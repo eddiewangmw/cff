@@ -1,0 +1,27 @@
+/*
+====================================================================================================
+Theme Name:		Metric - Child Theme
+Theme URI: 		http://themes.grandpixels.com/metric
+Description: 	Child theme for a Metric: Music Band Responsive WordPress Theme by Pavel of Grand Pixels
+Version: 		1.0.1
+Author: 		Pavel Richter / Grand Pixels
+Author URI: 	http://grandpixels.com
+License: 		GNU General Public License version 3.0
+License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+Template:		metric
+====================================================================================================
+
+IF YOU PLAN TO MAKE SOME MODIFICATIONS TO THE CODE OF THE THEME, WILL BE BETTER TO MAKE THEM VIA
+THIS CHILD THEME. IF YOU WILL MAKE MODIFICATION DIRECTLY TO THE PARENT THEME, YOU WILL LOSE THOSE
+MODIFICATIONS WHEN THE THEME IS UPDATED. WHEN YOU MAKE MODIFICATIONS INSIDE OF THE CHILD THEME
+INSTEAD, YOU CAN UPDATE THE PARENT THEME WITHOUT LOOSING ANY CHANGE YOU HAVE MADE.
+
+MORE INFORMATION ABOUT CHILD THEMES YOU CAN FIND IN WORDPRESS CODEX:
+http://codex.wordpress.org/child_themes.
+
+====================================================================================================
+*/
+
+@import url('../metric/style.css');
+
+/* Put your CSS below */

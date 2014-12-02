@@ -1,0 +1,222 @@
+==================================================
+Metric Changelog
+==================================================
+----------------------------------------------
+Version 1.1.7 (20 March 2014)
+----------------------------------------------
+Fixed single album and single event errors.
+----------------------------------------
+Edited Files
+----------------------------------------
+header.php
+single-album.php
+single-event.php
+style.css
+
+----------------------------------------------
+Version 1.1.6 (11 March 2014)
+----------------------------------------------
+Since updating Google Maps, has been changed field for adding maps to the event on page Add/Edit Event. Please update all maps by inserting the embed code. This may help you https://support.google.com/maps/answer/3544418?hl=en
+Removed Google Map shortcode.
+Added Custom Meta Data to "Add/Edit Album" and "Add/Edit Event".
+Fixed comment list.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/inits/init-functions.php
+backend/posttypes/posttype-album.php
+backend/posttypes/posttype-event.php
+backend/shortcodes/short-codes.php
+languages/default.mo
+languages/default.po
+comments.php
+content-audio.php
+functions.php
+screenshot.png
+single-album.php
+single-event.php
+style.css
+
+----------------------------------------------
+Version 1.1.5 (26 February 2014)
+----------------------------------------------
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/metaboxes/metabox-attachment.php
+backend/posttypes/posttype-album.php
+style.css
+taxonomy-category-gallery.php
+taxonomy-category-video.php
+template-gallery.php
+template-video.php
+
+----------------------------------------------
+Version 1.1.4 (26 February 2014)
+----------------------------------------------
+Compatibility with WooCommerce 2.1.2.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/inits/init-functions.php
+backend/inits/init-widgets.php
+backend/posttypes/posttype-slide.php
+javascripts/jquery.revolution.min.js
+-- NEW -- javascripts/jquery.revolution.plugins.min.js
+languages/default.mo
+languages/default.po
+woocommerce [folder]
+-- REM -- woocommerce/loop/add-to-cart.php
+-- REM -- woocommerce/single-product/add-to-cart/variable.php
+date-event.php
+functions.php
+functions-woocommerce.php
+style.css
+style-woocommerce.css
+style-woocommerce.php
+template-contact.php
+template-home.php
+title.php
+
+----------------------------------------------
+Version 1.1.3 (13 February 2014)
+----------------------------------------------
+Contact form subject bug fixed.
+Contact template sidebar bug fixed.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/inits/init-options.php
+backend/inits/init-widgets.php
+style.css
+template-contact.php
+
+----------------------------------------------
+Version 1.1.2 (13 February 2014)
+----------------------------------------------
+Compatibility with WooCommerce 2.1.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/inits/init-functions.php
+backend/inits/init-options.php
+backend/inits/init-plugins.php
+backend/posttypes/posttype-callout.php
+backend/posttypes/posttype-event.php
+images/icons/social/reddit.png
+images/icons/social/reddit@2x.png
+languages/default.mo
+languages/default.po
+date-album.php
+date-event.php
+functions.php
+functions-woocommerce.php
+socials.php
+style.css
+style.php
+style-woocommerce.css
+style-woocommerce.php
+taxonomy-category-event.php
+template-event.php
+template-event-past.php
+template-home.php
+toolbar-footer.php
+toolbar-header.php
+
+----------------------------------------------
+Version 1.1.1 (6 February 2014)
+----------------------------------------------
+Added shop items to homepage.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/classes/class-fields.php
+-- REM -- backend/images/picker - folder with all content
+-- NEW -- backend/images/colorpicker - folder with all content
+backend/images/loading.gif
+-- NEW -- backend/images/loading@2x.gif
+-- REM -- backend/images/replacement/replacement150x150.png
+-- NEW -- backend/images/replacement/replacement300x300.png
+backend/inits/init-backend.php
+backend/inits/init-functions.php
+backend/inits/init-options.php
+backend/posttypes/posttype-album.php
+backend/posttypes/posttype-event.php
+backend/styles/backend.css
+backend/styles/backend.less
+languages/default.mo
+languages/default.po
+date-event.php
+functions.php
+functions-woocommerce.php
+style.css
+style.php
+style-woocommerce.css
+style-woocommerce.php
+template-home.php
+
+----------------------------------------------
+Version 1.1.0 (30 January 2014)
+----------------------------------------------
+Added GPanel 3.1.0.
+Added recommended plugins installer.
+Added new shortcode "album".
+Added new shortcode "audio".
+Added new shortcode "clear".
+Added social icon LinkedIn.
+Added custom WooCommerce styles.
+Revised templates.
+Fixed displaying of retina logo.
+Fixed events loop.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+All files affected. Please update whole theme.
+----------------------------------------------
+Version 1.0.2 (04 November 2013)
+----------------------------------------------
+Added end date for event.
+Added some new options to Theme Options.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/inits/init-options.php
+backend/inits/init-functions.php
+backend/posttypes/posttype-event.php
+backend/posttypes/posttype-slide.php
+javascripts/jquery.frontend.js
+javascripts/jquery.frontend.min.js
+languages/default.mo
+languages/default.po
+date-event.php
+style.css
+taxonomy-category-event.php
+template-event.php
+template-home.php
+
+----------------------------------------------
+Version 1.0.1 (16 October 2013)
+----------------------------------------------
+Added reCaptcha responsive styles.
+Fixed minor bugs.
+----------------------------------------
+Edited Files
+----------------------------------------
+backend/inits/init-functions.php
+-- NEW -- backend/javascripts/jquery.cook.min.js
+-- REM -- backend/javascripts/jquery.cookie.min.js
+style.css
+style.php
+
+----------------------------------------------
+Version 1.0.0 (11 October 2013)
+----------------------------------------------
+Initial release.
