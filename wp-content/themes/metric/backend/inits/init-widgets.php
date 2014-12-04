@@ -104,6 +104,32 @@ if (function_exists('register_sidebar')) {
 		)
 	);
 	
+	// submenu about us page
+	register_sidebar(
+		array(
+			'name' 				=> __('About navigation ZH', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-about-us-sidebar-zh',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
+	// submenu about us page
+	register_sidebar(
+		array(
+			'name' 				=> __('About navigation EN', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-about-us-sidebar-en',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
 	// Sidebar > Page
 	register_sidebar(
 		array(

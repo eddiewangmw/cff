@@ -79,6 +79,13 @@ if (!function_exists('gp_register_metabox_slide')) {
 	
 		$meta_boxes = array();
 		
+		$posts = query_posts(array('post_type'=>'page','posts_per_page'=>-1));
+		foreach($posts AS $post){
+			// var_dump($post->post_title);
+			$pages[$post->ID]=$post->post_title;
+		}
+
+		wp_reset_query();
 		/*
 		--------------------------------------------------
 		Slide Options
@@ -164,6 +171,13 @@ if (!function_exists('gp_register_metabox_slide')) {
                        'random'                 => __('Random', 'gp'),
                        'random-premium'         => __('Random Premium', 'gp')
 					)
+				),
+				array(
+					'name'=>__('Page','gp'),
+					'desc'=>__('Slide dispalay page'),
+					'id'=>GP_SHORTNAME . '_slide_page',
+					'type'=>'select',
+					'options'=>$pages
 				),
 				array(
 					'name'				=> __('Speed of Transition', 'gp'),

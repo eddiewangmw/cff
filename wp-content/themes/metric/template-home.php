@@ -41,11 +41,11 @@ get_header();
 
 								// Counter
 								$slide_count = 1;
-
 								// Query
 								$gp_query_args = array(
 									'post_type'              => 'slide',
-									'posts_per_page'         => -1
+									'posts_per_page'         => -1,
+									'exclude'=>get_the_ID()
 								);
 								query_posts($gp_query_args);
 

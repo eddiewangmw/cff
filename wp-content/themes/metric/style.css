@@ -207,7 +207,7 @@ a.underline:hover,
 Global Classes
 ----------------------------------------------------------------------------------------------------
 */
-.title,.title a{color:#c99a07;}
+.title,.title a,.widget_nav_menu li a{color:#c99a07;}
 /* Floats */
 .float-left { float: left; }
 .float-right { float: right; }
@@ -1373,7 +1373,7 @@ Navigation - Primary
 /* 1st Level */
 .navigation-primary li {
     float: left;
-    margin-left: 2em;
+    margin-left: 1em;
 	position: relative;
 	font-size: 15px;
 	list-style: none;
@@ -1774,23 +1774,23 @@ Titles
 ====================================================================================================
 */
 
-.title {
+/*.title {
     float: left;
     width: 100%;
     clear: both;
-    
+
     border-bottom: 1px solid rgba(255,255,255,0.1);
-}
+}*/
 
 .title-container {
     position: relative;
     display: table;
 }
 
-.title h1 {
+/*.title h1 {
     margin: 0;
 }
-
+*/
 /* Edit Post Link */
 .title .edit-post-link {
     position: relative;

@@ -1531,3 +1531,4 @@ if (!function_exists('gp_comments_list')) {
 }
 
 pll_register_string('Subscription button','Submit your email');
+pll_register_string('About Us Sidebar Title','About Us');
