@@ -1,0 +1,708 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Banner\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-02 17:22+0100\n"
+"PO-Revision-Date: 2014-03-02 17:25+0100\n"
+"Last-Translator: Alfredo Cubitos alfredocubitos@yahoo.com.mx\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: en_US\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: banner.php:71 trunk/banner.php:71 tags/2.0.2/banner.php:71
+#: tags/2.0.3/banner.php:71 tags/1.1.0/banner.php:45 tags/2.0.0/banner.php:48
+#: tags/2.0.1/banner.php:48 tags/2.0.4/banner.php:71
+msgid "WP Banner Widget"
+msgstr "WP Banner Widget"
+
+#: banner.php:105 trunk/banner.php:105 tags/2.0.2/banner.php:105
+#: tags/2.0.3/banner.php:105 tags/1.1.0/banner.php:79 tags/2.0.0/banner.php:82
+#: tags/2.0.1/banner.php:82 tags/2.0.4/banner.php:105
+msgid "Advertisement"
+msgstr "Werbung"
+
+#: banner.php:110 trunk/banner.php:110 tags/2.0.2/banner.php:110
+#: tags/2.0.3/banner.php:110 tags/1.1.0/banner.php:84 tags/2.0.0/banner.php:87
+#: tags/2.0.1/banner.php:87 tags/2.0.4/banner.php:110
+msgid "Title:"
+msgstr "Titel:"
+
+#: banner.php:112 trunk/banner.php:112 tags/2.0.2/banner.php:112
+#: tags/2.0.3/banner.php:112 tags/1.1.0/banner.php:86 tags/2.0.0/banner.php:89
+#: tags/2.0.1/banner.php:89 tags/2.0.4/banner.php:112
+msgid "Client:"
+msgstr "Kunde:"
+
+#: banner.php:114 trunk/banner.php:114 tags/2.0.2/banner.php:114
+#: tags/2.0.3/banner.php:114 tags/1.1.0/banner.php:88 tags/2.0.0/banner.php:91
+#: tags/2.0.1/banner.php:91 tags/2.0.4/banner.php:114
+msgid "No Ad"
+msgstr "keine Werbung"
+
+#: banner.php:115 trunk/banner.php:115 tags/2.0.2/banner.php:115
+#: tags/2.0.3/banner.php:115 tags/1.1.0/banner.php:89 tags/2.0.0/banner.php:92
+#: tags/2.0.1/banner.php:92 tags/2.0.4/banner.php:115
+msgid "Random"
+msgstr "zufällig"
+
+#: banner.php:172 trunk/banner.php:172 tags/2.0.2/banner.php:172
+#: tags/2.0.3/banner.php:172 tags/1.1.0/banner.php:145
+#: tags/2.0.0/banner.php:148 tags/2.0.1/banner.php:148
+#: tags/2.0.4/banner.php:172
+msgid "Place your Ad here"
+msgstr "Werbung hier platzieren"
+
+#: banner.php:347 trunk/banner.php:347 tags/2.0.2/banner.php:279
+#: tags/2.0.3/banner.php:291 tags/2.0.0/banner.php:268
+#: tags/2.0.1/banner.php:268 tags/2.0.4/banner.php:291
+#, php-format
+msgid "%s Settings %s"
+msgstr "%s Einstellungen %s"
+
+#: banner.php:348 trunk/banner.php:348 tags/2.0.2/banner.php:280
+#: tags/2.0.3/banner.php:292 tags/2.0.0/banner.php:269
+#: tags/2.0.1/banner.php:269 tags/2.0.4/banner.php:292
+#, php-format
+msgid "%s Donate %s"
+msgstr "%s Spenden %s"
+
+#: banner_admin.php:160 trunk/banner_admin.php:160
+#: tags/2.0.2/banner_admin.php:155 tags/0.5.2/banner_admin.php:138
+#: tags/2.0.3/banner_admin.php:155 tags/1.0.1/banner_admin.php:106
+#: tags/1.1.0/banner_admin.php:108 tags/2.0.0/banner_admin.php:155
+#: tags/2.0.1/banner_admin.php:155 tags/0.5.3/banner_admin.php:138
+#: tags/0.5.3/trunk/banner_admin.php:138 tags/0.5.1/banner_admin.php:138
+#: tags/0.6.1/banner_admin.php:138 tags/2.0.4/banner_admin.php:155
+#: tags/0.6.0/banner_admin.php:138 tags/1.0.0/banner_admin.php:101
+msgid "<h3>Update Banner</h3>"
+msgstr "<h3>Banner ändern</h3>"
+
+#: banner_admin.php:162 trunk/banner_admin.php:162
+#: tags/2.0.2/banner_admin.php:157 tags/0.5.2/banner_admin.php:140
+#: tags/2.0.3/banner_admin.php:157 tags/1.0.1/banner_admin.php:108
+#: tags/1.1.0/banner_admin.php:110 tags/2.0.0/banner_admin.php:157
+#: tags/2.0.1/banner_admin.php:157 tags/0.5.3/banner_admin.php:140
+#: tags/0.5.3/trunk/banner_admin.php:140 tags/0.5.1/banner_admin.php:140
+#: tags/0.6.1/banner_admin.php:140 tags/2.0.4/banner_admin.php:157
+#: tags/0.6.0/banner_admin.php:140 tags/1.0.0/banner_admin.php:103
+msgid "<h3>Create New Banner</h3>"
+msgstr "<h3>Neuer Werbebanner</h3>"
+
+#: banner_admin.php:166 trunk/banner_admin.php:166
+#: tags/2.0.2/banner_admin.php:161 tags/2.0.3/banner_admin.php:161
+#: tags/1.1.0/banner_admin.php:114 tags/2.0.0/banner_admin.php:161
+#: tags/2.0.1/banner_admin.php:161 tags/2.0.4/banner_admin.php:161
+msgid "Client Data"
+msgstr "Kundendaten"
+
+#: banner_admin.php:170 trunk/banner_admin.php:170
+#: tags/2.0.2/banner_admin.php:165 tags/2.0.3/banner_admin.php:165
+#: tags/1.0.1/banner_admin.php:116 tags/1.1.0/banner_admin.php:118
+#: tags/2.0.0/banner_admin.php:165 tags/2.0.1/banner_admin.php:165
+#: tags/2.0.4/banner_admin.php:165 tags/1.0.0/banner_admin.php:111
+msgid "Existing&nbsp;client"
+msgstr "Kunde"
+
+#: banner_admin.php:173 trunk/banner_admin.php:173
+#: tags/2.0.2/banner_admin.php:168 tags/2.0.3/banner_admin.php:168
+#: tags/1.1.0/banner_admin.php:121 tags/2.0.0/banner_admin.php:168
+#: tags/2.0.1/banner_admin.php:168 tags/2.0.4/banner_admin.php:168
+msgid "(clear)"
+msgstr "(leeren)"
+
+#: banner_admin.php:188 trunk/banner_admin.php:188
+#: tags/2.0.2/banner_admin.php:183 tags/0.5.2/banner_admin.php:164
+#: tags/0.5.2/banner_admin.php:230 tags/2.0.3/banner_admin.php:183
+#: tags/1.0.1/banner_admin.php:134 tags/1.0.1/banner_admin.php:205
+#: tags/1.1.0/banner_admin.php:136 tags/1.1.0/banner_admin.php:207
+#: tags/2.0.0/banner_admin.php:183 tags/2.0.1/banner_admin.php:183
+#: tags/0.5.3/banner_admin.php:164 tags/0.5.3/banner_admin.php:230
+#: tags/0.5.3/trunk/banner_admin.php:164 tags/0.5.3/trunk/banner_admin.php:230
+#: tags/0.5.1/banner_admin.php:164 tags/0.5.1/banner_admin.php:230
+#: tags/0.6.1/banner_admin.php:164 tags/0.6.1/banner_admin.php:230
+#: tags/2.0.4/banner_admin.php:183 tags/0.6.0/banner_admin.php:164
+#: tags/0.6.0/banner_admin.php:230 tags/1.0.0/banner_admin.php:129
+#: tags/1.0.0/banner_admin.php:200
+msgid "<option>No Data</option>"
+msgstr "<option>keine Daten</option>"
+
+#: banner_admin.php:192 trunk/banner_admin.php:192
+#: tags/2.0.2/banner_admin.php:187 tags/2.0.3/banner_admin.php:187
+#: tags/2.0.0/banner_admin.php:187 tags/2.0.1/banner_admin.php:187
+#: tags/2.0.4/banner_admin.php:187
+msgid "Select a banner to edit"
+msgstr "Wähle eine Werbebanner aus"
+
+#: banner_admin.php:194 trunk/banner_admin.php:194
+#: tags/2.0.2/banner_admin.php:189 tags/2.0.3/banner_admin.php:189
+#: tags/1.0.1/banner_admin.php:139 tags/1.1.0/banner_admin.php:141
+#: tags/2.0.0/banner_admin.php:189 tags/2.0.1/banner_admin.php:189
+#: tags/2.0.4/banner_admin.php:189 tags/1.0.0/banner_admin.php:134
+msgid "Client&nbsp;name"
+msgstr "Name"
+
+#: banner_admin.php:198 trunk/banner_admin.php:198
+#: tags/2.0.2/banner_admin.php:193 tags/2.0.3/banner_admin.php:193
+#: tags/2.0.0/banner_admin.php:193 tags/2.0.1/banner_admin.php:193
+#: tags/2.0.4/banner_admin.php:193
+msgid "Give your banner a name"
+msgstr "Vergebe einen Namen"
+
+#: banner_admin.php:227 trunk/banner_admin.php:227
+#: tags/2.0.2/banner_admin.php:222 tags/2.0.3/banner_admin.php:222
+#: tags/2.0.0/banner_admin.php:222 tags/2.0.1/banner_admin.php:222
+#: tags/2.0.4/banner_admin.php:222
+msgid "Contract Data"
+msgstr "Vertragsdaten"
+
+#: banner_admin.php:230 trunk/banner_admin.php:230
+#: tags/2.0.2/banner_admin.php:225 tags/2.0.3/banner_admin.php:225
+#: tags/2.0.0/banner_admin.php:225 tags/2.0.1/banner_admin.php:225
+#: tags/2.0.4/banner_admin.php:225
+msgid "Price"
+msgstr "Preis"
+
+#: banner_admin.php:233 trunk/banner_admin.php:233
+#: tags/2.0.2/banner_admin.php:228 tags/2.0.3/banner_admin.php:228
+#: tags/2.0.0/banner_admin.php:228 tags/2.0.1/banner_admin.php:228
+#: tags/2.0.4/banner_admin.php:228
+msgid "click"
+msgstr "Klick"
+
+#: banner_admin.php:234 trunk/banner_admin.php:234
+#: tags/2.0.2/banner_admin.php:229 tags/2.0.3/banner_admin.php:229
+#: tags/2.0.0/banner_admin.php:229 tags/2.0.1/banner_admin.php:229
+#: tags/2.0.4/banner_admin.php:229
+msgid "view"
+msgstr "Ansicht"
+
+#: banner_admin.php:235 trunk/banner_admin.php:235
+#: tags/2.0.2/banner_admin.php:230 tags/2.0.3/banner_admin.php:230
+#: tags/2.0.0/banner_admin.php:230 tags/2.0.1/banner_admin.php:230
+#: tags/2.0.4/banner_admin.php:230
+msgid "month"
+msgstr "Monat"
+
+#: banner_admin.php:237 trunk/banner_admin.php:237
+#: tags/2.0.2/banner_admin.php:232 tags/2.0.3/banner_admin.php:232
+#: tags/2.0.0/banner_admin.php:232 tags/2.0.1/banner_admin.php:232
+#: tags/2.0.4/banner_admin.php:232
+msgid ""
+"Select your contract type<p>you are payed for each</p><ul>\n"
+"                                                                                      <li>* "
+"click <i>or</i></li>\n"
+"                                                                                      <li>* "
+"view <i>or</i></li>\n"
+"                                                                                      <li>* "
+"month</li>\n"
+"                                                                                      </"
+"ul>"
+msgstr ""
+"Vertragsart wählen<p>Bezahlung erfolgt per</p><ul>\n"
+"                                                                                      <li>* "
+"Klick <i>or</i></li>\n"
+"                                                                                      <li>* "
+"View <i>or</i></li>\n"
+"                                                                                      <li>* "
+"Monat</li>\n"
+"                                                                                      </"
+"ul>"
+
+#: banner_admin.php:245 trunk/banner_admin.php:245
+#: tags/2.0.2/banner_admin.php:240 tags/2.0.3/banner_admin.php:240
+#: tags/1.0.1/banner_admin.php:211 tags/1.1.0/banner_admin.php:213
+#: tags/2.0.0/banner_admin.php:240 tags/2.0.1/banner_admin.php:240
+#: tags/2.0.4/banner_admin.php:240 tags/1.0.0/banner_admin.php:206
+msgid "Impressions Purchased"
+msgstr "Wie oft anzeigen?"
+
+#: banner_admin.php:247 trunk/banner_admin.php:247
+#: tags/2.0.2/banner_admin.php:242 tags/2.0.3/banner_admin.php:242
+#: tags/1.1.0/banner_admin.php:215 tags/2.0.0/banner_admin.php:242
+#: tags/2.0.1/banner_admin.php:242 tags/2.0.4/banner_admin.php:242
+msgid "0 = unlimited"
+msgstr "0 = kein Limit"
+
+#: banner_admin.php:248 trunk/banner_admin.php:248
+#: tags/2.0.2/banner_admin.php:243 tags/2.0.3/banner_admin.php:243
+#: tags/2.0.0/banner_admin.php:243 tags/2.0.1/banner_admin.php:243
+#: tags/2.0.4/banner_admin.php:243
+msgid "If you have have a limited pay per view contract put max views here"
+msgstr "Anzahl der bezahlten Views"
+
+#: banner_admin.php:252 trunk/banner_admin.php:252
+#: tags/2.0.2/banner_admin.php:247 tags/2.0.3/banner_admin.php:247
+#: tags/1.0.1/banner_admin.php:218 tags/1.1.0/banner_admin.php:220
+#: tags/2.0.0/banner_admin.php:247 tags/2.0.1/banner_admin.php:247
+#: tags/2.0.4/banner_admin.php:247 tags/1.0.0/banner_admin.php:213
+msgid "Start Date"
+msgstr "von"
+
+#: banner_admin.php:262 trunk/banner_admin.php:262
+#: tags/2.0.2/banner_admin.php:257 tags/2.0.3/banner_admin.php:257
+#: tags/1.0.1/banner_admin.php:233 tags/1.1.0/banner_admin.php:235
+#: tags/2.0.0/banner_admin.php:257 tags/2.0.1/banner_admin.php:257
+#: tags/2.0.4/banner_admin.php:257 tags/1.0.0/banner_admin.php:228
+msgid "End Date"
+msgstr "bis"
+
+#: banner_admin.php:272 trunk/banner_admin.php:272
+#: tags/2.0.2/banner_admin.php:267 tags/2.0.3/banner_admin.php:267
+#: tags/2.0.0/banner_admin.php:267 tags/2.0.1/banner_admin.php:267
+#: tags/2.0.4/banner_admin.php:267
+#, fuzzy
+msgid "0 = no limit"
+msgstr "0 = kein Limit"
+
+#: banner_admin.php:276 trunk/banner_admin.php:276
+#: tags/2.0.2/banner_admin.php:271 tags/2.0.3/banner_admin.php:271
+#: tags/2.0.0/banner_admin.php:271 tags/2.0.1/banner_admin.php:271
+#: tags/2.0.4/banner_admin.php:271
+msgid ""
+"Select a period of time where the banner shown.<br> If end date is <i>0</i> "
+"the period is unlimited"
+msgstr ""
+"Zeitraum wählen in der der Banner angezeigt wird.<br> Wenn das Datum <i>0</"
+"i> ist, gibt es kein Limit"
+
+#: banner_admin.php:281 trunk/banner_admin.php:281
+#: tags/2.0.2/banner_admin.php:276 tags/0.5.2/banner_admin.php:385
+#: tags/2.0.3/banner_admin.php:276 tags/1.0.1/banner_admin.php:309
+#: tags/1.1.0/banner_admin.php:311 tags/2.0.0/banner_admin.php:276
+#: tags/2.0.1/banner_admin.php:276 tags/0.5.3/banner_admin.php:385
+#: tags/0.5.3/trunk/banner_admin.php:385 tags/0.5.1/banner_admin.php:385
+#: tags/0.6.1/banner_admin.php:392 tags/2.0.4/banner_admin.php:276
+#: tags/0.6.0/banner_admin.php:385 tags/1.0.0/banner_admin.php:304
+msgid "Active"
+msgstr "Werbung Aktiv"
+
+#: banner_admin.php:286 trunk/banner_admin.php:286
+#: tags/2.0.2/banner_admin.php:281 tags/0.5.2/banner_admin.php:394
+#: tags/0.5.2/banner_admin.php:399 tags/0.5.2/banner_admin.php:405
+#: tags/2.0.3/banner_admin.php:281 tags/1.0.1/banner_admin.php:312
+#: tags/1.1.0/banner_admin.php:314 tags/2.0.0/banner_admin.php:281
+#: tags/2.0.1/banner_admin.php:281 tags/0.5.3/banner_admin.php:394
+#: tags/0.5.3/banner_admin.php:399 tags/0.5.3/banner_admin.php:405
+#: tags/0.5.3/trunk/banner_admin.php:394 tags/0.5.3/trunk/banner_admin.php:399
+#: tags/0.5.3/trunk/banner_admin.php:405 tags/0.5.1/banner_admin.php:394
+#: tags/0.5.1/banner_admin.php:399 tags/0.5.1/banner_admin.php:405
+#: tags/0.6.1/banner_admin.php:401 tags/0.6.1/banner_admin.php:406
+#: tags/0.6.1/banner_admin.php:412 tags/2.0.4/banner_admin.php:281
+#: tags/0.6.0/banner_admin.php:394 tags/0.6.0/banner_admin.php:399
+#: tags/0.6.0/banner_admin.php:405 tags/1.0.0/banner_admin.php:307
+msgid "Yes"
+msgstr "Ja"
+
+#: banner_admin.php:287 trunk/banner_admin.php:287
+#: tags/2.0.2/banner_admin.php:282 tags/0.5.2/banner_admin.php:396
+#: tags/0.5.2/banner_admin.php:401 tags/0.5.2/banner_admin.php:407
+#: tags/2.0.3/banner_admin.php:282 tags/1.0.1/banner_admin.php:313
+#: tags/1.1.0/banner_admin.php:315 tags/2.0.0/banner_admin.php:282
+#: tags/2.0.1/banner_admin.php:282 tags/0.5.3/banner_admin.php:396
+#: tags/0.5.3/banner_admin.php:401 tags/0.5.3/banner_admin.php:407
+#: tags/0.5.3/trunk/banner_admin.php:396 tags/0.5.3/trunk/banner_admin.php:401
+#: tags/0.5.3/trunk/banner_admin.php:407 tags/0.5.1/banner_admin.php:396
+#: tags/0.5.1/banner_admin.php:401 tags/0.5.1/banner_admin.php:407
+#: tags/0.6.1/banner_admin.php:403 tags/0.6.1/banner_admin.php:408
+#: tags/0.6.1/banner_admin.php:414 tags/2.0.4/banner_admin.php:282
+#: tags/0.6.0/banner_admin.php:396 tags/0.6.0/banner_admin.php:401
+#: tags/0.6.0/banner_admin.php:407 tags/1.0.0/banner_admin.php:308
+msgid "No"
+msgstr "Nein"
+
+#: banner_admin.php:289 trunk/banner_admin.php:289
+#: tags/2.0.2/banner_admin.php:284 tags/2.0.3/banner_admin.php:284
+#: tags/2.0.0/banner_admin.php:284 tags/2.0.1/banner_admin.php:284
+#: tags/2.0.4/banner_admin.php:284
+msgid "Activate or deactivate your banner"
+msgstr "Banner aktivieren oder deaktivieren"
+
+#: banner_admin.php:295 trunk/banner_admin.php:295
+#: tags/2.0.2/banner_admin.php:290 tags/2.0.3/banner_admin.php:290
+#: tags/2.0.0/banner_admin.php:290 tags/2.0.1/banner_admin.php:290
+#: tags/2.0.4/banner_admin.php:290
+#, fuzzy
+msgid "Statistics"
+msgstr "Statistik"
+
+#: banner_admin.php:296 trunk/banner_admin.php:296
+#: tags/2.0.2/banner_admin.php:291 tags/2.0.3/banner_admin.php:291
+#: tags/2.0.0/banner_admin.php:291 tags/2.0.1/banner_admin.php:291
+#: tags/2.0.4/banner_admin.php:291
+#, fuzzy
+msgid "Clicks"
+msgstr "Klick URL"
+
+#: banner_admin.php:296 trunk/banner_admin.php:296
+#: tags/2.0.2/banner_admin.php:291 tags/2.0.3/banner_admin.php:291
+#: tags/2.0.0/banner_admin.php:291 tags/2.0.1/banner_admin.php:291
+#: tags/2.0.4/banner_admin.php:291
+msgid "Views"
+msgstr ""
+
+#: banner_admin.php:298 trunk/banner_admin.php:298
+#: tags/2.0.2/banner_admin.php:293 tags/2.0.3/banner_admin.php:293
+#: tags/2.0.0/banner_admin.php:293 tags/2.0.1/banner_admin.php:293
+#: tags/2.0.4/banner_admin.php:293
+msgid " Earnings"
+msgstr "Verdienst"
+
+#: banner_admin.php:299 trunk/banner_admin.php:299
+#: tags/2.0.2/banner_admin.php:294 tags/2.0.3/banner_admin.php:294
+#: tags/2.0.0/banner_admin.php:294 tags/2.0.1/banner_admin.php:294
+#: tags/2.0.4/banner_admin.php:294
+msgid "per month"
+msgstr "pro Monat"
+
+#: banner_admin.php:309 trunk/banner_admin.php:309
+#: tags/2.0.2/banner_admin.php:304 tags/2.0.3/banner_admin.php:304
+#: tags/2.0.0/banner_admin.php:304 tags/2.0.1/banner_admin.php:304
+#: tags/2.0.4/banner_admin.php:304
+msgid "Ad Banner Config"
+msgstr "Daten des Werbebanner"
+
+#: banner_admin.php:312 trunk/banner_admin.php:312
+#: tags/2.0.2/banner_admin.php:307 tags/2.0.3/banner_admin.php:307
+#: tags/2.0.0/banner_admin.php:307 tags/2.0.1/banner_admin.php:307
+#: tags/2.0.4/banner_admin.php:307
+msgid "Select Ad media type"
+msgstr "Einen Medientyp auswählen"
+
+#: banner_admin.php:317 trunk/banner_admin.php:317
+#: tags/2.0.2/banner_admin.php:312 tags/2.0.3/banner_admin.php:312
+#: tags/2.0.0/banner_admin.php:312 tags/2.0.1/banner_admin.php:312
+#: tags/2.0.4/banner_admin.php:312
+msgid "Choose a link to your banner image or insert the ad text"
+msgstr "Wähle einen Link zum Werbebanner oder trage einen Text ein"
+
+#: banner_admin.php:321 trunk/banner_admin.php:321
+#: tags/2.0.2/banner_admin.php:316 tags/2.0.3/banner_admin.php:316
+#: tags/2.0.0/banner_admin.php:316 tags/2.0.1/banner_admin.php:316
+#: tags/2.0.4/banner_admin.php:316
+msgid "Media type"
+msgstr "Medien Typ"
+
+#: banner_admin.php:331 trunk/banner_admin.php:331
+#: tags/2.0.2/banner_admin.php:325 tags/2.0.3/banner_admin.php:325
+#: tags/1.1.0/banner_admin.php:189 tags/2.0.0/banner_admin.php:325
+#: tags/2.0.1/banner_admin.php:325 tags/2.0.4/banner_admin.php:325
+msgid "Banner Size"
+msgstr "Bannergröße"
+
+#: banner_admin.php:334 trunk/banner_admin.php:334
+#: tags/2.0.2/banner_admin.php:328 tags/2.0.3/banner_admin.php:328
+#: tags/1.1.0/banner_admin.php:191 tags/2.0.0/banner_admin.php:328
+#: tags/2.0.1/banner_admin.php:328 tags/2.0.4/banner_admin.php:328
+msgid "necessary when using Flash"
+msgstr "erforderlich bei Flashbanner"
+
+#: banner_admin.php:340 trunk/banner_admin.php:340
+#: tags/2.0.2/banner_admin.php:334 tags/2.0.3/banner_admin.php:334
+#: tags/1.1.0/banner_admin.php:156 tags/2.0.0/banner_admin.php:334
+#: tags/2.0.1/banner_admin.php:334 tags/2.0.4/banner_admin.php:334
+msgid "Click URL"
+msgstr "Klick URL"
+
+#: banner_admin.php:344 trunk/banner_admin.php:344
+#: tags/2.0.2/banner_admin.php:338 tags/2.0.3/banner_admin.php:338
+#: tags/2.0.0/banner_admin.php:338 tags/2.0.1/banner_admin.php:338
+#: tags/2.0.4/banner_admin.php:338
+msgid "Link to your ad counter or your ad provider"
+msgstr "Link zum Zählpixel"
+
+#: banner_admin.php:348 trunk/banner_admin.php:348
+#: tags/2.0.2/banner_admin.php:342 tags/0.5.2/banner_admin.php:367
+#: tags/2.0.3/banner_admin.php:342 tags/1.0.1/banner_admin.php:250
+#: tags/1.1.0/banner_admin.php:252 tags/2.0.0/banner_admin.php:342
+#: tags/2.0.1/banner_admin.php:342 tags/0.5.3/banner_admin.php:367
+#: tags/0.5.3/trunk/banner_admin.php:367 tags/0.5.1/banner_admin.php:367
+#: tags/0.6.1/banner_admin.php:374 tags/2.0.4/banner_admin.php:342
+#: tags/0.6.0/banner_admin.php:367 tags/1.0.0/banner_admin.php:245
+msgid "Position"
+msgstr "Position"
+
+#: banner_admin.php:355 trunk/banner_admin.php:355
+#: tags/2.0.2/banner_admin.php:349 tags/2.0.3/banner_admin.php:349
+#: tags/1.1.0/banner_admin.php:259 tags/2.0.0/banner_admin.php:349
+#: tags/2.0.1/banner_admin.php:349 tags/2.0.4/banner_admin.php:349
+msgid "in a widget"
+msgstr "als Widget"
+
+#: banner_admin.php:360 trunk/banner_admin.php:360
+msgid "Sticky"
+msgstr "Fixe Position"
+
+#: banner_admin.php:365 trunk/banner_admin.php:365
+#: tags/2.0.2/banner_admin.php:354 tags/2.0.3/banner_admin.php:354
+#: tags/2.0.0/banner_admin.php:354 tags/2.0.1/banner_admin.php:354
+#: tags/2.0.4/banner_admin.php:354
+msgid "Expert mode"
+msgstr "Expertenmodus"
+
+#: banner_admin.php:369 trunk/banner_admin.php:369
+#: tags/2.0.2/banner_admin.php:358 tags/2.0.3/banner_admin.php:358
+#: tags/2.0.0/banner_admin.php:358 tags/2.0.1/banner_admin.php:358
+#: tags/2.0.4/banner_admin.php:358
+msgid "Choose where you want to place your ad."
+msgstr "Werbebannerplatz auswählen"
+
+#: banner_admin.php:371 trunk/banner_admin.php:371
+msgid "Select post for sticky banner"
+msgstr "Beitrag für feste Positionierung"
+
+#: banner_admin.php:372 trunk/banner_admin.php:372
+msgid "First post"
+msgstr "1. Beitrag"
+
+#: banner_admin.php:373 trunk/banner_admin.php:373
+msgid "Second post"
+msgstr "2. Beitrag"
+
+#: banner_admin.php:374 trunk/banner_admin.php:374
+msgid "Third post"
+msgstr "3. Beitrag"
+
+#: banner_admin.php:379 trunk/banner_admin.php:379
+#: tags/2.0.2/banner_admin.php:361 tags/2.0.3/banner_admin.php:361
+#: tags/1.1.0/banner_admin.php:268 tags/2.0.0/banner_admin.php:361
+#: tags/2.0.1/banner_admin.php:361 tags/2.0.4/banner_admin.php:361
+msgid "Place your ad on your blog"
+msgstr "Banner platzieren"
+
+#: banner_admin.php:383 trunk/banner_admin.php:383
+#: tags/2.0.2/banner_admin.php:365 tags/2.0.3/banner_admin.php:365
+#: tags/2.0.0/banner_admin.php:365 tags/2.0.1/banner_admin.php:365
+#: tags/2.0.4/banner_admin.php:365
+#, fuzzy
+msgid "Div ID"
+msgstr "WP div ID"
+
+#: banner_admin.php:419 trunk/banner_admin.php:419
+#: tags/2.0.2/banner_admin.php:401 tags/2.0.3/banner_admin.php:401
+#: tags/1.1.0/banner_admin.php:293 tags/2.0.0/banner_admin.php:401
+#: tags/2.0.1/banner_admin.php:401 tags/2.0.4/banner_admin.php:401
+msgid "Append"
+msgstr "anhängen"
+
+#: banner_admin.php:420 trunk/banner_admin.php:420
+#: tags/2.0.2/banner_admin.php:402 tags/2.0.3/banner_admin.php:402
+#: tags/1.1.0/banner_admin.php:294 tags/2.0.0/banner_admin.php:402
+#: tags/2.0.1/banner_admin.php:402 tags/2.0.4/banner_admin.php:402
+msgid "Prepend"
+msgstr "davor"
+
+#: banner_admin.php:421 trunk/banner_admin.php:421
+#: tags/2.0.2/banner_admin.php:403 tags/2.0.3/banner_admin.php:403
+#: tags/1.1.0/banner_admin.php:295 tags/2.0.0/banner_admin.php:403
+#: tags/2.0.1/banner_admin.php:403 tags/2.0.4/banner_admin.php:403
+msgid "After"
+msgstr "danach"
+
+#: banner_admin.php:428 trunk/banner_admin.php:428
+#: tags/2.0.2/banner_admin.php:410 tags/2.0.3/banner_admin.php:410
+#: tags/1.1.0/banner_admin.php:299 tags/2.0.0/banner_admin.php:410
+#: tags/2.0.1/banner_admin.php:410 tags/2.0.4/banner_admin.php:410
+msgid "in <b>%</b>"
+msgstr "<b>%</b>"
+
+#: banner_admin.php:431 trunk/banner_admin.php:431
+#: tags/2.0.2/banner_admin.php:413 tags/2.0.3/banner_admin.php:413
+#: tags/2.0.0/banner_admin.php:413 tags/2.0.1/banner_admin.php:413
+#: tags/2.0.4/banner_admin.php:413
+msgid "This is not your real layout! <br/> This is only an abstract view"
+msgstr "Dies entspricht nicht Deinem Layout<br/> Die Ansicht abstrahiert"
+
+#: banner_admin.php:431 trunk/banner_admin.php:431
+#: tags/2.0.2/banner_admin.php:413 tags/2.0.3/banner_admin.php:413
+#: tags/2.0.0/banner_admin.php:413 tags/2.0.1/banner_admin.php:413
+#: tags/2.0.4/banner_admin.php:413
+msgid ""
+"You should only use this option if you have knowledge of your theme layout!"
+msgstr ""
+"Diese Option sollte nur benutzt werden, wenn man das Theme-Layout genau kennt"
+
+#: banner_admin.php:446 trunk/banner_admin.php:446
+#: tags/2.0.2/banner_admin.php:428 tags/2.0.3/banner_admin.php:428
+#: tags/1.1.0/banner_admin.php:326 tags/2.0.0/banner_admin.php:428
+#: tags/2.0.1/banner_admin.php:428 tags/2.0.4/banner_admin.php:428
+msgid "really delete this banner?"
+msgstr "banner wirklich löschen?"
+
+#: banner_admin.php:447 trunk/banner_admin.php:447
+#: tags/2.0.2/banner_admin.php:429 tags/0.5.2/banner_admin.php:423
+#: tags/2.0.3/banner_admin.php:429 tags/1.0.1/banner_admin.php:325
+#: tags/1.1.0/banner_admin.php:327 tags/2.0.0/banner_admin.php:429
+#: tags/2.0.1/banner_admin.php:429 tags/0.5.3/banner_admin.php:423
+#: tags/0.5.3/trunk/banner_admin.php:423 tags/0.5.1/banner_admin.php:423
+#: tags/0.6.1/banner_admin.php:430 tags/2.0.4/banner_admin.php:429
+#: tags/0.6.0/banner_admin.php:423 tags/1.0.0/banner_admin.php:320
+msgid "Delete Banner"
+msgstr "banner löschen"
+
+#: banner_admin.php:452 trunk/banner_admin.php:452
+#: tags/2.0.2/banner_admin.php:434 tags/0.5.2/banner_admin.php:414
+#: tags/2.0.3/banner_admin.php:434 tags/1.0.1/banner_admin.php:330
+#: tags/1.1.0/banner_admin.php:332 tags/2.0.0/banner_admin.php:434
+#: tags/2.0.1/banner_admin.php:434 tags/0.5.3/banner_admin.php:414
+#: tags/0.5.3/trunk/banner_admin.php:414 tags/0.5.1/banner_admin.php:414
+#: tags/0.6.1/banner_admin.php:421 tags/2.0.4/banner_admin.php:434
+#: tags/0.6.0/banner_admin.php:414 tags/1.0.0/banner_admin.php:325
+msgid "Update Banner"
+msgstr "banner ändern"
+
+#: banner_admin.php:515 trunk/banner_admin.php:515
+#: tags/2.0.2/banner_admin.php:495 tags/2.0.3/banner_admin.php:495
+#: tags/1.1.0/banner_admin.php:363 tags/2.0.0/banner_admin.php:495
+#: tags/2.0.1/banner_admin.php:495 tags/2.0.4/banner_admin.php:495
+msgid "Create New"
+msgstr "Neuer banner"
+
+#: banner_admin.php:562 trunk/banner_admin.php:562
+#: tags/2.0.2/banner_admin.php:531 tags/2.0.3/banner_admin.php:531
+#: tags/1.1.0/banner_admin.php:400 tags/2.0.0/banner_admin.php:531
+#: tags/2.0.1/banner_admin.php:531 tags/2.0.4/banner_admin.php:531
+msgid "Date of campaign start"
+msgstr "Anfangsdatum der Kampagne"
+
+#: banner_admin.php:568 trunk/banner_admin.php:568
+#: tags/2.0.2/banner_admin.php:537 tags/2.0.3/banner_admin.php:537
+#: tags/1.1.0/banner_admin.php:407 tags/2.0.0/banner_admin.php:537
+#: tags/2.0.1/banner_admin.php:537 tags/2.0.4/banner_admin.php:537
+msgid "Date of campaign end. Leave field empty if its a never ending story"
+msgstr "Endedatum der Kampagne. Leer = kein Ende"
+
+#: banner_admin.php:656 trunk/banner_admin.php:656
+#: tags/2.0.2/banner_admin.php:626 tags/2.0.3/banner_admin.php:626
+#: tags/1.1.0/banner_admin.php:453 tags/2.0.0/banner_admin.php:626
+#: tags/2.0.1/banner_admin.php:626 tags/2.0.4/banner_admin.php:626
+msgid "close Banner-Window"
+msgstr "Bannerfenster schließen"
+
+#: banner_admin.php:660 trunk/banner_admin.php:660
+#: tags/2.0.2/banner_admin.php:630 tags/2.0.3/banner_admin.php:630
+#: tags/1.1.0/banner_admin.php:459 tags/2.0.0/banner_admin.php:630
+#: tags/2.0.1/banner_admin.php:630 tags/2.0.4/banner_admin.php:630
+msgid "open Banner-Window"
+msgstr "Bannerfenster öffnen"
+
+#: tags/2.0.2/banner_admintab.php:30 tags/1.1.0/banner_admintab.php:30
+#: tags/2.0.0/banner_admintab.php:30 tags/2.0.1/banner_admintab.php:30
+msgid "Banner Admin"
+msgstr "Banner-Verwaltung"
+
+#: tags/2.0.2/banner_admintab.php:31 tags/1.1.0/banner_admintab.php:31
+#: tags/2.0.0/banner_admintab.php:31 tags/2.0.1/banner_admintab.php:31
+msgid "Statistic"
+msgstr "Statistik"
+
+#: tags/2.0.2/banner_admintab.php:35 tags/1.1.0/banner_admintab.php:35
+#: tags/2.0.0/banner_admintab.php:35 tags/2.0.1/banner_admintab.php:35
+msgid "planned for future release"
+msgstr "zukünftig geplant"
+
+#: tags/2.0.2/banner_admintab.php:36 tags/1.1.0/banner_admintab.php:36
+#: tags/2.0.0/banner_admintab.php:36 tags/2.0.1/banner_admintab.php:36
+msgid "You can support the development with a donation"
+msgstr "Du kannst die Entwicklung mit einer Spende unterstützen"
+
+#: tags/0.5.2/banner.php:38 tags/0.5.3/banner.php:38
+#: tags/0.5.3/trunk/banner.php:38 tags/0.5.1/banner.php:38
+#: tags/0.6.1/banner.php:38 tags/0.6.0/banner.php:38
+#, fuzzy
+msgid "Advert"
+msgstr "Werbung"
+
+#: tags/0.5.2/banner.php:43 tags/0.5.3/banner.php:43
+#: tags/0.5.3/trunk/banner.php:43 tags/0.5.1/banner.php:43
+#: tags/0.6.1/banner.php:43 tags/0.6.0/banner.php:43
+#, fuzzy
+msgid "Banner"
+msgstr "Banner URL"
+
+#: tags/0.5.2/banner_admin.php:146 tags/0.5.3/banner_admin.php:146
+#: tags/0.5.3/trunk/banner_admin.php:146 tags/0.5.1/banner_admin.php:146
+#: tags/0.6.1/banner_admin.php:146 tags/0.6.0/banner_admin.php:146
+#, fuzzy
+msgid "Client"
+msgstr "Kunde:"
+
+#: tags/0.5.2/banner_admin.php:168 tags/0.5.3/banner_admin.php:168
+#: tags/0.5.3/trunk/banner_admin.php:168 tags/0.5.1/banner_admin.php:168
+#: tags/0.6.1/banner_admin.php:168 tags/0.6.0/banner_admin.php:168
+msgid "choose existing client&nbsp;&nbsp;"
+msgstr "Kunden wählen&nbsp;&nbsp;"
+
+#: tags/0.5.2/banner_admin.php:180 tags/0.5.3/banner_admin.php:180
+#: tags/0.5.3/trunk/banner_admin.php:180 tags/0.5.1/banner_admin.php:180
+#: tags/0.6.1/banner_admin.php:180 tags/0.6.0/banner_admin.php:180
+#, fuzzy
+msgid "Create new Customer"
+msgstr "Neuer banner"
+
+#: tags/0.5.2/banner_admin.php:236 tags/0.5.3/banner_admin.php:236
+#: tags/0.5.3/trunk/banner_admin.php:236 tags/0.5.1/banner_admin.php:236
+#: tags/0.6.1/banner_admin.php:236 tags/0.6.0/banner_admin.php:236
+#, fuzzy
+msgid "<td>Impressions Purchased</td>"
+msgstr "Wie oft anzeigen?"
+
+#: tags/0.5.2/banner_admin.php:242 tags/0.5.2/banner_admin.php:245
+#: tags/0.5.3/banner_admin.php:242 tags/0.5.3/banner_admin.php:245
+#: tags/0.5.3/trunk/banner_admin.php:242 tags/0.5.3/trunk/banner_admin.php:245
+#: tags/0.5.1/banner_admin.php:242 tags/0.5.1/banner_admin.php:245
+#: tags/0.6.1/banner_admin.php:242 tags/0.6.1/banner_admin.php:245
+#: tags/0.6.0/banner_admin.php:242 tags/0.6.0/banner_admin.php:245
+#, fuzzy
+msgid "unlimited "
+msgstr "0 = kein Limit"
+
+#: tags/0.5.2/banner_admin.php:252 tags/0.5.3/banner_admin.php:252
+#: tags/0.5.3/trunk/banner_admin.php:252 tags/0.5.1/banner_admin.php:252
+#: tags/0.6.1/banner_admin.php:252 tags/0.6.0/banner_admin.php:252
+#, fuzzy
+msgid "<td>Start Date</td>"
+msgstr "von"
+
+#: tags/0.5.2/banner_admin.php:319 tags/0.5.3/banner_admin.php:319
+#: tags/0.5.3/trunk/banner_admin.php:319 tags/0.5.1/banner_admin.php:319
+#: tags/0.6.1/banner_admin.php:325 tags/0.6.0/banner_admin.php:319
+#, fuzzy
+msgid "<td>End Date</td>"
+msgstr "bis"
+
+#: tags/0.5.2/banner_admin.php:363 tags/1.1.0/banner_admin.php:243
+#: tags/0.5.3/banner_admin.php:363 tags/0.5.3/trunk/banner_admin.php:363
+#: tags/0.5.1/banner_admin.php:363 tags/0.6.1/banner_admin.php:370
+#: tags/0.6.0/banner_admin.php:363
+msgid "blank = no limit"
+msgstr "leer = kein Limit"
+
+#: tags/1.1.0/banner_admin.php:148
+msgid "Banner URL"
+msgstr "Banner URL"
+
+#: tags/1.1.0/banner_admin.php:186
+msgid "Ad Banner Data"
+msgstr "Daten des Werbebanner"
+
+#: tags/1.1.0/banner_admin.php:262
+msgid "in layout"
+msgstr "im Layout plazieren"
+
+#: tags/1.1.0/banner_admin.php:269
+msgid "WP Div ID"
+msgstr "WP div ID"
+
+#: tags/1.1.0/banner_admin.php:303
+msgid "This option works only with wp standard templates!"
+msgstr "Diese Option funktioniert nur mit Standard-Themes"

@@ -1,0 +1,334 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-banner\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-banner\n"
+"POT-Creation-Date: 2014-03-15 11:15:33+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-03-15 17:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Español\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: banner.php:71
+msgid "WP Banner Widget"
+msgstr ""
+
+#: banner.php:105
+msgid "Advertisement"
+msgstr "Promoción"
+
+#: banner.php:110
+msgid "Title:"
+msgstr "Título:"
+
+#: banner.php:112
+msgid "Client:"
+msgstr "Cliente:"
+
+#: banner.php:114
+msgid "No Ad"
+msgstr "No anuncio"
+
+#: banner.php:115
+msgid "Random"
+msgstr "casualamente"
+
+#: banner.php:172
+msgid "Place your Ad here"
+msgstr "Pon tu anuncio aqui"
+
+#: banner.php:347
+msgid "%s Settings %s"
+msgstr "%s Configuración %s"
+
+#: banner.php:348
+msgid "%s Donate %s"
+msgstr "%s Dona algo %s"
+
+#: banner_admin.php:160
+msgid "<h3>Update Banner</h3>"
+msgstr "<h3>Actualizar  anuncio</h3>"
+
+#: banner_admin.php:162
+msgid "<h3>Create New Banner</h3>"
+msgstr "<h3>Preparar promoción nueva</h3>"
+
+#: banner_admin.php:166
+msgid "Client Data"
+msgstr "Datos del cliente"
+
+#: banner_admin.php:170
+msgid "Existing&nbsp;client"
+msgstr "Cliente&nbsp;existente"
+
+#: banner_admin.php:173
+msgid "(clear)"
+msgstr "(vacío)"
+
+#: banner_admin.php:188
+msgid "<option>No Data</option>"
+msgstr "<option>No Datos</option>"
+
+#: banner_admin.php:192
+msgid "Select a banner to edit"
+msgstr "Elige un anuncio para editar"
+
+#: banner_admin.php:194
+msgid "Client&nbsp;name"
+msgstr "Nombre del&nbsp;cliente"
+
+#: banner_admin.php:198
+msgid "Give your banner a name"
+msgstr "Nombra tu anuncio"
+
+#: banner_admin.php:227
+msgid "Contract Data"
+msgstr "Datos de contrato"
+
+#: banner_admin.php:230
+msgid "Price"
+msgstr "Precio"
+
+#: banner_admin.php:233
+msgid "click"
+msgstr "clic"
+
+#: banner_admin.php:234
+msgid "view"
+msgstr "mostrados"
+
+#: banner_admin.php:235
+msgid "month"
+msgstr "mes"
+
+#: banner_admin.php:237
+msgid ""
+"Select your contract type<p>you are payed for each</p><ul>\n"
+"                                                                                      <li>* "
+"click <i>or</i></li>\n"
+"                                                                                      <li>* "
+"view <i>or</i></li>\n"
+"                                                                                      <li>* "
+"month</li>\n"
+"                                                                                      </"
+"ul>"
+msgstr ""
+"Elige tu tipo de contrato <p>pago por</p><ul>\n"
+"                                                                                      <li>* "
+"clic <i>o</i></li>\n"
+"                                                                                      <li>* "
+"mostrados <i>o</i></li>\n"
+"                                                                                      <li>* "
+"mes</li>\n"
+"                                                                                      </"
+"ul>"
+
+#: banner_admin.php:245
+msgid "Impressions Purchased"
+msgstr "Impresiones pagadas"
+
+#: banner_admin.php:247
+msgid "0 = unlimited"
+msgstr "0 = sin límite"
+
+#: banner_admin.php:248
+msgid "If you have have a limited pay per view contract put max views here"
+msgstr ""
+"Si tienes un contrato limitado por anuncios mostrados pon la cantidad "
+"mostrada aqui   "
+
+#: banner_admin.php:252
+msgid "Start Date"
+msgstr "Fecha inicial"
+
+#: banner_admin.php:262
+msgid "End Date"
+msgstr "Fecha final"
+
+#: banner_admin.php:272
+msgid "0 = no limit"
+msgstr "0 = sin límite"
+
+#: banner_admin.php:276
+msgid ""
+"Select a period of time where the banner is shown.<br> If end date is <i>0</"
+"i> the period is unlimited"
+msgstr ""
+"Elige un período de validez en que el anuncio esté mostrado.<br> Si la fecha "
+"es <i>0</i> significa sin límite"
+
+#: banner_admin.php:281
+msgid "Active"
+msgstr "Activo"
+
+#: banner_admin.php:286
+msgid "Yes"
+msgstr "Sí"
+
+#: banner_admin.php:287
+msgid "No"
+msgstr "No"
+
+#: banner_admin.php:289
+msgid "Activate or deactivate your banner"
+msgstr "Activa o desactiva tu anuncio"
+
+#: banner_admin.php:295
+msgid "Statistics"
+msgstr "Estadística"
+
+#: banner_admin.php:296
+msgid "Clicks"
+msgstr "Clics"
+
+#: banner_admin.php:296
+msgid "Views"
+msgstr "Mostrados"
+
+#: banner_admin.php:298
+msgid " Earnings"
+msgstr "Ingresos"
+
+#: banner_admin.php:299
+msgid "per month"
+msgstr "por mes"
+
+#: banner_admin.php:309
+msgid "Ad Banner Config"
+msgstr "Configuración de promoción"
+
+#: banner_admin.php:312
+msgid "Select Ad media type"
+msgstr "Tipo de media"
+
+#: banner_admin.php:317
+msgid "Choose a link to your banner image or insert the ad text"
+msgstr "Elige un enlace al anuncio o pon un texto"
+
+#: banner_admin.php:321
+msgid "Media type"
+msgstr "Tipo de media"
+
+#: banner_admin.php:331
+msgid "Banner Size"
+msgstr "Tamaño del anuncio"
+
+#: banner_admin.php:334
+msgid "necessary when using Flash"
+msgstr "necesario con Flash"
+
+#: banner_admin.php:340
+msgid "Click URL"
+msgstr "URL de clic"
+
+#: banner_admin.php:344
+msgid "Link to your ad counter or your ad provider"
+msgstr "Enlace al proveedor/contador del anuncio "
+
+#: banner_admin.php:348
+msgid "Position"
+msgstr "Posición"
+
+#: banner_admin.php:355
+msgid "in a widget"
+msgstr "en un widget"
+
+#: banner_admin.php:360
+msgid "Sticky"
+msgstr "Fijo"
+
+#: banner_admin.php:365
+msgid "Expert mode"
+msgstr "Modo para expertos"
+
+#: banner_admin.php:369
+msgid "Choose where you want to place your ad."
+msgstr "Elige donde posicionar el anuncio"
+
+#: banner_admin.php:371
+msgid "Select post for sticky banner"
+msgstr "Elige un articulo para un anuncio fijo"
+
+#: banner_admin.php:372
+msgid "First post"
+msgstr "Primer artículo"
+
+#: banner_admin.php:373
+msgid "Second post"
+msgstr "Segundo artículo"
+
+#: banner_admin.php:374
+msgid "Third post"
+msgstr "Tercer artículo"
+
+#: banner_admin.php:379
+msgid "Place your ad on your blog"
+msgstr "Posiciona el anuncio en tu blog"
+
+#: banner_admin.php:383
+msgid "Div ID"
+msgstr "ID de un tag DIV"
+
+#: banner_admin.php:419
+msgid "Append"
+msgstr "Adjutar"
+
+#: banner_admin.php:420
+msgid "Prepend"
+msgstr "Delante"
+
+#: banner_admin.php:421
+msgid "After"
+msgstr "Detrás"
+
+#: banner_admin.php:428
+msgid "in <b>%</b>"
+msgstr "en <b>%</b>"
+
+#: banner_admin.php:431
+msgid "This is not your real layout! <br/> This is only an abstract view"
+msgstr "Ese no es el diseño real! <br/> Mostra solo un modelo."
+
+#: banner_admin.php:431
+msgid ""
+"You should only use this option if you have knowledge of your theme layout!"
+msgstr ""
+"Usa esa opción si tienes profundos conocimientos del diseño de ese theme! "
+
+#: banner_admin.php:446
+msgid "really delete this banner?"
+msgstr "seguro que quieres borrar ese anuncio?"
+
+#: banner_admin.php:447
+msgid "Delete Banner"
+msgstr "Borrar anuncio"
+
+#: banner_admin.php:452
+msgid "Update Banner"
+msgstr "Actualizar anuncio"
+
+#: banner_admin.php:515
+msgid "Create New"
+msgstr "Anuncio nuevo"
+
+#: banner_admin.php:562
+msgid "Date of campaign start"
+msgstr "Fecha inicial de la campaña"
+
+#: banner_admin.php:568
+msgid "Date of campaign end. Leave field empty if its a never ending story"
+msgstr "Fecha final de la campaña"
+
+#: banner_admin.php:656
+msgid "close Banner-Window"
+msgstr "cierra Banner-Window"
+
+#: banner_admin.php:660
+msgid "open Banner-Window"
+msgstr "abre Banner-Window"

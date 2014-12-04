@@ -28,28 +28,28 @@ class Forms
     {
         $form = new Form('subscriptionFront' . $widgetId);
         // Subscriber
-        $form->addText('email', 'Your e-mail address')
+        $form->addText('email', '')
             ->setRequired('E-mail address is requried.')
             ->addRule(Form::EMAIL, 'Your e-mail address must be valid.');
-        if(array_key_exists('firstName', $fields)){ $form->addText('firstName', 'First Name'); }
-        if(array_key_exists('lastName', $fields)){ $form->addText('lastName', 'Last Name'); }
+        // if(array_key_exists('firstName', $fields)){ $form->addText('firstName', 'First Name'); }
+        // if(array_key_exists('lastName', $fields)){ $form->addText('lastName', 'Last Name'); }
         if(array_key_exists('age', $fields)){
             $form->addText('age', 'Age')
                 ->addCondition(Form::FILLED)
                     ->addRule(Form::INTEGER, 'Age must be a numeric number.')
                     ->addRule(Form::RANGE, 'Age should be between 8 and 120 years :).', array(5, 120));;
         }
-        if(array_key_exists('interests', $fields)){ $form->addTextarea('interests', 'Interests'); }
-        if(array_key_exists('location', $fields)){ $form->addText('location', 'Location'); }
+        // if(array_key_exists('interests', $fields)){ $form->addTextarea('interests', 'Interests'); }
+        // if(array_key_exists('location', $fields)){ $form->addText('location', 'Location'); }
         // Submit
-        $form->addSubmit('submit', pll__('nimeide'))->setAttribute('class', 'subscribeButton');
+        $form->addSubmit('submit', pll__('Submit your email'))->setAttribute('class', 'subscribeButton');
         // swap renderer for widgets
         if($widget == TRUE){
             $renderer = $form->getRenderer();
-            $renderer->wrappers['controls']['container'] = 'dl';
+            $renderer->wrappers['controls']['container'] = '';
             $renderer->wrappers['pair']['container'] = NULL;
-            $renderer->wrappers['label']['container'] = 'dt';
-            $renderer->wrappers['control']['container'] = 'dd';
+            $renderer->wrappers['label']['container'] = '';
+            $renderer->wrappers['control']['container'] = '';
         }
         return $form;
     }

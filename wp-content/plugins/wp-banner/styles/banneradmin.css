@@ -1,0 +1,226 @@
+#ad_banner{
+   width:650px;
+   float: left;
+}
+#banner-layout{
+   padding-top: 10px;
+   float: right;
+   margin: 0px;
+   padding: 0px;
+   width: 620px;
+   height: 720px
+}
+
+td {  margin:0px;
+      border: 0px;
+      padding:5px;
+   }
+.banner-error {
+  	border: 1px solid #c24949;
+	background-color: #ffbcbc;
+	border-style: solid;
+	margin:0px;
+	padding:0px;
+  }
+.banner-inlayout{
+   width:382px;
+   background: #E5DCFF;
+   display:none;
+   border-width: 2px;
+   border-color: red;
+   border-style: solid;
+}
+.banner-sticky{
+   width:150px;
+   background: #EFE0C9;
+   display:none;
+   margin-left: 30px;
+   border-width: 1px;
+   border-color: #CDC3B7;
+   border-style: solid;
+}
+
+    
+.banner-sticky  input[type=radio]{  
+         margin: 5px;
+}
+
+.banner-table {
+   padding:10px;
+   border:1px;
+}
+
+#adcontainer{
+   position: relative;
+   margin-left:25px;
+   height: 120px;
+   width: 100px;
+   border-style:solid;
+   border-width: 1px;
+   border-color:#888A85;
+}
+
+.banner-radiopos-tb{
+   width: 90px;
+   height: 10px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #C00000;
+   margin: 5px;
+}
+
+#banner-radiopos-container{
+   border-style:solid;
+   border-width: 1px;
+   border-color:blue;
+   height: 45px;
+   width: 60px;
+   margin: 5px;
+}
+/*avoid linebreak after jquery ui buttonset*/
+#banner-radiopos,#banner_active, #banner_mediatype, #banner_radiopos{
+   display: inline;
+}
+
+.hasDatepicker{
+   float:left;
+}
+
+.banner-radiopos-bottom{
+   position: absolute;
+ /*  top:  70%;*/
+   bottom: 0px;
+}
+
+.banner-radiopos-content{
+   width: 70px;
+   height: 75px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #C00000;
+   float: left;
+   margin-left: 5px;
+  
+}
+
+.banner-radiopos-side{
+   height: 75px;
+   width: 13px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #C00000;
+   float: right;
+   margin-right: 3px;
+}
+
+.banner-radiopos{
+   width: 15px;
+   height: 2px;
+   background: #000000;
+   margin: 5px;
+}
+
+.banner-ad{
+   height: 15px;
+   width: 30px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: red;
+   margin-top:3px;
+   font: 5px;
+   padding-left: 5px;
+}
+
+.banner-radiopospad{
+   margin-left: 9px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+}
+
+.banner-nospace{
+   margin:0px;
+   padding:0px;
+   float: left;
+}
+
+.banner-space{
+   float: left;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.ui-button-text{
+   font-size: 10px;
+}
+
+.banner-help-icon{
+   width: 18px;
+   height: 18px;
+   float:right;
+}
+
+/*.banner-nospace > input {
+   float: left;
+}*/
+
+
+.banner-maintable{
+   width: 620px;
+
+}
+
+tr:hover {
+   background-color:#DCDCDC;
+}
+
+.banner-fieldset{
+   border-style:solid; 
+   border-width:1px; 
+   padding:10px;
+   border-color:#996666;
+   margin-top:10px;
+  /* width: 588px; */
+}
+#banner_mediatype{
+   width: 430px;
+   height: 22px;
+}
+#bannerurl, #bannersize{
+    display:none;
+}
+#banner_url{
+   float: left;
+}
+
+#slider-horizontal{
+   width: 100%;
+}
+
+#banner_cliName{
+   position:absolute; 
+   width: 100px; 
+   height: 50px;
+    
+}
+
+#banner_cliSelect option{
+  /*background-color: #FFFF99;*/
+  opacity:0.6;
+  font-weight:normal;
+ 
+ filter:alpha(opacity=60);  /* For IE8 and earlier */
+}
+
+#banner_cliSelect:first-child{
+  background-color: #F2F2F2;
+  font-weight:bold;
+ /* opacity:0.6;*/
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+
+
+legend{
+   font-weight: bold;
+   color: #656439;
+}

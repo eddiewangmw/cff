@@ -1,0 +1,21 @@
+<img src="banneradsizes.png" width="580" height="545" border="0" usemap="#wpbannermap" />
+
+<map name="wpbannermap">
+<area shape="rect" coords="4,1,148,48" alt="3:1 Rectangle 300X100" ocnclick="wpBannerSize('300X100')" href="#" />
+<area shape="rect" coords="216,1,578,46" alt="Leaderboard 728x90" ocnclick="wpBannerSize('728x90')" href="#" />
+<area shape="rect" coords="3,57,233,85" alt="Full Banner 468x60" ocnclick="wpBannerSize('468x60')" href="#" />
+<area shape="rect" coords="244,57,357,84" alt="Half Banner 234x60" ocnclick="wpBannerSize('234x60')" href="#" />
+<area shape="rect" coords="366,54,423,173" alt="Vertical Banner 120x240" ocnclick="wpBannerSize('120x240')" href="#" />
+<area shape="rect" coords="433,56,578,179" alt="Medium Rectangle 300x250" ocnclick="wpBannerSize('300x250')" href="#" />
+<area shape="rect" coords="365,181,422,224" alt="Button 1 120x90" ocnclick="wpBannerSize('120x90')" href="#" />
+<area shape="rect" coords="367,233,425,259" alt="Button 2 120x60" ocnclick="wpBannerSize('120x60')" href="#" />
+<area shape="rect" coords="462,185,577,383" alt="Vertical Rectangle 240x400" ocnclick="wpBannerSize('240x400')" href="#" />
+<area shape="rect" coords="0,246,148,543" alt="Half Page Ad 300x600" ocnclick="wpBannerSize('300x600')" href="#" />
+<area shape="rect" coords="156,247,232,544" alt="Wide Skyscraper 160x600" ocnclick="wpBannerSize('160x600')" href="#" />
+<area shape="rect" coords="242,246,298,544" alt="Skyscraper 120x600" ocnclick="wpBannerSize('120x600')" href="#" />
+<area shape="rect" coords="317,246,360,261" alt="Micro Bar 88x31" ocnclick="wpBannerSize('88x31')" href="#" />
+<area shape="rect" coords="307,277,428,398" alt="Square Pop-Up 250x250" ocnclick="wpBannerSize('250x250')" href="#" />
+<area shape="rect" coords="305,406,472,543" alt="Large Rectangle 336x280" ocnclick="wpBannerSize('336x280')" href="#" />
+<area shape="rect" coords="491,406,578,479" alt="Rectangle 180x150" ocnclick="wpBannerSize('180x150')" href="#" />
+<area shape="rect" coords="519,483,578,544" alt="Squae Button 125x125" ocnclick="wpBannerSize('125x125')" href="#" />
+</map>
