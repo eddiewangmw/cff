@@ -322,7 +322,7 @@ get_header();
                             <div class="page-content">
 
                                 <?php the_content(); ?>
-
+<div id="next_page"></div>
                             </div>
 
                         <?php 

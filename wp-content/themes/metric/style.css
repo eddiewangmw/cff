@@ -208,6 +208,7 @@ Global Classes
 ----------------------------------------------------------------------------------------------------
 */
 .title,.title a,.widget_nav_menu li a{color:#c99a07;}
+.title a:hover,.widget_nav_menu li a:hover{color:#e50b18;}
 /* Floats */
 .float-left { float: left; }
 .float-right { float: right; }
@@ -1902,6 +1903,7 @@ Content
     
     font-size: 1.1em;
 }
+#next_page{float:right;}
 .page-content:after,
 .single-content:after {
     content: '';

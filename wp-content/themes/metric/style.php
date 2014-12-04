@@ -151,7 +151,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         
         /* CSS Common > Links */
         a { color: <?php echo $color_secondary; ?>; }
-        a:hover { color: <?php echo $color_primary; ?>; }
+        a:hover { color: #e50b18; }
         a.underline, .underline a { color: <?php echo $color_secondary; ?>; border-color: <?php echo $color_secondary; ?>; }
         a.underline:hover, .underline a:hover { color: <?php echo $color_primary; ?>; border-color: <?php echo $color_primary; ?>; }
         
