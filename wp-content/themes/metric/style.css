@@ -1886,11 +1886,18 @@ Content
 }
 
 /* Page & Single Content */
+.widget_nav_menu .current_page_item{
+	background:#e50b18;
+	color:#fff;
+}
+.widget_nav_menu li.current_page_item a{
+	color:#fff;
+}
 .page-content,
 .single-content {
     display: block;
     width: 100%;
-    margin: 0 auto 2em;
+    margin: 2em 0;
     clear: both;
     
     font-size: 1.1em;
@@ -1910,6 +1917,7 @@ Content
 .page-content p,
 .single-content p { 
     line-height: 1.6em;
+	color:#000;
 }
 
 .page-content blockquote,
@@ -4443,12 +4451,12 @@ only screen and (max-width: 400px) {
     background-image: url("images/icons/recaptcha/help.png");
 }
 /*ads*/
-.ad-home-top{margin-bottom:20px;}
-.ad-home-top img{width:100%;}
-.ad-home-footer {margin: 2em 0;}
-.ad-home-footer .sam-block-item{width: 32.6%;margin-right: 1%;}
-.ad-home-footer .sam-block-item img{width: 100%;}
-.ad-home-footer .sam-block-item:last-child{margin-right: 0;}
+.ad-normal-footer, .ad-home-top{margin-bottom:20px;}
+.ad-normal-footer img, .ad-home-top img{width:100%;}
+.ad-normal-footer, .ad-home-footer {margin: 2em 0;}
+.ad-normal-footer .sam-block-item, .ad-home-footer .sam-block-item{width: 32.6%;margin-right: 1%;}
+.ad-normal-footer .sam-block-item img, .ad-home-footer .sam-block-item img{width: 100%;}
+.ad-normal-footer .sam-block-item:last-child, .ad-home-footer .sam-block-item:last-child{margin-right: 0;}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),

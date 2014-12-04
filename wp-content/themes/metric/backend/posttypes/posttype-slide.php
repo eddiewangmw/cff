@@ -219,6 +219,7 @@ if (!function_exists('gp_columns_edit_slide')) {
 			'cb'				=> "<input type=\"checkbox\" />",
 			'title'				=> __('Slide Title', 'gp'),
 			'slide_caption'		=> __('Caption', 'gp'),
+			'slide_page'		=> __('Page', 'gp'),
 			'slide_url'			=> __('URL', 'gp'),
 			'author'			=> __('Author', 'gp'),
 			'date'				=> __('Date', 'gp'),
@@ -289,6 +290,7 @@ if (!function_exists('gp_columns_edit_sorting_slide')) {
 		return array(
 			'title'				=> 'title',
 			'slide_caption'		=> 'slide_caption',
+			'slide_page'		=> 'slide_page',
 			'slide_url'			=> 'slide_url',
 			'author'			=> 'author',
 			'date'				=> 'date'

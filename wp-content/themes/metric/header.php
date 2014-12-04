@@ -44,15 +44,7 @@
         <?php
         }
 	?>
-    
-    <?php
-        // if (gp_option('gp_toolbar_header') != 'false') {
- //            gp_start('div', array('toolbar', 'toolbar-header'));
- //                get_template_part('toolbar', 'header');
- //            gp_end('div', array('toolbar', 'toolbar-header'));
- //        }
-    ?>
-    
+   
     <div class="header">
     
         <div class="header-container">

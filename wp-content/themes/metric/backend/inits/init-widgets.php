@@ -104,6 +104,32 @@ if (function_exists('register_sidebar')) {
 		)
 	);
 	
+	// Ad > normal top-footer 
+	register_sidebar(
+		array(
+			'name' 				=> __('Ad normal page top-footer', 'gp'),
+			'description' 		=> __('Ad in normal page top-footer area.', 'gp'),
+			'id' 				=> 'widget-ad-normal-top-footer',
+			'before_widget' 	=> '<div id="%1$s" class=" %2$s slideshow-container clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title' => '<span style="display: none;">',
+			'after_title' => '</span>',
+		)
+	);
+	
+	// Ad > normal footer 
+	register_sidebar(
+		array(
+			'name' 				=> __('Ad normal page footer', 'gp'),
+			'description' 		=> __('Ad in normal page footer area.', 'gp'),
+			'id' 				=> 'widget-ad-normal-footer',
+			'before_widget' 	=> '<div id="%1$s" class=" %2$s slideshow-container clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title' => '<span style="display: none;">',
+			'after_title' => '</span>',
+		)
+	);
+	
 	// submenu about us page
 	register_sidebar(
 		array(

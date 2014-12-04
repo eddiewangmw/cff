@@ -134,7 +134,7 @@ if (!function_exists('gp_frontend_scripts')) {
             wp_enqueue_script('jquery-ui-tabs');
             
             // Homepage Scripts
-            if (is_page_template('template-home.php')) {
+            if (is_page_template('template-home.php')OR is_page_template('template-about-us-en.php') OR is_page_template('template-about-us-zh.php') ) {
 
 				// jQuery Revolution Slider Plugins
 				wp_register_script('gp-revolution-plugins', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.revolution.plugins.min.js', array('jquery'), '1.0.0', true);
@@ -212,7 +212,7 @@ if (!function_exists('gp_frontend_homepage_scripts')) {
 
     function gp_frontend_homepage_scripts() {
     
-        if (is_page_template('template-home.php')) {
+        if (is_page_template('template-home.php') OR is_page_template('template-about-us-en.php') OR is_page_template('template-about-us-zh.php') ) {
         
             // Variables
             if (gp_option('gp_slideshow_type') == 'fullwidth') {

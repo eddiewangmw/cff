@@ -45,7 +45,8 @@ get_header();
 								$gp_query_args = array(
 									'post_type'              => 'slide',
 									'posts_per_page'         => -1,
-									'exclude'=>get_the_ID()
+									'meta_key'    => 'gp_slide_page',
+									'meta_query' => array(array('key' => 'gp_slide_page','value'=>get_the_ID()))
 								);
 								query_posts($gp_query_args);
 
