@@ -60,7 +60,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         $color_background_dark_rgb = gp_hex_to_rgb($color_background_dark);
         
         // Color Text Light
-        if (get_theme_mod('gp_color_text_light')) { $color_text_light = get_theme_mod('gp_color_text_light'); } else { $color_text_light = '#ffffff'; }
+        if (get_theme_mod('gp_color_text_light')) { $color_text_light = get_theme_mod('gp_color_text_light'); } else { $color_text_light = '#c99a07'; }
         $color_text_light_rgb = gp_hex_to_rgb($color_text_light);
         
         // Color Text Dark
@@ -68,12 +68,13 @@ if (!function_exists('gp_frontend_styles_generate')) {
         $color_text_dark_rgb = gp_hex_to_rgb($color_text_dark);
         
         // Color Primary
-        if (get_theme_mod('gp_color_primary')) { $color_primary = get_theme_mod('gp_color_primary'); } else { $color_primary = '#ebcd37'; }
+        if (get_theme_mod('gp_color_primary')) { $color_primary = get_theme_mod('gp_color_primary'); } else { $color_primary = '#ffffff'; }
         $color_primary_rgb = gp_hex_to_rgb($color_primary);
         
         // Color Secondary
-        if (get_theme_mod('gp_color_secondary')) { $color_secondary = get_theme_mod('gp_color_secondary'); } else { $color_secondary = '#28a5a5'; }
-        $color_secondary_rgb = gp_hex_to_rgb($color_secondary);
+        if (get_theme_mod('gp_color_secondary')) { $color_secondary = get_theme_mod('gp_color_secondary'); } else { $color_secondary = '#e50b18'; }
+        // $color_secondary_rgb = gp_hex_to_rgb($color_secondary);
+        $color_secondary_rgb = "#6e5504";
         
         /*
         ----------------------------------------------------------------------------------------------------
@@ -118,7 +119,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         .pagination { font-family: "<?php echo $font_face; ?>", Helvetica, Arial, sans-serif !important; text-transform: <?php echo $text_transform; ?>; }
         
         /* Typography > Callouts */
-        .grid-callout-home .post .post-title-container { font-family: "<?php echo $font_face; ?>", Helvetica, Arial, sans-serif !important; text-transform: <?php echo $text_transform; ?>; }
+        .grid-callout-home .post .post-title-container { font-family: "<?php echo $font_face; ?>", Helvetica, Arial, sans-serif !important; text-transform: <?php echo $text_transform; ?>; color:#ffffff;}
         
 		<?php if (!empty($image_logo_2x)) { ?>
 		/* Retina Logo */
@@ -162,8 +163,8 @@ if (!function_exists('gp_frontend_styles_generate')) {
         blockquote cite { color: <?php echo $color_text_dark; ?>; }
         
         /* Forms */
-        button, .button a, #submit, #comment-submit, input[type="submit"] { color: <?php echo $color_text_light; ?> !important; background-color: <?php echo $color_primary; ?>; border-color: <?php echo $color_text_light; ?>; }
-        button:hover, .button a:hover, #submit:hover, #comment-submit:hover, input[type="submit"]:hover { background-color: <?php echo $color_secondary; ?> !important; border-color: <?php echo $color_secondary; ?>; }
+        button, .button a, #submit, #comment-submit, input[type="submit"] { color: #fff !important; background-color: <?php echo $color_primary; ?>; border-color: <?php echo $color_text_light; ?>; }
+        button:hover, .button a:hover, #submit:hover, #comment-submit:hover, input[type="submit"]:hover { background-color: rgb(138, 20, 20) !important; border-color: <?php echo $color_secondary; ?>; }
         
         /* Comments */
         .comments .comment-body { color: <?php echo $color_text_light; ?>; background-color: <?php echo $color_background_dark; ?>; }
@@ -247,7 +248,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         .slide.without-image { background-color: rgba(<?php echo $color_background_light_rgb; ?>,0.05); }
         .slide-caption .slide-title,
         .slide-caption .slide-title a { color: <?php echo $color_text_light; ?>; background-color: <?php echo $color_primary; ?> !important; }
-        .slide-caption .slide-description { background-color: <?php echo $color_secondary; ?>; }
+        .slide-caption .slide-description { color:#ffffff;background-color: <?php echo $color_secondary; ?>; }
         
         .tp-bullets.tp-thumbs { background-color: <?php echo $color_background_dark; ?>; }
         
@@ -355,7 +356,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         .input-captcha .rc-icon a:hover { background-color: <?php echo $color_primary; ?>; }
 
         /* Components > Overlay */
-        .overlay-back span.overlay-block { background-color: rgba(<?php echo $color_secondary_rgb; ?>,0.6); }
+        .overlay-back div.overlay-block { background-color: <?php echo $color_secondary_rgb; ?>; }
 
         <?php if (gp_option('gp_custom_css')) {	?>
         

@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 
     <div class="body-background"></div>
-    
+	<div class="container">
     <?php
         if (gp_option('gp_search') != 'false') {
         ?>
@@ -46,47 +46,36 @@
 	?>
     
     <?php
-        if (gp_option('gp_toolbar_header') != 'false') {
-            gp_start('div', array('toolbar', 'toolbar-header'));
-                get_template_part('toolbar', 'header');
-            gp_end('div', array('toolbar', 'toolbar-header'));
-        }
+        // if (gp_option('gp_toolbar_header') != 'false') {
+ //            gp_start('div', array('toolbar', 'toolbar-header'));
+ //                get_template_part('toolbar', 'header');
+ //            gp_end('div', array('toolbar', 'toolbar-header'));
+ //        }
     ?>
     
     <div class="header">
     
         <div class="header-container">
-        
-            <?php if (gp_option('gp_image_logo')) { ?>
                     
-                <div class="logo logo-image">
-                    
-                    <a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>">
-                        <img src="<?php echo gp_option('gp_image_logo'); ?>" alt="<?php echo get_bloginfo('name'); ?>" />
-                    </a>
-    
-                </div><!-- END // logo-image -->
+			<div class="logo logo-image float-left">
+
+			<a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>">
+			    <img src="<?php echo gp_option('gp_image_logo'); ?>" alt="<?php echo get_bloginfo('name'); ?>" />
+			</a>
+
+			</div><!-- END // logo-image -->
                 
-            <?php } else { ?>
+            <div class="float-right">
+	            <div class="switchlang"><?php dynamic_sidebar('widget-area-subscription'); ?></div>
+	            <nav id="navigation" class="navigation" role="navigation">
+                
+	                <div class="navigation-mobile-button"></div><!-- END // navigation-mobile-button -->
+	                <div class="navigation-mobile"></div><!-- END // navigation-mobile -->
             
-                <div class="logo logo-default">
-                    
-                    <a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>" />
-                    </a>
-                    
-                </div><!-- END // logo-default -->
+	                <?php gp_navigation(); ?>
                 
-            <?php } ?>
-            
-            <nav id="navigation" class="navigation" role="navigation">
-                
-                <div class="navigation-mobile-button"></div><!-- END // navigation-mobile-button -->
-                <div class="navigation-mobile"></div><!-- END // navigation-mobile -->
-            
-                <?php gp_navigation(); ?>
-                
-            </nav><!-- END // navigation -->
+	            </nav><!-- END // navigation -->
+			</div>
         
         </div><!-- END // header-container -->
     

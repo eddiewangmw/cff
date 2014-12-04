@@ -1530,12 +1530,4 @@ if (!function_exists('gp_comments_list')) {
 
 }
 
-/*
-====================================================================================================
-Init WooCommerce Functions
-====================================================================================================
-*/
-
-if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-    get_template_part('functions', 'woocommerce');
-}
+pll_register_string('Subscription button','Submit your email');

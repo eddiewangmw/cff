@@ -65,6 +65,32 @@ Register Widget Areas
 
 if (function_exists('register_sidebar')) {
 	
+	// Header > subscription
+	register_sidebar(
+		array(
+			'name' 				=> __('Subscription', 'gp'),
+			'description' 		=> __('Subscription widget area.', 'gp'),
+			'id' 				=> 'widget-area-subscription',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title' => '<span style="display: none;">',
+			'after_title' => '</span>',
+		)
+	);
+	
+	// Ad > home top 
+	register_sidebar(
+		array(
+			'name' 				=> __('Ad home top', 'gp'),
+			'description' 		=> __('Ad in home page top area.', 'gp'),
+			'id' 				=> 'widget-ad-home-top',
+			'before_widget' 	=> '<div id="%1$s" class=" %2$s slideshow-container clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title' => '<span style="display: none;">',
+			'after_title' => '</span>',
+		)
+	);
+	
 	// Sidebar > Page
 	register_sidebar(
 		array(

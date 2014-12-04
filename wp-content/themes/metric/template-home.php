@@ -13,7 +13,9 @@ Template Name:	    Homepage
 
 get_header();
 ?>
-
+	<div class="ads ad-home-top">
+		<?php dynamic_sidebar('widget-ad-home-top'); ?> 
+	</div>
 	<?php if (get_posts('post_type=slide')) { ?>
 
 		<?php
@@ -122,7 +124,7 @@ get_header();
 																if (!empty($slide_url)) {
 																?>
 
-																	<h2 class="slide-title">
+																	<h2 class="slide-title title">
 																		<a href="<?php echo $slide_url; ?>" title="<?php the_title_attribute(); ?>">
 																			<?php the_title(); ?>
 																		</a>
@@ -132,7 +134,7 @@ get_header();
 																} else {
 																?>
 
-																	<h2 class="slide-title without-link">
+																	<h2 class="slide-title title without-link">
 																		<?php the_title(); ?>
 																	</h2>
 
@@ -349,7 +351,7 @@ get_header();
 
                             $callout_title          = __(gp_meta('gp_callout_title'));
                             $callout_url            = __(gp_meta('gp_callout_url'));
-                            $callout_description    = __(gp_meta('gp_callout_description'));
+                            $callout_description    = __(gp_meta('gp_callout_desc'));
 
                             $callout_class = array('post', 'post-no-' . $callout_count, $class_thumbnail, $class_url);
                             ?>
@@ -362,22 +364,23 @@ get_header();
 
                                             <a href="<?php echo $callout_url; ?>" title="<?php the_title_attribute(); ?>">
                                                 <?php the_post_thumbnail('small-fixed'); ?>
-
+												
                                                 <?php if ($callout_title != '0') { ?>
 
-                                                    <span class="overlay-block">
+                                                    <div class="overlay-block">
 
-                                                        <span class="post-title">
-
-                                                            <span class="post-title-container">
-
+                                                        <div class="post-title">
+															
+                                                            <div class="post-title-container">
+																<h4><?php echo $callout_description;?></h4>
+																<span></span>
                                                                 <?php the_title(); ?>
 
-                                                            </span>
+                                                            </div>
 
-                                                        </span>
+                                                        </div>
 
-                                                    </span><!-- END // post-header -->
+                                                    </div><!-- END // post-header -->
 
                                                 <?php } ?>
 
@@ -402,73 +405,6 @@ get_header();
 
     <?php } ?>
 
-    <?php
-        if (have_posts()) {
-            while (have_posts()) {
-                the_post();
-
-                if (!empty($post->post_content)) {
-                ?>
-
-                    <?php gp_start('div', array('canvas', 'border-bottom')); ?>
-
-                        <div class="page-content">
-                            <?php the_content(); ?>
-                        </div><!-- END // page-content -->
-
-                    <?php gp_end('div', array('canvas', 'border-bottom')); ?>
-
-                <?php
-                }
-            } //while
-        } //if
-        wp_reset_query();
-    ?>
-
-    <?php
-        if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-            gp_start('div', array('canvas', 'grid-shop-home', 'border-bottom'));
-            ?>
-
-            <?php
-                // Type
-                if (gp_option('gp_shop_homepage_type')) {
-                    $shop_type = gp_option('gp_shop_homepage_type');
-                } else {
-                    $shop_type = 'recent';
-                }
-
-                if (gp_option('gp_shop_homepage_title_show') != 'false') {
-                    // Title
-                    if (gp_option('gp_shop_homepage_title')) {
-                        $shop_title = __(gp_option('gp_shop_homepage_title'));
-                    } else {
-                        $shop_title = __('Recent shop items', 'gp');
-                    }
-                    ?>
-
-                    <h2 class="title-home">
-                        <?php echo $shop_title; ?>
-                    </h2>
-
-                <?php
-                }
-            ?>
-
-            <?php
-                if (gp_option('gp_shop_homepage') != 'false') {
-                    if ($shop_type == 'featured') {
-                        echo do_shortcode("[featured_products per_page='4' columns='4']");
-                    } else {
-                        echo do_shortcode("[recent_products per_page='4' columns='4']");
-                    }
-                }
-            ?>
-
-            <?php
-            gp_end('div', array('canvas', 'grid-shop-home', 'border-bottom'));
-        }
-    ?>
 
     <?php if (get_posts('post_type=event') && gp_option('gp_event_homepage') != 'false') { ?>
 
@@ -481,12 +417,12 @@ get_header();
             $event_number = 2;
         } else if (wp_count_posts('event')->publish == 3) {
             $event_number = 3;
-        } else if (wp_count_posts('event')->publish == 4) {
-            $event_number = 4;
-        } else if (wp_count_posts('event')->publish > 4) {
-            $event_number = 4;
+        // } else if (wp_count_posts('event')->publish == 4) {
+            // $event_number = 4;
+        } else if (wp_count_posts('event')->publish > 3) {
+            $event_number = 3;
         } else {
-            $event_number = 4;
+            $event_number = 3;
         }
 
         // Title
@@ -739,231 +675,7 @@ get_header();
 
     <?php } ?>
 
-    <?php if (get_posts('post_type=album') && gp_option('gp_album_homepage') != 'false') { ?>
-
-        <?php gp_start('div', array('canvas', 'border-bottom')); ?>
-
-        <?php
-        if (wp_count_posts('album')->publish == 1) {
-            $album_number = 1;
-        } else if (wp_count_posts('album')->publish == 2) {
-            $album_number = 2;
-        } else if (wp_count_posts('album')->publish == 3) {
-            $album_number = 3;
-        } else if (wp_count_posts('album')->publish == 4) {
-            $album_number = 4;
-        } else if (wp_count_posts('album')->publish > 4) {
-            $album_number = 4;
-        } else {
-            $album_number = 4;
-        }
-
-        // Title
-        if (gp_option('gp_album_homepage_title')) {
-            $album_title = __(gp_option('gp_album_homepage_title'));
-        } else {
-            $album_title = __('Recent albums', 'gp');
-        }
-        ?>
-
-        <?php if (gp_option('gp_album_homepage_title_show') != 'false') { ?>
-
-            <h2 class="title-home">
-                <?php echo $album_title; ?>
-            </h2>
-
-        <?php } ?>
-
-        <div class="grid-post-home grid-album-home grid-album posts-no-<?php echo $album_number; ?>">
-
-            <?php
-            global $post;
-
-            // Counter
-            $album_count = 1;
-
-            // Query
-            $gp_query_args = array(
-                'post_type'             => 'album',
-                'post_status'           => 'publish',
-                'order'				    => 'DESC',
-                'orderby'               => 'date',
-                'ignore_sticky_posts'   => 1,
-                'posts_per_page'        => $album_number
-            );
-
-            query_posts($gp_query_args);
-
-            // Loop
-            if (have_posts()) {
-                while (have_posts()) {
-                    the_post();
-
-                    $album_artist				= __(gp_meta('gp_album_artist'));
-                    $album_release_date	        = gp_meta('gp_album_release_date');
-
-                    $post_class = array('post', 'post-' . $album_count);
-                    ?>
-
-                    <article <?php post_class($post_class); ?>>
-
-                        <?php if (has_post_thumbnail()) { ?>
-
-                            <div class="post-image overlay">
-
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                    <?php the_post_thumbnail('small-square'); ?>
-                                    <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                </a>
-
-                            </div><!-- END // post-image -->
-
-                        <?php } ?>
-
-                        <div class="post-content">
-
-                            <h2 class="post-header">
-
-                                <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-
-                            </h2><!-- END // post-header -->
-
-                            <?php if (!empty($album_artist)) { ?>
-
-                                <div class="post-artist">
-
-                                    <strong><?php echo $album_artist; ?></strong>
-
-                                </div><!-- END // post-artist -->
-
-                            <?php } ?>
-
-                            <?php if (!empty($album_release_date)) { ?>
-
-                                <div class="post-meta">
-
-                                    <?php get_template_part('date', 'album'); ?>
-
-                                </div><!-- END // post-meta -->
-
-                            <?php } ?>
-
-                            <?php if (function_exists('zilla_likes')) { ?>
-
-                                <div class="post-likes">
-
-                                    <?php zilla_likes(); ?>
-
-                                </div><!-- END // post-likes -->
-
-                            <?php } ?>
-
-                        </div><!-- END // post-content -->
-
-                    </article>
-
-                    <?php
-                    $album_count++;
-                } // while
-            } // if
-            wp_reset_query();
-            ?>
-
-        </div><!-- END // grid-album-home -->
-
-        <?php gp_end('div', array('canvas', 'border-bottom')); ?>
-
-    <?php } ?>
-
-    <?php if (gp_option('gp_post_homepage') != 'false') { ?>
-
-        <?php gp_start('div', 'canvas'); ?>
-
-        <?php
-        if (wp_count_posts()->publish == 1) {
-            $post_number = 1;
-        } else if (wp_count_posts()->publish == 2) {
-            $post_number = 2;
-        } else if (wp_count_posts()->publish == 3) {
-            $post_number = 3;
-        } else if (wp_count_posts()->publish == 4) {
-            $post_number = 4;
-        } else if (wp_count_posts()->publish > 4) {
-            $post_number = 4;
-        } else {
-            $post_number = 4;
-        }
-
-        // Title
-        if (gp_option('gp_post_homepage_title')) {
-            $post_title = __(gp_option('gp_post_homepage_title'));
-        } else {
-            $post_title = __('Recent posts', 'gp');
-        }
-        ?>
-
-        <?php if (gp_option('gp_post_homepage_title_show') != 'false') { ?>
-
-            <h2 class="title-home">
-                <?php echo $post_title; ?>
-            </h2>
-
-        <?php } ?>
-
-        <div class="grid-post-home posts-no-<?php echo $post_number; ?>">
-
-            <?php
-            global $post;
-
-            // Counter
-            $post_count = 1;
-
-            // View Type
-            $view_type = 'grid';
-            $view_page = 'home';
-
-            // Query
-            $gp_query_args = array(
-                'ignore_sticky_posts'	=> 1,
-                'posts_per_page'		=> $post_number
-            );
-
-            query_posts($gp_query_args);
-
-            // Loop
-            if (have_posts()) {
-                while (have_posts()) {
-                    the_post();
-
-                    $post_class = array('post-no-' . $post_count);
-                    ?>
-
-                    <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
-
-                        <?php
-                        if (!get_post_format()) {
-                            get_template_part('content', 'standard');
-                        } else {
-                            get_template_part('content', get_post_format());
-                        }
-                        ?>
-
-                    </article><!-- END // post -->
-
-                    <?php
-                    $post_count++;
-                } // while
-            } // if
-            wp_reset_query();
-            ?>
-
-        </div><!-- END // grid-post-home -->
-
-        <?php gp_end('div', 'canvas'); ?>
-
-    <?php } ?>
+   
 
 <?php
 get_footer();

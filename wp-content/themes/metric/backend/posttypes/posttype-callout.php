@@ -110,6 +110,12 @@ if (!function_exists('gp_register_metabox_callout')) {
 					'desc'				=> __('Insert the URL you wish to link to.', 'gp'),
 					'id'				=> GP_SHORTNAME . '_callout_url',
 					'type'				=> 'input'
+				),
+				array(
+					'name'				=> __('The Description', 'gp'),
+					'desc'				=> __('Insert description.', 'gp'),
+					'id'				=> GP_SHORTNAME . '_callout_desc',
+					'type'				=> 'input'
 				)
 			)
 		);

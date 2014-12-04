@@ -207,7 +207,7 @@ a.underline:hover,
 Global Classes
 ----------------------------------------------------------------------------------------------------
 */
-
+.title,.title a{color:#c99a07;}
 /* Floats */
 .float-left { float: left; }
 .float-right { float: right; }
@@ -790,6 +790,10 @@ Common
 */
 
 /* Containers */
+.container{width: 960px;
+padding: 0 10px;
+margin: 0 auto;
+	background: #fff;}
 .grid {
     padding-bottom: 2%;
     overflow: visible;
@@ -963,7 +967,7 @@ Containers
 .footer-container,
 .block-container,
 .copyright-container {
-    width: 1260px;
+    width: 100%;
     padding: 0 40px;
     margin: 0 auto;
 }
@@ -1306,6 +1310,7 @@ Header
 .header-container {
 	display: table;
 	margin: 0 auto;
+	background: #fff;
 }
 
 /*
@@ -1351,6 +1356,7 @@ Navigation
     margin: 0;
     font-size: 0;
     z-index: 99999;
+	float:right;
 }
 
 /*
@@ -1743,6 +1749,24 @@ Navigation - Categories
     padding-left: 2.5em;
 }
 
+/*switch lang*/
+.switchlang li{float:left;}
+.switchlang li:first-child{padding-right: 10px;border-right: 1px solid #fff;}
+.switchlang li:last-child{padding-left: 10px;}
+.switchlang li a{text-decoration:none;}
+
+.switchlang .widget-block{float:right;clear:both;margin: 5px;}
+.switchlang .widgetGuts{display: table-cell;float: right;}
+.switchlang .widgetGuts form input {
+float: left;
+width: auto;
+padding: 5px;
+margin: 0;
+height: 30px;
+border: 1px solid red;
+}
+.switchlang .widgetGuts form input[type="submit"]{background:red;font-size: 1em;}
+/*.switchlang .widgetGuts form input:first-child{width:auto;}*/
 /*
 ====================================================================================================
 Titles
@@ -1783,7 +1807,7 @@ Canvas
 */
 
 .canvas {
-    float: left;
+/*    float: left;*/
 	display: block;
     width: 100%;
     clear: both;
@@ -1800,6 +1824,7 @@ Canvas
 	display: block;
 	padding-top: 3em;
 	padding-bottom: 3em;
+	background: #fff;
 }
 .canvas.border-bottom {
     border-bottom: 1px solid rgba(0,0,0,0.15);
@@ -1922,8 +1947,7 @@ Slideshow
 ====================================================================================================
 */
 
-.slideshow {
-    float: left;
+.slideshow , .ad-home-top{
 	display: block;
     width: 100%;
     overflow: hidden;
@@ -1935,9 +1959,11 @@ Slideshow
 .slideshow-container {
 	display: block;
 	position: relative;
-	padding: 0 40px;
+/*	padding: 0 40px;*/
+	padding:0;
 	overflow: hidden;
     z-index: 1;
+	background: #fff;
 }
 
 .slideshow-container.fullwidth {
@@ -2650,10 +2676,26 @@ Callout Grid Home
 }
 .grid-callout-home .post .post-title-container {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: bottom;
     font-size: 1.3em;
     font-weight: 400;
-    padding: 0 2em;
+	text-align: left;
+	padding: 0 1em;
+}
+
+.grid-callout-home .post .post-title-container h4{
+    font-size: 1.1em;
+	height:60%;
+}
+
+.grid-callout-home .post .post-title-container>span{
+	float: left;
+	width: 5px;
+	height: 25px;
+	margin: 0;
+	text-align: center;
+	background: red;
+	margin-right: 10px;
 }
 
 /* Post Image */
@@ -4389,7 +4431,9 @@ only screen and (max-width: 400px) {
 .input-captcha .rc-icon.help a {
     background-image: url("images/icons/recaptcha/help.png");
 }
-
+/*ads*/
+.ad-home-top{margin-bottom:20px;}
+.ad-home-top img{width:100%;}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -4483,8 +4527,8 @@ Overlays
 }
 
 /* Overlay Block */
-.overlay span.overlay-block,
-.overlay-back span.overlay-block {
+.overlay div.overlay-block,
+.overlay-back div.overlay-block {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -4500,21 +4544,21 @@ Overlays
 	background-repeat: repeat;
 }
 
-.overlay-back span.overlay-block {
+.overlay-back div.overlay-block {
     display: block;
     background-image: none;
 }
 
-.ie7 .overlay:hover span.overlay-block,
-.ie8 .overlay:hover span.overlay-block,
-.ie9 .overlay:hover span.overlay-block { display: block; }
+.ie7 .overlay:hover div.overlay-block,
+.ie8 .overlay:hover div.overlay-block,
+.ie9 .overlay:hover div.overlay-block { display: block; }
 
-.ie7 .overlay-back:hover span.overlay-block,
-.ie8 .overlay-back:hover span.overlay-block,
-.ie9 .overlay-back:hover span.overlay-block { display: none; }
+.ie7 .overlay-back:hover div.overlay-block,
+.ie8 .overlay-back:hover div.overlay-block,
+.ie9 .overlay-back:hover div.overlay-block { display: none; }
 
 /* Overlay Icon */
-.overlay span.overlay-icon {
+.overlay div.overlay-icon {
 	position: absolute;
 	display: block;
 	top: 0;
@@ -4526,7 +4570,7 @@ Overlays
 	background-position: center center;
 	background-repeat: no-repeat;	
 }
-.overlay.overlay-video span.overlay-icon {
+.overlay.overlay-video div.overlay-icon {
     background-image: url("images/icons/overlay-play.png");
 }
 
@@ -4747,14 +4791,14 @@ only screen and (min-resolution: 2dppx) {
 	}
 	
 	/* Overlay */
-	.overlay span.overlay-icon {
+	.overlay div.overlay-icon {
 		background-image: url("images/icons/overlay-plus@2x.png");
 		-webkit-background-size: 48px 48px;
 		-moz-background-size: 48px 48px;
 		-o-background-size: 48px 48px;
 		background-size: 48px 48px;
 	}
-	.overlay.overlay-video span.overlay-icon { background-image: url("images/icons/overlay-play@2x.png"); }
+	.overlay.overlay-video div.overlay-icon { background-image: url("images/icons/overlay-play@2x.png"); }
 	
 	/* Back to Top Button */
 	.back-to-top {
@@ -4902,6 +4946,7 @@ only screen and (max-width: 1024px) {
 @media
 only screen and (max-width: 768px) {
     
+	.container{width:auto;}
     .toolbar-container,
     .header-container,
     .title-container,
