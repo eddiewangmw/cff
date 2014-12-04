@@ -367,20 +367,20 @@ get_header();
 												
                                                 <?php if ($callout_title != '0') { ?>
 
-                                                    <div class="overlay-block">
+                                                    <span class="overlay-block">
 
-                                                        <div class="post-title">
+                                                        <span class="post-title">
 															
-                                                            <div class="post-title-container">
+                                                            <span class="post-title-container">
 																<h4><?php echo $callout_description;?></h4>
 																<span></span>
                                                                 <?php the_title(); ?>
 
-                                                            </div>
+                                                            </span>
 
-                                                        </div>
+                                                        </span>
 
-                                                    </div><!-- END // post-header -->
+                                                    </span><!-- END // post-header -->
 
                                                 <?php } ?>
 
@@ -435,19 +435,38 @@ get_header();
 
         <?php if (gp_option('gp_event_homepage_title_show') != 'false') { ?>
 
-            <h2 class="title-home">
+            <h2 class="title-home title">
                 <?php echo $event_title; ?>
             </h2>
 
         <?php } ?>
 
-        <div class="grid-post-home grid-event-home grid-event-upcoming grid-event posts-no-<?php echo $event_number; ?>">
+        <div class="grid-post-home grid-event-home grid-event-upcoming grid-event posts-no-4">
+			<?php $slide_image_helper	= get_template_directory_uri() . '/images/downsb.png';?>
+			
+			<article class="event type-event status-publish hentry event-upcoming post event-download">
 
+
+			<div class="post-content">
+				<img src="<?php echo $slide_image_helper;?>"></img>
+
+			<div class="post-footer">
+			<div class="post-buy button">
+			<a href="http://cff.com/?event=aarons-tribute-rock-fest" target="_blank">
+			READ MORE
+			</a>
+			</div>
+			</div>
+
+			</div><!-- END // post-content -->
+
+			</article>
         <?php
         global $post;
 
+		
         // Counter
-        $event_count = 1;
+        $event_count = 0;
 
         // Current Date
         $current_date = date('Y/m/d', current_time('timestamp'));
@@ -504,7 +523,7 @@ get_header();
                     $thumbnail_size = 'small-fixed';
                 }
 
-                $post_class = array('event-upcoming', 'post', 'post-' . $event_count);
+                $post_class = array('event-upcoming', 'post', 'post-' . ($event_count+1));
                 ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
@@ -552,13 +571,9 @@ get_header();
 
                             <?php get_template_part('date', 'event'); ?>
 
-                            <?php if (!empty($event_time)) { ?>
-
                                 <small class="post-time">
-                                    <?php echo $event_time; ?>
+                                    <?php echo $event_time ? $event_time : ''; ?>
                                 </small><!-- END // post-time -->
-
-                            <?php } ?>
 
                         </h3><!-- END // post-date -->
 
@@ -578,45 +593,10 @@ get_header();
 
                         </h2><!-- END // post-header -->
 
-                        <?php if (!empty($event_venue)) { ?>
-
-                            <?php if (!empty($event_venue_url)) { ?>
-
-                                <div class="post-venue">
-                                    <a href="<?php echo $event_venue_url; ?>" title="<?php echo $event_venue; ?>" target="_blank">
-                                        <?php echo $event_venue; ?>
-                                    </a>
-                                </div><!-- END // post-venue -->
-
-                            <?php } else { ?>
-
-                                <div class="post-venue">
-                                    <?php echo $event_venue; ?>
-                                </div><!-- END // post-venue -->
-
-                            <?php } ?>
-
-                        <?php } ?>
-
-                        <?php if (!empty($event_location)) { ?>
-
-                            <div class="post-location">
-                                <?php echo $event_location; ?>
-                            </div><!-- END // post-location -->
-
-                        <?php } ?>
-
                         <div class="post-excerpt">
                             <?php the_excerpt(); ?>
                         </div><!-- END // post-excerpt -->
 
-                        <?php if (!empty($event_status)) { ?>
-
-                            <div class="post-status">
-                                <?php echo $event_status; ?>
-                            </div><!-- END // post-status -->
-
-                        <?php } ?>
 
                         <?php if (!empty($event_buy_text_1) && !empty($event_buy_url_1) || !empty($event_buy_text_2) && !empty($event_buy_url_2)) { ?>
 
@@ -645,19 +625,14 @@ get_header();
                             </div><!-- END // post-footer -->
 
                         <?php } ?>
-
-                        <?php
-                        if (function_exists('zilla_likes')) {
-                            ?>
-
-                            <div class="post-likes">
-                                <?php zilla_likes(); ?>
-                            </div><!-- END // post-likes -->
-
-                        <?php
-                        }
-                        ?>
-
+						 <div class="post-footer">
+                        <div class="post-buy button">
+                            <a href="<?php echo the_permalink(); ?>" target="_blank">
+                               READ MORE
+                            </a>
+                        </div>
+					</div>
+						
                     </div><!-- END // post-content -->
 
                 </article>
@@ -670,12 +645,14 @@ get_header();
         ?>
 
         </div><!-- END // grid-event-home -->
-
+		
         <?php gp_end('div', array('canvas', 'border-bottom')); ?>
 
     <?php } ?>
 
-   
+<div class="ads ad-home-footer">
+	<?php dynamic_sidebar('widget-ad-home-footer'); ?> 
+</div>  
 
 <?php
 get_footer();

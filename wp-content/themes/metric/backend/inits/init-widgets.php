@@ -91,6 +91,19 @@ if (function_exists('register_sidebar')) {
 		)
 	);
 	
+	// Ad > home top 
+	register_sidebar(
+		array(
+			'name' 				=> __('Ad home footer', 'gp'),
+			'description' 		=> __('Ad in home page footer area.', 'gp'),
+			'id' 				=> 'widget-ad-home-footer',
+			'before_widget' 	=> '<div id="%1$s" class=" %2$s slideshow-container clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title' => '<span style="display: none;">',
+			'after_title' => '</span>',
+		)
+	);
+	
 	// Sidebar > Page
 	register_sidebar(
 		array(

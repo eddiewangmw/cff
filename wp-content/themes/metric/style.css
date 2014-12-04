@@ -793,7 +793,8 @@ Common
 .container{width: 960px;
 padding: 0 10px;
 margin: 0 auto;
-	background: #fff;}
+	background: #fff;height: 100%;}
+	
 .grid {
     padding-bottom: 2%;
     overflow: visible;
@@ -968,7 +969,7 @@ Containers
 .block-container,
 .copyright-container {
     width: 100%;
-    padding: 0 40px;
+    padding: 0;
     margin: 0 auto;
 }
 
@@ -1304,7 +1305,7 @@ Header
     display: block;
     width: 100%;
     clear: both;
-    
+    padding-top: 30px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .header-container {
@@ -1776,7 +1777,6 @@ Titles
 .title {
     float: left;
     width: 100%;
-    padding: 2em 0;
     clear: both;
     
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1822,12 +1822,12 @@ Canvas
 }
 .canvas-container {
 	display: block;
-	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-top: 1em;
+/*	padding-bottom: 1.5em;*/
 	background: #fff;
 }
 .canvas.border-bottom {
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+/*    border-bottom: 1px solid rgba(0,0,0,0.15);*/
 }
 
 /*
@@ -2401,7 +2401,7 @@ Common
 
 /* Post Header */
 .post-header {
-    font-size: 1.6em;
+    font-size: 1.3em;
     line-height: 1.6em;
     padding: 0;
     margin: 0 0 1em;
@@ -2534,6 +2534,7 @@ Common
     padding: 0.5em 1em;
     font-size: 1.2em;
     text-decoration: none;
+	text-align:center;
 }
 
 /* Post Tags */
@@ -2795,7 +2796,13 @@ Post Grid Home
 .grid-post-home.posts-no-3 .post { width: 30.66%; }
 .grid-post-home.posts-no-4 .post { width: 22.00%; }
 .grid-post-home.posts-no-5 .post { width: 16.8%; }
-
+.grid-post-home .event-download img{width:100%;}
+.grid-post-home .event-download .post-content{position:relative;}
+.grid-post-home .event-download .post-footer{position: absolute;
+bottom: 0;
+width: 100%;
+margin: 0;
+padding: 0;}
 /* Post Content */
 .grid-post-home .post-content {
     padding: 0;
@@ -2922,9 +2929,10 @@ Common
 .grid-event .post-date,
 .list-event .post-date {
     margin-top: 0;
-    font-size: 1.6em;
+    font-size: 1em;
     font-style: normal;
     font-weight: 700;
+	height:35px;
 }
 
 /* Post Time */
@@ -2968,12 +2976,14 @@ Upcoming Events
 
 /* Post Header */
 .grid-event-upcoming .post-header {
-    padding: 0.5em 0;
+	padding: 0.2em 0;
+	height: 30px;
+	overflow: hidden;
 }
 
 /* Post Excerpt */
-.grid-event-upcoming .post-excerpt {
-    margin: 2em 0 0 0;
+.grid-event-upcoming .post-excerpt,.grid-event-upcoming .post-excerpt p {
+    margin: 0 0 0 0;
 }
 
 /* Post Footer */
@@ -3539,10 +3549,11 @@ Footer
 */
 
 .footer {
-    float: left;
+/*    float: left;*/
     display: block;
     width: 100%;
     clear: both;
+	padding-top: 50px
 }
 
 /*
@@ -3552,7 +3563,7 @@ Copyright
 */
 
 .copyright {
-    float: left;
+/*    float: left;*/
     display: block;
     width: 100%;
     clear: both;
@@ -4434,6 +4445,10 @@ only screen and (max-width: 400px) {
 /*ads*/
 .ad-home-top{margin-bottom:20px;}
 .ad-home-top img{width:100%;}
+.ad-home-footer {margin: 2em 0;}
+.ad-home-footer .sam-block-item{width: 32.6%;margin-right: 1%;}
+.ad-home-footer .sam-block-item img{width: 100%;}
+.ad-home-footer .sam-block-item:last-child{margin-right: 0;}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -4527,8 +4542,8 @@ Overlays
 }
 
 /* Overlay Block */
-.overlay div.overlay-block,
-.overlay-back div.overlay-block {
+.overlay span.overlay-block,
+.overlay-back span.overlay-block {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -4544,21 +4559,21 @@ Overlays
 	background-repeat: repeat;
 }
 
-.overlay-back div.overlay-block {
+.overlay-back span.overlay-block {
     display: block;
     background-image: none;
 }
 
-.ie7 .overlay:hover div.overlay-block,
-.ie8 .overlay:hover div.overlay-block,
-.ie9 .overlay:hover div.overlay-block { display: block; }
+.ie7 .overlay:hover span.overlay-block,
+.ie8 .overlay:hover span.overlay-block,
+.ie9 .overlay:hover span.overlay-block { display: block; }
 
-.ie7 .overlay-back:hover div.overlay-block,
-.ie8 .overlay-back:hover div.overlay-block,
-.ie9 .overlay-back:hover div.overlay-block { display: none; }
+.ie7 .overlay-back:hover span.overlay-block,
+.ie8 .overlay-back:hover span.overlay-block,
+.ie9 .overlay-back:hover span.overlay-block { display: none; }
 
 /* Overlay Icon */
-.overlay div.overlay-icon {
+.overlay span.overlay-icon {
 	position: absolute;
 	display: block;
 	top: 0;
@@ -4570,7 +4585,7 @@ Overlays
 	background-position: center center;
 	background-repeat: no-repeat;	
 }
-.overlay.overlay-video div.overlay-icon {
+.overlay.overlay-video span.overlay-icon {
     background-image: url("images/icons/overlay-play.png");
 }
 
@@ -4791,14 +4806,14 @@ only screen and (min-resolution: 2dppx) {
 	}
 	
 	/* Overlay */
-	.overlay div.overlay-icon {
+	.overlay span.overlay-icon {
 		background-image: url("images/icons/overlay-plus@2x.png");
 		-webkit-background-size: 48px 48px;
 		-moz-background-size: 48px 48px;
 		-o-background-size: 48px 48px;
 		background-size: 48px 48px;
 	}
-	.overlay.overlay-video div.overlay-icon { background-image: url("images/icons/overlay-play@2x.png"); }
+	.overlay.overlay-video span.overlay-icon { background-image: url("images/icons/overlay-play@2x.png"); }
 	
 	/* Back to Top Button */
 	.back-to-top {

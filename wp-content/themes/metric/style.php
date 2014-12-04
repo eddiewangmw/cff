@@ -263,7 +263,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         
         .post-share li a { background-color: <?php echo $color_primary; ?>; }
         .post-share li a:hover { background-color: <?php echo $color_secondary; ?>; }
-        .post-buy.button a { color: <?php echo $color_text_light; ?>; background-color: <?php echo $color_background_dark; ?>; }
+        .post-buy.button a { color: #fff; background-color: red; }
         .post-buy.button a:hover { background-color: <?php echo $color_secondary; ?>; border-color: <?php echo $color_text_light; ?>; }
         
         /* Posts > Callouts */
@@ -356,7 +356,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         .input-captcha .rc-icon a:hover { background-color: <?php echo $color_primary; ?>; }
 
         /* Components > Overlay */
-        .overlay-back div.overlay-block { background-color: <?php echo $color_secondary_rgb; ?>; }
+        .overlay-back span.overlay-block { background-color: <?php echo $color_secondary_rgb; ?>; }
 
         <?php if (gp_option('gp_custom_css')) {	?>
         
