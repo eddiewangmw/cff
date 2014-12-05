@@ -49,23 +49,10 @@ get_header();
         
         <div class="content-event <?php echo $content_class; ?>" role="main">
             
-            <?php
-                if (term_description()) {
-                ?>
-                    
-                    <div class="page-content">
-                        
-                        <?php echo term_description(); ?>
-                        
-                    </div>
-                    
-                <?php
-                }
-            ?>
             
             <?php if ($view_type == 'grid') { ?>
             
-               <div class="grid-event grid-event-upcoming clearfix <?php echo $grid_class; ?>">
+               <div class="grid-event grid-event-upcoming clearfix">
                 
             <?php } else if ($view_type == 'list') { ?>
             
@@ -125,9 +112,18 @@ get_header();
                 
                 // Loop
                 if (have_posts()) {
+					$day_check = '';
+					$i = 1;
                     while (have_posts()) {
                         the_post();
                 
+						$day = gp_meta('gp_event_date');
+
+						if ($day != $day_check) {
+							$i = 1;
+						    echo '<div class="date-hr">'.$day . '</div>';
+						  }
+						  
                         $event_time					= __(gp_meta('gp_event_time'));
                         $event_venue				= __(gp_meta('gp_event_venue'));
                         $event_venue_url			= __(gp_meta('gp_event_location_url'));
@@ -179,10 +175,11 @@ get_header();
                             }
                             
                         }
+						array_push($post_class,'grid'.$i);
                         ?>
                         
                             <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
-                                
+								
                                 <?php if ($view_type == 'grid') { ?>
                                 
                                     <div class="tile-block">
@@ -255,30 +252,6 @@ get_header();
                                                 <?php } ?>
                                                 
                                             </h2><!-- END // post-header -->
-                                        
-                                            <?php if (!empty($event_venue)) { ?>
-                                                
-                                                <?php if (!empty($event_venue_url)) { ?>
-                                            
-                                                    <div class="post-venue">
-                                                        
-                                                        <a href="<?php echo $event_venue_url; ?>" title="<?php echo $event_venue; ?>" target="_blank">
-                                                            <?php echo $event_venue; ?>
-                                                        </a>
-                                                        
-                                                    </div><!-- END // post-venue -->
-                                                
-                                                <?php } else { ?>
-                                                
-                                                    <div class="post-venue">
-                                                        
-                                                        <?php echo $event_venue; ?>
-                                                        
-                                                    </div><!-- END // post-venue -->
-                                                
-                                                <?php } ?>
-                                                
-                                            <?php } ?>
                                             
                                             <?php if (!empty($event_location)) { ?>
     
@@ -346,173 +319,14 @@ get_header();
 
                                     </div><!-- END // tile-block -->
                                     
-                                <?php } else if ($view_type == 'list') { ?>
-                                    
-                                    <?php if (gp_option('gp_event_thumbnail') != 'false') { ?>
-                                            
-                                        <?php if (has_post_thumbnail()) { ?>
-                                
-                                            <div class="post-image overlay">
-                                            
-                                                <?php if (gp_option('gp_event_single') != 'false') { ?>
-                                                    
-                                                    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                                        <?php the_post_thumbnail('small-fixed'); ?>
-                                                        <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                    </a>
-                                                    
-                                                <?php } else if (gp_option('gp_event_single') == 'false' || gp_option('gp_event_single') == '' && has_post_thumbnail()) { ?>
-                                                    
-                                                    <span class="lightbox">
-                                                        <a href="<?php echo $original_image_url[0]; ?>" title="<?php the_title_attribute(); ?>">
-                                                            <?php the_post_thumbnail('small-fixed'); ?>
-                                                            <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                        </a>
-                                                    </span>
-                                                    
-                                                <?php } else { ?>
-                                                    
-                                                    <?php the_post_thumbnail('small-fixed'); ?>
-                                                    <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                    
-                                                <?php } ?>
-
-                                            </div><!-- END // post-image -->
-                                        
-                                        <?php } ?>
-                                        
-                                    <?php } ?>
-                                    
-                                    <div class="post-header">
-                                        
-                                        <div class="inner">
-        
-                                            <h5 class="post-date">
-                                                
-                                                <?php get_template_part('date', 'event'); ?>
-                                                
-                                            </h5><!-- END // post-date -->
-                                            
-                                            <h2 class="post-title">
-                                                
-                                                <?php if (gp_option('gp_event_single') != 'false') { ?>
-                                                    
-                                                    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                                        <?php the_title(); ?>
-                                                    </a>
-                                                    
-                                                <?php } else if (gp_option('gp_event_single') == 'false' || gp_option('gp_event_single') == '' && has_post_thumbnail()) { ?>
-                                                    
-                                                    <span class="lightbox">
-                                                        <a href="<?php echo $original_image_url[0]; ?>" title="<?php the_title_attribute(); ?>">
-                                                            <?php the_title(); ?>
-                                                        </a>
-                                                    </span>
-                                                    
-                                                <?php } else { ?>
-                                                    
-                                                    <?php the_title(); ?>
-                                                    
-                                                <?php } ?>
-                                                
-                                            </h2><!-- END // post-title -->
-                                        
-                                        </div><!-- END // inner -->
-                                    
-                                    </div><!-- END // post-header -->
-                                    
-                                    <?php if (!empty($event_venue) || !empty($event_location)) { ?>
-                                    
-                                        <div class="post-info align-center">
-                                        
-                                            <div class="inner">
-                                            
-                                                <?php if (!empty($event_venue)) { ?>
-                                                    
-                                                    <?php if (!empty($event_venue_url)) { ?>
-                                                
-                                                    <div class="post-venue">
-                                                        <a href="<?php echo $event_venue_url; ?>" title="<?php echo $event_venue; ?>" target="_blank">
-                                                            <?php echo $event_venue; ?>
-                                                        </a>
-                                                    </div><!-- END // post-venue -->
-                                                    
-                                                    <?php } else { ?>
-                                                    
-                                                    <div class="post-venue">
-                                                        <?php echo $event_venue; ?>
-                                                    </div><!-- END // post-venue -->
-                                                    
-                                                    <?php } ?>
-                                                    
-                                                <?php } ?>
-                                                
-                                                <?php if (!empty($event_location)) { ?>
-                
-                                                    <div class="post-location">
-                                                        <?php echo $event_location; ?>
-                                                    </div><!-- END // post-location -->
-                
-                                                <?php } ?>
-                                            
-                                            </div><!-- END // inner -->
-                                            
-                                        </div><!-- END // post-info -->
-                                    
-                                    <?php } //if ?>
-                                    
-                                    <?php if (!empty($event_status)) { ?>
-                                    
-                                        <div class="post-status align-center">
-                                        
-                                            <div class="inner">
-                                            
-                                                <p class="no-bottom"><?php echo $event_status; ?></p>
-                                            
-                                            </div><!-- END // inner -->
-                                            
-                                        </div><!-- END // post-status -->
-                                        
-                                    <?php } //if ?>
-                                    
-                                    <?php if (!empty($event_buy_text_1) && !empty($event_buy_url_1) || !empty($event_buy_text_2) && !empty($event_buy_url_2)) { ?>
-                                    
-                                        <div class="post-action align-center">
-                                        
-                                            <div class="inner">
-                                        
-                                                <?php if (!empty($event_buy_text_1) && !empty($event_buy_url_1)) { ?>
-                                                    
-                                                    <div class="post-buy button float-left">
-                                                        <a href="<?php echo $event_buy_url_1; ?>" title="<?php echo $event_buy_text_1; ?>" target="_blank">
-                                                            <?php echo $event_buy_text_1; ?>
-                                                        </a>
-                                                    </div><!-- END // post-buy -->
-                                                    
-                                                <?php } ?>
-                                                
-                                                <?php if (!empty($event_buy_text_2) && !empty($event_buy_url_2)) { ?>
-                                                    
-                                                    <div class="post-buy button float-left">
-                                                        <a href="<?php echo $event_buy_url_2; ?>" title="<?php echo $event_buy_text_2; ?>" target="_blank">
-                                                            <?php echo $event_buy_text_2; ?>
-                                                        </a>
-                                                    </div><!-- END // post-buy -->
-                                                    
-                                                <?php } ?>
-        
-                                            </div><!-- END // inner -->
-                                                
-                                        </div><!-- END // post-action -->
-                                    
-                                    <?php } //if ?>
-                                
-                                <?php } //if ?>
+                                <?php } ?>
                                 
                             </article><!-- END // tile -->
 
                         <?php
                         $post_count++;
+						$i++;
+						$day_check = $day;
                         } //while
                     } else {
                     ?>

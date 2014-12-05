@@ -529,43 +529,6 @@ get_header();
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
 
-                    <?php
-                    if (gp_option('gp_event_thumbnail') != 'false') {
-                        if (has_post_thumbnail()) {
-                            ?>
-
-                            <div class="post-image transition overlay">
-
-                                <?php if (gp_option('gp_event_single') != 'false') { ?>
-
-                                    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                        <?php the_post_thumbnail($thumbnail_size); ?>
-                                        <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                    </a>
-
-                                <?php } else if (gp_option('gp_event_single') == 'false' || gp_option('gp_event_single') == '' && has_post_thumbnail()) { ?>
-
-                                    <span class="lightbox">
-                                        <a href="<?php echo $original_image_url[0]; ?>" title="<?php the_title_attribute(); ?>">
-                                            <?php the_post_thumbnail($thumbnail_size); ?>
-                                            <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                        </a>
-                                    </span>
-
-                                <?php } else { ?>
-
-                                    <?php the_post_thumbnail($thumbnail_size); ?>
-                                    <span class="overlay-block"><span class="overlay-icon"></span></span>
-
-                                <?php } ?>
-
-                            </div><!-- END // post-image -->
-
-                        <?php
-                        }
-                    }
-                    ?>
-
                     <div class="post-content">
 
                         <h3 class="post-date">

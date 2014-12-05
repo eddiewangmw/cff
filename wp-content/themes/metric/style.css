@@ -2741,6 +2741,20 @@ Event Grid Home
 ----------------------------------------------------------------------------------------------------
 */
 
+.grid-event{}
+.grid-event article{float:left;width:33%;padding-right: 15px;}
+.grid-event article.grid-3{padding-right:0;}
+.grid-event .date-hr{
+	width: 100%;
+	background: rgb(187, 180, 180);
+	padding: 10px;
+	border-left: 5px solid red;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin:20px 0;
+	clear: both;
+}
+
 .grid-event-home {
     width: 100%;
 }

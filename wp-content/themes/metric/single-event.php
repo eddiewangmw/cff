@@ -19,13 +19,18 @@ get_header();
     
 	<?php gp_start('div', 'canvas'); ?>
 
-        <div class="content-event single-event <?php echo $content_class; ?>" role="main">
+    <?php
+            if (get_terms('category-event') || is_active_sidebar('widget-area-event')) {
+                get_sidebar('event');
+            }
+    ?>
+        <div class="content-event content-sidebar <?php echo $content_class; ?>" role="main">
                             
             <?php 
                 if (have_posts()) { 
                     while (have_posts()) {
                         the_post();
-                        
+
                         $event_time					= __(gp_meta('gp_event_time'));
                         $event_venue				= __(gp_meta('gp_event_venue'));
                         $event_venue_url			= __(gp_meta('gp_event_location_url'));
@@ -220,8 +225,6 @@ get_header();
                                         <?php the_content(); ?>
                                     </div><!-- END // post-content -->
     
-                                    <?php if (function_exists('gp_share')) { gp_share(); } ?>
-    
                                 </div><!-- END // one-half | one-entire -->
                                 
                                 <?php
@@ -278,11 +281,6 @@ get_header();
             wp_reset_query();
             ?>
             
-            <?php
-                if (comments_open()) {
-                    comments_template();
-                } 
-            ?>
                             
         </div><!-- END // content -->
         

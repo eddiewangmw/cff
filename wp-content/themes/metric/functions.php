@@ -628,8 +628,8 @@ Categories Navigation
 
 if (!function_exists('gp_categories')) {
 
-    function gp_categories($type) {
-	
+    function gp_categories($type,$current_category) {
+
 		if (get_terms($type)) {
         ?>
                         
@@ -646,7 +646,8 @@ if (!function_exists('gp_categories')) {
                             'hide_empty'          => 0,
                             'use_desc_for_title'  => 0,
                             'title_li'            => '',
-                            'show_option_none'    => ''
+                            'show_option_none'    => '',
+							'current_category'=>$current_category ? $current_category : 0
                         );
                         wp_list_categories($gp_categories_args);
                     ?>
