@@ -156,6 +156,32 @@ if (function_exists('register_sidebar')) {
 		)
 	);
 	
+	// submenu Award page ZH
+	register_sidebar(
+		array(
+			'name' 				=> __('Award Page Navigation ZH', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-award-sidebar-zh',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
+	// submenu Award page EN
+	register_sidebar(
+		array(
+			'name' 				=> __('Award Page Navigation EN', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-award-sidebar-en',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
 	// Sidebar > Page
 	register_sidebar(
 		array(

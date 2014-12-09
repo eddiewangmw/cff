@@ -133,12 +133,12 @@ if (!function_exists('gp_frontend_scripts')) {
             wp_enqueue_script('jquery-ui-core');
             wp_enqueue_script('jquery-ui-tabs');
             
-			 if (is_page_template('template-about-us-en.php') OR is_page_template('template-about-us-zh.php') ) {
+			 if (is_page_template('template-about-us.php') ) {
 			 	 wp_register_script('menu', trailingslashit(get_template_directory_uri()) . 'javascripts/menu.js', array('jquery'), '1.0.0', true);
 				 wp_enqueue_script('menu');
 			 }
             // Homepage Scripts
-            if (is_page_template('template-home.php')OR is_page_template('template-about-us-en.php') OR is_page_template('template-about-us-zh.php') ) {
+            if (is_page_template('template-home.php')OR is_page_template('template-about-us.php')) {
 
 				// jQuery Revolution Slider Plugins
 				wp_register_script('gp-revolution-plugins', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.revolution.plugins.min.js', array('jquery'), '1.0.0', true);
@@ -188,7 +188,8 @@ if (!function_exists('gp_frontend_scripts')) {
             }
             
             // jQuery Frontend
-            wp_register_script('gp-frontend', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.frontend.min.js', array('jquery'), '1.0.0', true);
+			// TODO: min frontend file
+            wp_register_script('gp-frontend', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.frontend.js', array('jquery'), '1.0.0', true);
             wp_enqueue_script('gp-frontend');
             
         }
@@ -216,7 +217,7 @@ if (!function_exists('gp_frontend_homepage_scripts')) {
 
     function gp_frontend_homepage_scripts() {
     
-        if (is_page_template('template-home.php') OR is_page_template('template-about-us-en.php') OR is_page_template('template-about-us-zh.php') ) {
+        if (is_page_template('template-home.php') OR is_page_template('template-about-us.php') ) {
         
             // Variables
             if (gp_option('gp_slideshow_type') == 'fullwidth') {

@@ -2,9 +2,9 @@
 
 /*
 
-Template Name:	    About us EN
+Template Name:	    About us
 
-@name			    About uz EN
+@name			    About uz
 @since			    1.0.0
 @author			    Pavel Richter <pavel@grandpixels.com>
 @copyright		    Copyright (c) 2014, Grand Pixels
@@ -17,7 +17,12 @@ get_header();
 	<!-- start left side -->
 	<div class="sidebar-page sidebar-left sidebar">
 		<h3 class="widget-title"><?php echo pll__('About Us');?></h3>
-		<?php dynamic_sidebar('widget-about-us-sidebar-en'); ?> 
+		<?php if(get_bloginfo('language') == 'en_AU'):?>
+					<?php dynamic_sidebar('widget-about-us-sidebar-en'); ?> 
+		<?php else:?>
+					<?php dynamic_sidebar('widget-about-us-sidebar-zh'); ?> 
+		<?php endif;?>
+
 	</div>
 	<!-- End left side-->
 	<!-- Start right side-->

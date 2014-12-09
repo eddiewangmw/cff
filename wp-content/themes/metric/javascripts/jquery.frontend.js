@@ -341,5 +341,14 @@ jQuery(document).ready(function () {
 			jQuery(this).find('span').stop(false, true).fadeIn(300);
 		}
 	);
+	
+	jQuery('.award-overlay-back').hover(
+		function () {
+			jQuery(this).find('span').stop(false, true).fadeOut(300);
+		},
+		function () {
+			jQuery(this).find('span').stop(false, true).fadeIn(300);
+		}
+	);
 
 });

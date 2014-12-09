@@ -72,7 +72,8 @@ Load Custom Post Types
 
 get_template_part('backend/posttypes/posttype', 'slide');
 get_template_part('backend/posttypes/posttype', 'callout');
-
+get_template_part('backend/posttypes/posttype', 'award');
+get_template_part('backend/posttypes/posttype', 'judge');
 get_template_part('backend/posttypes/posttype', 'album');
 get_template_part('backend/posttypes/posttype', 'event');
 get_template_part('backend/posttypes/posttype', 'gallery');
@@ -86,6 +87,7 @@ Load Custom Taxonomies
 
 get_template_part('backend/taxonomies/taxonomy', 'album');
 get_template_part('backend/taxonomies/taxonomy', 'event');
+get_template_part('backend/taxonomies/taxonomy', 'award');
 get_template_part('backend/taxonomies/taxonomy', 'gallery');
 get_template_part('backend/taxonomies/taxonomy', 'video');
 

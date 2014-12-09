@@ -2,9 +2,9 @@
 
 /*
 
-Template Name:	    About us ZH
+Template Name:	    Film Submission
 
-@name			    About uz ZH
+@name			    Film Submission
 @since			    1.0.0
 @author			    Pavel Richter <pavel@grandpixels.com>
 @copyright		    Copyright (c) 2014, Grand Pixels
@@ -15,12 +15,9 @@ get_header();
 
 ?>
 	<!-- start left side -->
-	<div class="sidebar-page sidebar-left sidebar">
-		<h3 class="widget-title"><?php echo pll__('About Us');?></h3>
-		<?php dynamic_sidebar('widget-about-us-sidebar-zh'); ?> 
-	</div>
+		<h3 class="widget-title"><?php the_title();?></h3>
+		<?php  get_sidebar('award');?>
 	<!-- End left side-->
-	<!-- Start right side-->
 	<div class="content-page content-sidebar content-sidebar-left">
 		<!-- start slideshow -->
 	<?php 
@@ -322,7 +319,7 @@ get_header();
                             <div class="page-content">
 
                                 <?php the_content(); ?>
-<div id="next_page"></div>
+								<div id="next_page"></div>
                             </div>
 
                         <?php 
@@ -339,7 +336,5 @@ get_header();
 		<?php dynamic_sidebar('widget-ad-normal-footer'); ?> 
 	</div>
 	</div>
-    <!-- END // right side -->
-
 <?php
 get_footer();
