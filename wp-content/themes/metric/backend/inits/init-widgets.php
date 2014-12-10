@@ -156,12 +156,38 @@ if (function_exists('register_sidebar')) {
 		)
 	);
 	
-	// submenu Events page
+	// submenu News page
 	register_sidebar(
 		array(
-			'name' 				=> __('Events navigation ZH', 'gp'),
+			'name' 				=> __('News navigation ZH', 'gp'),
 			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
-			'id' 				=> 'widget-events-sidebar-zh',
+			'id' 				=> 'widget-news-sidebar-zh',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
+	// submenu Movies page
+	register_sidebar(
+		array(
+			'name' 				=> __('Movies navigation EN', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-movie-sidebar-en',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
+	// submenu Movies page
+	register_sidebar(
+		array(
+			'name' 				=> __('Movies navigation ZH', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-movie-sidebar-zh',
 			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
 			'after_widget'  	=> '</div>',
 			'before_title'  	=> '<h3 class="widget-title">',

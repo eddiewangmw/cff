@@ -23,18 +23,18 @@ if (!function_exists('gp_register_video')) {
 		register_post_type('video',
 			array (
 				'labels' => array(
-					'name'					=> __('Videos', 'gp'),
-					'menu_name'				=> __('Videos', 'gp'),
-					'singular_name'			=> __('Video', 'gp'),
-					'all_items'				=> __('All Videos', 'gp'),
-					'add_new'				=> __('Add New Video', 'gp'),
-					'add_new_item'			=> __('Add New Video', 'gp'),
-					'edit_item'				=> __('Edit Video', 'gp'),
-					'new_item'				=> __('New Video', 'gp'),
-					'view_item'				=> __('View Video', 'gp'),
-					'search_items'			=> __('Search Videos', 'gp'),
-					'not_found'				=> __('No Videos', 'gp'),
-					'not_found_in_trash'	=> __('No Videos Found in Trash', 'gp')
+					'name'					=> __('Movies', 'gp'),
+					'menu_name'				=> __('Movies', 'gp'),
+					'singular_name'			=> __('Movie', 'gp'),
+					'all_items'				=> __('All Movies', 'gp'),
+					'add_new'				=> __('Add New Movie', 'gp'),
+					'add_new_item'			=> __('Add New Movie', 'gp'),
+					'edit_item'				=> __('Edit Movie', 'gp'),
+					'new_item'				=> __('New Movie', 'gp'),
+					'view_item'				=> __('View Movie', 'gp'),
+					'search_items'			=> __('Search Movies', 'gp'),
+					'not_found'				=> __('No Movies', 'gp'),
+					'not_found_in_trash'	=> __('No Movies Found in Trash', 'gp')
 				),
 				'public'				=> true,
 				'show_ui'				=> true,
@@ -82,7 +82,7 @@ if (!function_exists('gp_register_metabox_video')) {
 		}
 	
 		$meta_boxes = array();
-		
+		$current_date = date('Y/m/d');
 		/*
 		--------------------------------------------------
 		Gallery Images
@@ -91,20 +91,47 @@ if (!function_exists('gp_register_metabox_video')) {
 	
 		$meta_boxes[] = array(
 			'id'				=> 'gp-metabox-posttype-video',
-			'title'				=> __('Video Options', 'gp'),
+			'title'				=> __('Movie Options', 'gp'),
 			'pages'				=> array('video'),
 			'context'			=> 'normal',
 			'priority'			=> 'high',
 			'fields'			=> array(
 				array(
-					'name'				=> __('YouTube Video', 'gp'),
-					'desc'				=> __('Add YouTube Video URL or CODE. For Example: URL <code>http://www.youtube.com/watch?v=12345abcdef</code> or just CODE <code>12345abcdef</code>. <strong>Please note that Featured Image is required!</strong>', 'gp'),
+					'name'				=> __('Release Date', 'gp'),
+					'desc'				=> __('Select start date of the movie.', 'gp'),
+					'id'				=> GP_SHORTNAME . '_movie_release',
+					'type'				=> 'picker_date',
+					'std'				=> $current_date
+				),
+				array(
+					'name'				=> __('Release Place', 'gp'),
+					'desc'				=> __('Release plase eg: TaiWan', 'gp'),
+					'id'				=> GP_SHORTNAME . '_movie_place',
+					'type'				=> 'input'
+				),
+				
+				array(
+					'name'				=> __('Movie type', 'gp'),
+					'desc'				=> __('Movie type', 'gp'),
+					'id'				=> GP_SHORTNAME . '_movie_type',
+					'type'				=> 'select',
+					'options' => array('document'=>'Documentary','love'=>"Love")
+				),
+				array(
+					'name'				=> __('Movie Long', 'gp'),
+					'desc'				=> __('Movie Long eg:115 (Min)', 'gp'),
+					'id'				=> GP_SHORTNAME . '_movie_long',
+					'type'				=> 'input'
+				),
+				array(
+					'name'				=> __('YouTube Movie', 'gp'),
+					'desc'				=> __('Add YouTube Movie URL or CODE. For Example: URL <code>http://www.youtube.com/watch?v=12345abcdef</code> or just CODE <code>12345abcdef</code>. <strong>Please note that Featured Image is required!</strong>', 'gp'),
 					'id'				=> GP_SHORTNAME . '_video_youtube_code',
 					'type'				=> 'input'
 				),
 				array(
-					'name'				=> __('Vimeo Video', 'gp'),
-					'desc'				=> __('Add Vimeo Video URL or CODE. For Example: URL <code>http://vimeo.com/123456789</code> or just CODE <code>123456789</code>. <strong>Please note that Featured Image is required!</strong>', 'gp'),
+					'name'				=> __('Vimeo Movie', 'gp'),
+					'desc'				=> __('Add Vimeo Movie URL or CODE. For Example: URL <code>http://vimeo.com/123456789</code> or just CODE <code>123456789</code>. <strong>Please note that Featured Image is required!</strong>', 'gp'),
 					'id'				=> GP_SHORTNAME . '_video_vimeo_code',
 					'type'				=> 'input'
 				)
@@ -139,7 +166,7 @@ if (!function_exists('gp_columns_edit_video')) {
 		
 		$columns = array(
 			'cb'				=> "<input type=\"checkbox\" />",
-			'title'				=> __('Video Title', 'gp'),
+			'title'				=> __('Movie Title', 'gp'),
 			'author'			=> __('Author', 'gp'),
 			'date'				=> __('Date', 'gp'),
 		);
@@ -187,16 +214,16 @@ if (!function_exists('gp_messages_video')) {
 		
 		$messages['video'] = array(
 			0		=> '',
-			1		=> sprintf(__('Video updated. <a href="%s">View video &rsaquo;</a>', 'gp'), esc_url(get_permalink($post_ID))),
+			1		=> sprintf(__('Movie updated. <a href="%s">View movie &rsaquo;</a>', 'gp'), esc_url(get_permalink($post_ID))),
 			2		=> __('Custom field updated.', 'gp'),
 			3		=> __('Custom field deleted.', 'gp'),
-			4		=> __('Video updated.', 'gp'),
-			5		=> isset($_GET['revision']) ? sprintf( __('Video restored to revision from %s', 'gp'), wp_post_revision_title((int)$_GET['revision'], false)) : false,
-			6		=> sprintf(__('Video published. <a href="%s">View video &rsaquo;</a>', 'gp'), esc_url(get_permalink($post_ID))),
-			7		=> __('Video saved.', 'gp'),
-			8		=> sprintf(__('Video submitted. <a target="_blank" href="%s">Preview Video &rsaquo;</a>', 'gp'), esc_url(add_query_arg('preview', 'true', get_permalink($post_ID)))),
-			9		=> sprintf(__('Video scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview video &rsaquo;</a>', 'gp'), date_i18n(__('M j, Y @ G:i', 'gp'), strtotime($post->post_date)), esc_url(get_permalink($post_ID))),
-			10		=> sprintf(__('Video draft updated. <a target="_blank" href="%s">Preview video &rsaquo;</a>', 'gp'), esc_url(add_query_arg('preview', 'true', get_permalink($post_ID)))),
+			4		=> __('Movie updated.', 'gp'),
+			5		=> isset($_GET['revision']) ? sprintf( __('Movie restored to revision from %s', 'gp'), wp_post_revision_title((int)$_GET['revision'], false)) : false,
+			6		=> sprintf(__('Movie published. <a href="%s">View movie &rsaquo;</a>', 'gp'), esc_url(get_permalink($post_ID))),
+			7		=> __('Movie saved.', 'gp'),
+			8		=> sprintf(__('Movie submitted. <a target="_blank" href="%s">Preview Movie &rsaquo;</a>', 'gp'), esc_url(add_query_arg('preview', 'true', get_permalink($post_ID)))),
+			9		=> sprintf(__('Movie scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview movie &rsaquo;</a>', 'gp'), date_i18n(__('M j, Y @ G:i', 'gp'), strtotime($post->post_date)), esc_url(get_permalink($post_ID))),
+			10		=> sprintf(__('Movie draft updated. <a target="_blank" href="%s">Preview movie &rsaquo;</a>', 'gp'), esc_url(add_query_arg('preview', 'true', get_permalink($post_ID)))),
 		);
 		
 		return $messages;
@@ -220,7 +247,7 @@ if (!function_exists('gp_title_placeholder_video')) {
 		$screen = get_current_screen();
 		
 		if ($screen->post_type == 'video') {
-			$title = __('Enter video title', 'gp');
+			$title = __('Enter movie title', 'gp');
 		}
 		
 		return $title;

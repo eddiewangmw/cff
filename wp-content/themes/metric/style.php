@@ -231,7 +231,7 @@ if (!function_exists('gp_frontend_styles_generate')) {
         .navigation-categories ul li ul li.current-cat ul li a:hover { color: <?php echo $color_text_light; ?>; } 
         
         /* Canvas */
-        .canvas { color: <?php echo $color_text_dark; ?>; background-color: <?php echo $color_background_light; ?>; }
+        .canvas { /*color: <?php //echo $color_text_dark; ?>;*/ background-color: <?php echo $color_background_light; ?>; }
         .canvas-dark { color: <?php echo $color_text_light; ?>; background-color: <?php echo $color_background_dark; ?>; }
         .canvas a { color: <?php echo $color_secondary; ?>; }
         .canvas a:hover { color: <?php echo $color_primary; ?>; }

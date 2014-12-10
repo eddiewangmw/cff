@@ -2,7 +2,7 @@
 
 /*
 
-Template Name:	    Videos
+Template Name:	    Movies
 
 @name			    Video Template
 @since			    1.0.0
@@ -44,27 +44,6 @@ get_header();
         
         <div class="content-video <?php echo $content_class; ?>" role="main">
             
-            <?php
-                if (have_posts()) {
-                    while (have_posts()) {
-                        the_post();
-                        
-                        if (!empty($post->post_content)) {
-                        ?>
-
-                            <div class="page-content">
-
-                                <?php the_content(); ?>
-
-                            </div><!-- END // page-content -->
-
-                        <?php 
-                        }
-                    } //while
-                } //if
-                wp_reset_query();
-            ?>
-            
             <div class="grid-video <?php echo $grid_class; ?>">
 
                 <?php
@@ -97,44 +76,58 @@ get_header();
                     if (have_posts()) {
                         while (have_posts()) {
                             the_post();
-
+							
                             $block_class = array('tile', 'post', 'post-' . $post_count);
+							$date = __(gp_meta('gp_movie_release'));
+							$place = __(gp_meta('gp_movie_place'));
+							$type = __(gp_meta('gp_movie_type'));
+							$long = __(gp_meta('gp_movie_long'));
                             ?>
                             
-                                <article <?php post_class($block_class); ?>>
-                                    
-                                    <div class="tile-block">
-                                    
-                                        <?php if (has_post_thumbnail()) { ?>
-            
-                                            <div class="post-image overlay-video overlay">
-                                                
-                                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                                                    <?php the_post_thumbnail('medium-fixed'); ?>
-                                                    <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                </a>
-                                                
-                                            </div><!-- END // post-image -->
-                                        
-                                        <?php } ?>
-    
-                                        <div class="post-content">
+                              <article <?php post_class($block_class); ?>>
+                                  
+                                  <div class="tile-block">
+                                  
+                                      <?php if (has_post_thumbnail()) { ?>
+          
+                                          <div class="post-image overlay-video overlay">
+                                              
+                                              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+                                                  <?php the_post_thumbnail('medium-fixed'); ?>
+                                                  <span class="overlay-block"><span class="overlay-icon"></span></span>
+                                              </a>
+                                              
+                                          </div><!-- END // post-image -->
+                                      
+                                      <?php } ?>
+  
+                                      <div class="post-content">
 
-                                            <h2 class="post-header">
-                                                
-                                                <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                                    <?php the_title(); ?>
-                                                </a>
-                                                
-                                            </h2><!-- END // post-header -->
-                                            
-                                            <?php get_template_part('meta'); ?>
-                                            
-                                        </div><!-- END // post-content -->
-                                        
-                                    </div><!-- END // tile-block -->
-    
-                                </article><!-- END // tile -->
+                                          <h2 class="post-header">
+                                              
+                                              <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                                                  <?php the_title(); ?>
+                                              </a>
+                                              
+                                          </h2><!-- END // post-header -->
+                                          <ul>
+											<?php if($date OR $place):?>
+											<li><?php echo $place?><?php echo $place&&$date ? ' / ':'';?><?php echo date('Y',strtotime($date));?></li>
+											<?php endif;?>
+											<?php if($type OR $long):?>
+											<li><?php echo $type?><?php echo $type&&$long ? ' / ':'';?><?php echo $long ? $long.'min':'';?></li>
+											<?php endif;?>
+											<?php if($date):?>
+												<li><?php echo date('m d, Y',strtotime($date));?></li>
+											<?php endif;?>
+										</ul>
+                                          <?php //get_template_part('meta'); ?>
+                                          
+                                      </div><!-- END // post-content -->
+                                      
+                                  </div><!-- END // tile-block -->
+  
+                              </article><!-- END // tile -->
 
                             <?php 
                         } //while

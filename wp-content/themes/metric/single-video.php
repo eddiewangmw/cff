@@ -40,7 +40,7 @@ get_header();
 
         <div class="content-video single-video <?php echo $content_class; ?>" role="main">
 
-            <?php get_template_part('meta'); ?>
+            <?php //get_template_part('meta'); ?>
 
             <?php 
                 if (have_posts()) { 
@@ -75,7 +75,7 @@ get_header();
                             
                             </div><!-- END // single-post-content -->
                         
-                            <?php if (function_exists('gp_share')) { gp_share(); } ?>
+                            <?php //if (function_exists('gp_share')) { gp_share(); } ?>
 
                         <?php
                     } //while
@@ -83,21 +83,10 @@ get_header();
                 wp_reset_query();
             ?>
 
-            <?php
-                if (comments_open()) {
-                    comments_template(); 
-                } 
-            ?>
             
         </div><!-- END // content -->
         
-        <?php
-            if ($sidebar == 'right') {
-                if (get_terms('category-video') || is_active_sidebar('widget-area-video')) {
-                    get_sidebar('video');
-                }
-            }
-        ?>
+     
 
 	<?php gp_end('div', 'canvas'); ?>
 

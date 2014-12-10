@@ -25,6 +25,7 @@ if (get_terms('category-video') || is_active_sidebar('widget-area-video')) {
 	$grid_class		= 'grid-tiles';
 }
 
+// var_dump(get_query_var('term'));/
 get_header();
 ?>
 
@@ -41,20 +42,6 @@ get_header();
         ?>
         
         <div class="content-video <?php echo $content_class; ?>" role="main">
-            
-            <?php
-                if (term_description()) {
-                ?>
-                    
-                    <div class="page-content">
-                        
-                        <?php echo term_description(); ?>
-                        
-                    </div>
-                    
-                <?php
-                }
-            ?>
             
             <div class="grid-video <?php echo $grid_class; ?>">
 
@@ -96,6 +83,10 @@ get_header();
                             the_post();
 
                             $block_class = array('tile', 'post', 'post-' . $post_count);
+							$date = __(gp_meta('gp_movie_release'));
+							$place = __(gp_meta('gp_movie_place'));
+							$type = __(gp_meta('gp_movie_type'));
+							$long = __(gp_meta('gp_movie_long'));
                             ?>
                             
                                 <article <?php post_class($block_class); ?>>
@@ -124,8 +115,18 @@ get_header();
                                                 </a>
                                                 
                                             </h2><!-- END // post-header -->
-                                            
-                                            <?php get_template_part('meta'); ?>
+                                            <ul>
+												<?php if($date OR $place):?>
+												<li><?php echo $place?><?php echo $place&&$date ? ' / ':'';?><?php echo date('Y',strtotime($date));?></li>
+												<?php endif;?>
+												<?php if($type OR $long):?>
+												<li><?php echo $type?><?php echo $type&&$long ? ' / ':'';?><?php echo $long ? $long.'min':'';?></li>
+												<?php endif;?>
+												<?php if($date):?>
+													<li><?php echo date('m d, Y',strtotime($date));?></li>
+												<?php endif;?>
+											</ul>
+                                            <?php //get_template_part('meta'); ?>
                                             
                                         </div><!-- END // post-content -->
                                         

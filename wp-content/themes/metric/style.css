@@ -952,7 +952,7 @@ Grid Tiles (Isotope Masonry Layout)
     margin: 0 3em 3em 0;
     z-index: 1;
     
-    border-bottom: 4px solid rgba(0,0,0,0.15);
+/*    border-bottom: 4px solid rgba(0,0,0,0.15);*/
 }
 
 /*
@@ -1361,11 +1361,11 @@ Navigation
 	float:right;
 }
 .widget_nav_menu li.current-menu-item{
-	background:#c99a07;
+/*	background:#c99a07;*/
 }
 .widget_nav_menu li.current-menu-item a{
-	color:#fff;
-	padding-left: 0.5em;
+	color:#e50b18;
+/*	padding-left: 0.5em;*/
 }
 /*
 ----------------------------------------------------------------------------------------------------
@@ -1894,11 +1894,11 @@ Content
 
 /* Page & Single Content */
 .widget_nav_menu .current_page_item{
-	background:#e50b18;
+/*	background:#e50b18;*/
 	color:#fff;
 }
 .widget_nav_menu li.current_page_item a{
-	color:#fff;
+/*	color:#e50b18;*/
 }
 .page-content,
 .single-content {
@@ -2812,7 +2812,7 @@ text-decoration: underline;
 color:red;}
 
 .grid-award .post-content ul{}
-.grid-award .post-content li{list-style:none;}
+.grid-award .post-content li,.type-video .post-content li{list-style:none;}
 
 /*
 ----------------------------------------------------------------------------------------------------

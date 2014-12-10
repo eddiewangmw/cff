@@ -23,7 +23,7 @@ if (!function_exists('gp_register_taxonomy_video')) {
         register_taxonomy('category-video', 'video',
             array(
                 'labels' => array(
-                    'name'                  => __('Categories', 'gp'),
+                    'name'                  => __('Movie Categories', 'gp'),
                     'singular_name'         => __('Video Category', 'gp'),
                     'search_items'          => __('Search Video Category', 'gp'),
                     'popular_items'         => __('Popular Video Categories', 'gp'),
