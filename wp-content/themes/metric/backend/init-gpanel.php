@@ -74,6 +74,7 @@ get_template_part('backend/posttypes/posttype', 'slide');
 get_template_part('backend/posttypes/posttype', 'callout');
 get_template_part('backend/posttypes/posttype', 'award');
 get_template_part('backend/posttypes/posttype', 'judge');
+get_template_part('backend/posttypes/posttype', 'news');
 get_template_part('backend/posttypes/posttype', 'album');
 get_template_part('backend/posttypes/posttype', 'event');
 get_template_part('backend/posttypes/posttype', 'gallery');

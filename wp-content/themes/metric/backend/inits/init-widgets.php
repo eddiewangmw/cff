@@ -130,6 +130,32 @@ if (function_exists('register_sidebar')) {
 		)
 	);
 	
+	// submenu News page
+	register_sidebar(
+		array(
+			'name' 				=> __('News navigation ZH', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-news-sidebar-zh',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
+	// submenu News page
+	register_sidebar(
+		array(
+			'name' 				=> __('News navigation EN', 'gp'),
+			'description' 		=> __('Sidebar that appears on pages.', 'gp'),
+			'id' 				=> 'widget-news-sidebar-en',
+			'before_widget' 	=> '<div id="%1$s" class="widget-block %2$s clearfix">',
+			'after_widget'  	=> '</div>',
+			'before_title'  	=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		)
+	);
+	
 	// submenu Events page
 	register_sidebar(
 		array(
