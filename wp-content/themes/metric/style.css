@@ -2843,6 +2843,18 @@ Event Grid Home
     height: auto;
 }
 
+.content-ticket .date-hr{
+	width: 100%;
+	background: rgb(187, 180, 180);
+	padding: 10px;
+	border-left: 5px solid red;
+	font-weight: bold;
+	margin:20px 0;
+	clear: both;
+	font-size:1.1em;
+}
+.content-ticket .page-content ul{padding-left: 0.5em}
+.content-ticket .page-content li{list-style:none;}
 /* Post */
 .grid-event-home .post {
     float: left;

@@ -1539,3 +1539,11 @@ if (!function_exists('gp_comments_list')) {
 pll_register_string('Subscription button','Submit your email');
 pll_register_string('About Us Sidebar Title','About Us');
 pll_register_string('Events Sidebar Title','Events');
+pll_register_string('Ticket Release Date','Release Date');
+pll_register_string('Ticket Release Time','Release Time');
+pll_register_string('Ticket Release Place','Release Place');
+pll_register_string('Ticket Price','Ticket Price');
+pll_register_string('Ticket Book Contact','Ticket Book Contact');
+pll_register_string('Ticket Proxy Contact','Ticket Proxy Contact');
+pll_register_string('Ticket Seal Date','Ticket Seal Date');
+pll_register_string('Ticket Seal Time','Ticket Seal Time');
