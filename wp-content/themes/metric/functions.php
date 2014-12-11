@@ -629,7 +629,7 @@ Categories Navigation
 
 if (!function_exists('gp_categories')) {
 
-    function gp_categories($type,$current_category) {
+    function gp_categories($type,$current_category=0) {
 
 		if (get_terms($type)) {
         ?>

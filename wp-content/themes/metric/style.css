@@ -2855,6 +2855,29 @@ Event Grid Home
 }
 .content-ticket .page-content ul{padding-left: 0.5em}
 .content-ticket .page-content li{list-style:none;}
+
+/*partner*/
+.grid-partner{}
+.grid-partner .date-hr{clear:both;color: #e50b18;
+font-size: 1.5em;
+text-decoration: underline;}
+.grid-gallery .post-image, .grid-partner .post-image{width:32%;margin-right:1%;position:relative;clear:none;}
+.grid-gallery .post-image{max-height:130px;overflow:hidden;}
+.grid-gallery .post-image .award-overlay, .grid-partner .post-image .award-overlay{position: absolute;
+top: 0;
+padding-left: 1em;
+color: #fff;
+height: 100%;
+width: 100%;
+background-color: #6e5504;
+opacity: 0.8;}
+.grid-gallery .post-image .award-overlay h4, .grid-partner .post-image .award-overlay h4{
+border-left: 6px solid red;
+padding-left: 10px;
+font-size: 1.5em;
+font-weight: 500;
+}
+
 /* Post */
 .grid-event-home .post {
     float: left;

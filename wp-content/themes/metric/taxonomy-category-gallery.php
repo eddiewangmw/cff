@@ -10,55 +10,28 @@
 */
 
 // Sidebar
-if (gp_option('gp_gallery_sidebar')) {
-    $sidebar = gp_option('gp_gallery_sidebar');
-} else {
-    $sidebar = 'left';
-}
+
+$sidebar = 'left';
 
 // Content & Grid Classes
-if (get_terms('category-gallery') || is_active_sidebar('widget-area-gallery')) {
-	$content_class	= 'content-sidebar content-sidebar-' . $sidebar;
-	$grid_class		= 'grid-tiles-sidebar';
-} else {
-	$content_class	= 'content';
-	$grid_class		= 'grid-tiles';
-}
+$content_class	= 'content-sidebar content-sidebar-' . $sidebar;
+$grid_class		= 'grid-tiles-sidebar';
+
 
 get_header();
 ?>
-    
-    <?php get_template_part('title'); ?>
     
     <?php gp_start('div', 'canvas'); ?>
 				
 		<div class="grid">
         
         	<?php
-                if ($sidebar == 'left') {
-                    if (get_terms('category-gallery') || is_active_sidebar('widget-area-gallery')) {
                         get_sidebar('gallery');
-                    }
-                }
 			?>
             
             <div class="content-gallery <?php echo $content_class; ?>" role="main">
             	
-            	<?php
-                    if (term_description()) {
-                    ?>
-                        
-                        <div class="page-content">
-                            
-                            <?php echo term_description(); ?>
-                            
-                        </div>
-                        
-                    <?php
-                    }
-                ?>
-            	
-            	<div class="grid-gallery <?php echo $grid_class; ?>">
+            	<div class="grid-gallery">
 
 					<?php
                         global $post;
@@ -96,44 +69,22 @@ get_header();
                         if (have_posts()) {
                             while (have_posts()) {
                                 the_post();
-    
-                                $block_class = array('tile', 'post', 'post-' . $post_count);
-                                ?>
-                                
-                                    <article <?php post_class($block_class); ?>>
-        
-                                        <div class="tile-block">
-                                        
+                                ?>      
                                             <?php if (has_post_thumbnail()) { ?>
             
-                                                <div class="post-image overlay">
-                                                    
+                                                <div class="post-image award-overlay-back">
                                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
                                                         <?php the_post_thumbnail('medium-fixed'); ?>
-                                                        <span class="overlay-block"><span class="overlay-icon"></span></span>
+														<span class="award-overlay" style="display: block;">
+																<span class="post-title-container" style="display: table-cell;">
+																	<h4><?php the_title();?></h4>
+																</span>
+														</span>
                                                     </a>
                                                     
                                                 </div><!-- END // post-image -->
                                             
                                             <?php } ?>
-                                            
-                                            <div class="post-content">
-        
-                                                <h2 class="post-header">
-                                                    
-                                                    <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                                        <?php the_title(); ?>
-                                                    </a>
-                                                    
-                                                </h2><!-- END // post-header -->
-                                                
-                                                <?php get_template_part('meta'); ?>
-                                                
-                                            </div><!-- END // post-content -->
-                                            
-                                        </div><!-- END // tile-block -->
-        
-                                    </article><!-- END // tile -->
     
                                 <?php 
                             } //while

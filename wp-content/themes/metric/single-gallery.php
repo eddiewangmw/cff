@@ -100,31 +100,13 @@ get_header();
                                 
                                 <?php the_content(); ?>
                                 
-                            </div><!-- END // single-post-content -->
-                            
-                            <?php if (function_exists('gp_share')) { gp_share(); } ?>
+                            </div><!-- END // single-post-content --> 
                             
                         <?php
                     } //while
                 } //if
                 wp_reset_query();
             ?>
-            
-            <?php
-                if (comments_open()) {
-                    comments_template();
-                } 
-            ?>
-
-        </div><!-- END // content -->
-        
-        <?php
-            if ($sidebar == 'right') {
-                if (is_active_sidebar('widget-area-gallery')) {
-                    get_sidebar('gallery');
-                }
-            }
-        ?>
 
 	<?php gp_end('div', 'canvas'); ?>
 

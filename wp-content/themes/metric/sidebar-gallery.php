@@ -19,8 +19,8 @@ if (gp_option('gp_gallery_sidebar')) {
 ?>
 
 <div class="sidebar-gallery sidebar-<?php echo $sidebar; ?> sidebar" role="complementary">
-    
-    <?php gp_categories('category-gallery'); ?>
+     <h3 class="widget-title"><?php echo pll__('Gallery');?></h3>
+    <?php gp_categories('category-gallery',0); ?>
     
     <?php dynamic_sidebar('widget-area-gallery'); ?>
     

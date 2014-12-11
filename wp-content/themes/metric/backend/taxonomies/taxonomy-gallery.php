@@ -23,7 +23,7 @@ if (!function_exists('gp_register_taxonomy_gallery')) {
         register_taxonomy('category-gallery', 'gallery',
             array(
                 'labels' => array(
-                    'name'                  => __('Categories', 'gp'),
+                    'name'                  => __('Gallery Categories', 'gp'),
                     'singular_name'         => __('Gallery Category', 'gp'),
                     'search_items'          => __('Search Gallery Category', 'gp'),
                     'popular_items'         => __('Popular Gallery Categories', 'gp'),
