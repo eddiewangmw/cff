@@ -832,14 +832,16 @@ if(!class_exists('SamAdBlock')) {
     private $clauses = null;
     public $ad = '';
     
-    public function __construct($args = null, $crawler = false, $clauses = null) {
+    public function __construct($args = null, $crawler = false, $clauses = null,$page_id=null) {
       $this->args = $args;
       $this->crawler = $crawler;
       $this->clauses = $clauses;
-      $this->ad = self::buildBlock($this->args, $this->crawler);
+	  $this->page_id = $page_id;
+      $this->ad = self::buildBlock($this->args, $this->crawler, $this->page_id);
     }
     
-    private function buildBlock($args = null, $crawler = false) {
+    private function buildBlock($args = null, $crawler = false,$page_id=null) {
+
       if(is_null($args)) return 'X';
       if(empty($args['id']) && empty($args['name'])) return 'Y';
       
@@ -849,8 +851,13 @@ if(!class_exists('SamAdBlock')) {
       
       if(!empty($args['id'])) $bId = "sb.id = {$args['id']}";
       else $bId = "sb.name = '{$args['name']}'";
-      
-      $bSql = "SELECT
+
+	  // $pId = "";
+ // 	  if($page_id){
+ // 		  $bId = ''; // reset bid Instnse set to be empty
+ // 		  $pId = " sb.page_id = ".$page_id;
+ // 	  }
+      echo $bSql = "SELECT
                  sb.id,
                  sb.name,
                  sb.b_lines,
@@ -866,9 +873,10 @@ if(!class_exists('SamAdBlock')) {
                  sb.i_border,
                  sb.trash
                FROM $bTable sb
-               WHERE $bId AND sb.trash IS FALSE;";
+               WHERE $bId $pId AND sb.trash IS FALSE;";
                
       $block = $wpdb->get_row($bSql, ARRAY_A);
+
       if(!empty($block)) {
         $ads = unserialize($block['block_data']);
         $lines = (integer) $block['b_lines'];
@@ -881,15 +889,17 @@ if(!class_exists('SamAdBlock')) {
           $lDiv = '';
           for($j = 1; $j <= $cols; $j++) {
             $id = $ads[$i][$j]['id'];
+
             switch($ads[$i][$j]['type']) {
               case 'place':
                 $place = new SamAdPlace(array('id' => $id), false, $crawler, $this->clauses);
-                $iDiv = $place->ad;
+				var_dump($id,$crawler,$this->clauses);
+                echo $iDiv = $place->ad;
                 break;
                 
               case 'ad':
                 $ad = new SamAd(array('id' => $id), false, $crawler);
-                $iDiv = $ad->ad;
+                echo $iDiv = $ad->ad;
                 break;
                 
               case 'zone':
