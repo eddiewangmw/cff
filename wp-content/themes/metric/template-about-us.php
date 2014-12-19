@@ -17,7 +17,7 @@ get_header();
 	<!-- start left side -->
 	<div class="sidebar-page sidebar-left sidebar">
 		<h3 class="widget-title"><?php echo pll__('About Us');?></h3>
-		<?php if(get_bloginfo('language') == 'en_AU'):?>
+		<?php if(get_bloginfo('language') == 'en-AU'):?>
 					<?php dynamic_sidebar('widget-about-us-sidebar-en'); ?> 
 		<?php else:?>
 					<?php dynamic_sidebar('widget-about-us-sidebar-zh'); ?> 
