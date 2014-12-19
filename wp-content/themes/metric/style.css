@@ -207,7 +207,7 @@ a.underline:hover,
 Global Classes
 ----------------------------------------------------------------------------------------------------
 */
-.title,.title a,.widget_nav_menu li a{color:#c99a07;}
+.title,.title a,.widget_nav_menu li a,.switchlang a{color:#c99a07;}
 .title a:hover,.widget_nav_menu li a:hover{color:#e50b18;}
 /* Floats */
 .float-left { float: left; }
@@ -791,7 +791,7 @@ Common
 */
 
 /* Containers */
-.container{width: 960px;
+.container{width: 1260px;
 padding: 0 10px;
 margin: 0 auto;
 	background: #fff;height: 100%;}
@@ -1380,7 +1380,7 @@ Navigation - Primary
 /* 1st Level */
 .navigation-primary li {
     float: left;
-    margin-left: 1em;
+    margin-left: 2em;
 	position: relative;
 	font-size: 15px;
 	list-style: none;
