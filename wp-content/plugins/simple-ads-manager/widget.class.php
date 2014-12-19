@@ -474,7 +474,7 @@ if(!class_exists('simple_ads_manager_block_widget') && class_exists('WP_Widget')
       $adp_id = $instance['adp_id'];
       $hide_style = $instance['hide_style'];
       
-      $block = new SamAdBlock(array('id' => $adp_id), $this->crawler,'',get_the_ID());
+      $block = new SamAdBlock(array('id' => $adp_id), $this->crawler);
       $content = $block->ad;
       if(!empty($content)) {
         if ( !$hide_style ) {

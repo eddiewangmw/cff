@@ -129,16 +129,6 @@ if(!class_exists('SamBlockEditor')) {
       }
     }
     
-	// 列出所有pages
-	private function buildPages(){
-		$posts = query_posts(array('post_type'=>'page','posts_per_page'=>-1));
-		foreach($posts AS $post){
-			// var_dump($post->post_title);
-			$pages[$post->ID]=$post->post_title;
-		}
-		return $pages;
-	}
-	
     public function page() {
       global $wpdb;
       $pTable = $wpdb->prefix . "sam_places";          
@@ -175,7 +165,6 @@ if(!class_exists('SamBlockEditor')) {
           'i_padding' => $_POST['i_padding'],
           'i_background'  => stripcslashes( $_POST['i_background'] ),
           'i_border' => $_POST['i_border'],
-		'page_id' => intval($_POST['page_id']),
           //FIXED 'trash' => ($_POST['trash'] === 'true')
           'trash' => ($_POST['trash'] === 'true' ? 1 : 0)
         );
@@ -211,8 +200,7 @@ if(!class_exists('SamBlockEditor')) {
                  i_padding,
                  i_background,
                  i_border,
-                 trash,
-				 page_id
+                 trash
                FROM $bTable
                WHERE $bTable.id = $item;";
       if($action !== 'new') {
@@ -404,24 +392,6 @@ if(!class_exists('SamBlockEditor')) {
                 <p><?php _e('Use <strong>Stylesheet rules</strong> for defining these properties.', SAM_DOMAIN); ?><br/><?php _e('For example:', SAM_DOMAIN) ?> <code>url(sheep.png) center bottom no-repeat</code> <?php _e('for background property or', SAM_DOMAIN); ?> <code>5px solid red</code> <?php _e('for border property', SAM_DOMAIN); ?>.</p>
                 <p><strong><?php _e("Important Note", SAM_DOMAIN); ?></strong>: <?php _e("As the Ads Block is the regular structure, predefined styles of individual items for drawing Ads Block's elements aren't used. Define styles for Ads Block Items here!", SAM_DOMAIN);?></p>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div id="descdiv" class="postbox ">
-            <div class="handlediv" title="<?php _e('Click to toggle', SAM_DOMAIN); ?>"><br/></div>
-            <h3 class="hndle"><span>Select Page to display</span></h3>
-            <div class="inside">
-              <p>Select Page to display.</p>
-              <p>
-	   			<?php $pages = $this->buildPages();?>
-	   			<select name="page_id">
-					<option value="">Select One Page</option>
-	   				<?php foreach($pages AS $value=>$page_title):?>
-	   				<option value="<?php echo $value;?>" <?php echo $row['page_id'] == $value ? 'selected' : '';?>><?php echo $page_title;?></option>
-	   				<?php endforeach;?>
-	   			</select>
-               </p>
             </div>
           </div>
         </div>
