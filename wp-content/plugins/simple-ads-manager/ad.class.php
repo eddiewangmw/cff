@@ -873,9 +873,10 @@ if(!class_exists('SamAdBlock')) {
         $ads = unserialize($block['block_data']);
         $lines = (integer) $block['b_lines'];
         $cols = (integer) $block['b_cols'];
+		$display = $cols == 1 ? 'block' : 'inline-block';
         $blockDiv = "<div style='margin: {$block['b_margin']}; padding: {$block['b_padding']}; background: {$block['b_background']}; border: {$block['b_border']}'>";
         $lineDiv = "<div class='sam-block-line' style='margin: 0px; padding: 0px;'>";
-        $itemDiv = "<div class='sam-block-item' style='display: inline-block; margin: {$block['i_margin']}; padding: {$block['i_padding']}; background: {$block['i_background']}; border: {$block['i_border']}'>";
+        $itemDiv = "<div class='sam-block-item' style='display: {$display}; margin: {$block['i_margin']}; padding: {$block['i_padding']}; background: {$block['i_background']}; border: {$block['i_border']}'>";
 
         for($i = 1; $i <= $lines; $i++) {
           $lDiv = '';
