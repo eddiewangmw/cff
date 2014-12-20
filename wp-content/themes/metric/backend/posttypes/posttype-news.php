@@ -50,7 +50,7 @@ if (!function_exists('gp_register_news')) {
 					'with_front'			=> true
 				),
 				'menu_position'			=> 46,
-				'menu_icon'				=> 'dashicons-gpicons-news',
+				'menu_icon'				=> 'dashicons-gpicons-slide',
 				'supports'				=> array(
 					'title',
 					'editor',

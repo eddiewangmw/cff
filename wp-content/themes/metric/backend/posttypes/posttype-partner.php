@@ -50,7 +50,7 @@ if (!function_exists('gp_register_partner')) {
 					'with_front'			=> true
 				),
 				'menu_position'			=> 46,
-				'menu_icon'				=> 'dashicons-gpicons-partner',
+				'menu_icon'				=> 'dashicons-gpicons-slide',
 				'supports'				=> array(
 					'title',
 					'editor',

@@ -50,7 +50,7 @@ if (!function_exists('gp_register_ticket')) {
 					'with_front'			=> true
 				),
 				'menu_position'			=> 46,
-				'menu_icon'				=> 'dashicons-gpicons-ticket',
+				'menu_icon'				=> 'dashicons-gpicons-slide',
 				'supports'				=> array(
 					'title',
 					'editor',

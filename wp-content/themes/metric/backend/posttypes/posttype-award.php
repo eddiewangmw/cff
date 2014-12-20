@@ -50,7 +50,7 @@ if (!function_exists('gp_register_award')) {
 					'with_front'			=> true
 				),
 				'menu_position'			=> 46,
-				'menu_icon'				=> 'dashicons-gpicons-award',
+				'menu_icon'				=> 'dashicons-gpicons-slide',
 				'supports'				=> array(
 					'title',
 					'editor',
