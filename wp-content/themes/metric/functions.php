@@ -629,7 +629,7 @@ Categories Navigation
 
 if (!function_exists('gp_categories')) {
 
-    function gp_categories($type,$current_category=0) {
+    function gp_categories($type,$current_category=0,$order_by='none') {
 
 		if (get_terms($type)) {
         ?>
@@ -639,7 +639,7 @@ if (!function_exists('gp_categories')) {
                     <?php
                         $gp_categories_args = array(
                             'taxonomy'            => $type,
-                            'orderby'             => 'none',
+                            'orderby'             => $order_by,
                             'order'               => 'ASC',
                             'show_count'          => 0,
                             'pad_counts'          => 0,

@@ -50,3 +50,40 @@ if (!function_exists('gp_register_taxonomy_event')) {
     add_action('init', 'gp_register_taxonomy_event');
 
 }
+
+
+add_action('category-event_edit_form', 'edit_event_form_fields');
+add_action('category-event_add_form_fields','edit_event_form_fields');
+
+ 
+function edit_event_form_fields ($tag) {
+    $termid = $tag->term_id;
+
+    $order = get_option( "eorder_$termid");
+?>
+  <tr class="form-field">
+            <th valign="top" scope="row">
+                <label for="catpic"><?php _e('Order', ''); ?></label>
+            </th>
+            <td>
+				<input type="text" name="order" value="<?php echo $order ? $order : 1;?>">
+            </td>
+        </tr>
+        <?php
+    }
+add_action ( 'edited_category-event', 'save_event_extra_fileds');
+// save extra category extra fields callback function
+
+function save_event_extra_fileds( $term_id ) {
+	global $wpdb;
+    if ( isset( $_POST['order'] ) ) {
+        	$termid = $term_id;
+        	$cat_meta = get_option( "eorder_$termid");
+			if ($cat_meta !== false ) {
+				update_option(  "eorder_$termid",$_POST['order']  );
+			}else{
+				add_option(  "eorder_$termid",$_POST['order'] ,  '', 'yes'  );
+			}
+	        $wpdb->update($wpdb->terms, array('term_group' => $_POST['order']), array('term_id'=>$term_id));
+    }
+}

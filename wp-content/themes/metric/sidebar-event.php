@@ -26,7 +26,7 @@ if (gp_option('gp_event_sidebar')) {
 		$category = current($terms);
 		$current_category =  $category->term_id;
 	}?>
-    <?php gp_categories('category-event',$current_category); ?>
+    <?php gp_categories('category-event',$current_category,'term_group'); ?>
 
     <?php dynamic_sidebar('widget-area-event'); ?>
     
