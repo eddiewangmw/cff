@@ -315,6 +315,10 @@ if (!function_exists('gp_columns_edit_content_slide')) {
 	
 			break;
 			
+			case 'slide_page':
+			$p = get_post($post_ID);
+			echo $p ? $p->post_title : '';
+			break;
 			// URL
 			case 'slide_url':
 	
