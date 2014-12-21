@@ -25,7 +25,7 @@ get_header();
             }
     ?>
         <div class="content-event content-sidebar <?php echo $content_class; ?>" role="main">
-                            
+            <?php  get_template_part('content', 'slider');?>           
             <?php 
                 if (have_posts()) { 
                     while (have_posts()) {
@@ -58,14 +58,7 @@ get_header();
                 
                             <article <?php post_class($post_class); ?>>
                                 
-                                <?php
-                                    if (has_post_thumbnail() || !empty($event_youtube_code) || !empty($event_vimeo_code)) {
-                                        $post_block_class = 'one-half';
-                                    } else {
-                                        $post_block_class = 'one-entire';
-                                    }
-                                ?>
-                                <div class="single-post-block post-block <?php echo $post_block_class; ?>">
+                                <div class="single-post-block post-block one-entire">
                                     
                                     <div class="single-post-meta clearfix">
                                         
@@ -227,51 +220,7 @@ get_header();
     
                                 </div><!-- END // one-half | one-entire -->
                                 
-                                <?php
-                                    if (has_post_thumbnail() || !empty($event_youtube_code) || !empty($event_vimeo_code)) {
-                                        $post_block_class = 'one-half';
-                                    } else {
-                                        $post_block_class = 'one-entire';
-                                    }
-                                ?>
-                                <div class="single-post-block post-block <?php echo $post_block_class; ?>">
-                                    
-                                    <?php if (has_post_thumbnail()) { ?>
-                                    
-                                        <div class="single-post-image post-image lightbox overlay clearfix">
-                                            
-                                            <a href="<?php echo $original_image_url[0]; ?>">
-                                                <?php the_post_thumbnail('large'); ?>
-                                                <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                            </a>
-                                            
-                                        </div><!-- END // post-image -->
-                                        
-                                    <?php } ?>
-                                    
-                                    <?php if (!empty($event_youtube_code)) { ?>
-
-                                        <div class="single-post-video post-video">
-                                            <iframe src="http://www.youtube.com/embed/<?php echo $event_youtube_code; ?>?wmode=opaque&amp;autoplay=0&amp;enablejsapi=1&modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;theme=dark" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-                                        </div><!-- END // post-video -->
-
-                                    <?php } ?>
-
-                                    <?php if (!empty($event_vimeo_code)) { ?>
-                                    
-                                        <div class="single-post-video post-video">
-                                            <iframe src="http://player.vimeo.com/video/<?php echo $event_vimeo_code; ?>?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                                        </div><!-- END // post-video -->
-                                        
-                                    <?php } ?>
-
-									<?php if (!empty($event_google_map_embed)) { ?>
-										<div class="post-map">
-											<?php echo stripslashes($event_google_map_embed); ?>
-										</div><!-- END // post-map -->
-									<?php } ?>
-                                    
-                                </div><!-- END // one-half | one-entire -->
+                               
                                 
                             </article><!-- END // post -->
                 
@@ -281,7 +230,7 @@ get_header();
             wp_reset_query();
             ?>
             
-                            
+         <?php  get_template_part('content', 'ads');?>	                  
         </div><!-- END // content -->
         
 	<?php gp_end('div', 'canvas'); ?>
