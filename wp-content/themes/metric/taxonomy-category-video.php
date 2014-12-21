@@ -157,16 +157,8 @@ get_header();
                 
                 wp_reset_query();
             ?>
-            
+            <?php  get_template_part('content', 'ads');?>	
         </div><!-- END // content -->
-        
-        <?php
-            if ($sidebar == 'right') {
-                if (get_terms('category-video') || is_active_sidebar('widget-area-video')) {
-                    get_sidebar('video');
-                }
-            }
-        ?>
         
 	<?php gp_end('div', 'canvas'); ?>
 
