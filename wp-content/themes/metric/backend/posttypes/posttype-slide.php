@@ -79,12 +79,21 @@ if (!function_exists('gp_register_metabox_slide')) {
 	
 		$meta_boxes = array();
 		
+		// normal page
 		$posts = query_posts(array('post_type'=>'page','posts_per_page'=>-1));
+		$pages[''] = 'Select One Page';
 		foreach($posts AS $post){
-			// var_dump($post->post_title);
 			$pages[$post->ID]=$post->post_title;
 		}
-
+		
+		// SCHEDULE CITY
+		$terms = get_categories(array('taxonomy' => 'category-event','hide_empty'=>0,'show_count'=>0));
+		// $terms = get_terms('category-event');
+		$cities[''] = 'Select One City';
+		foreach($terms AS $post){
+			$cities[$post->term_id]=$post->name;
+		}
+		
 		wp_reset_query();
 		/*
 		--------------------------------------------------
@@ -178,6 +187,13 @@ if (!function_exists('gp_register_metabox_slide')) {
 					'id'=>GP_SHORTNAME . '_slide_page',
 					'type'=>'select',
 					'options'=>$pages
+				),
+				array(
+					'name'=>__('SCHEDULE CITY','gp'),
+					'desc'=>__('Slide dispalay in schedule page'),
+					'id'=>GP_SHORTNAME . '_slide_city',
+					'type'=>'select',
+					'options'=>$cities
 				),
 				array(
 					'name'				=> __('Speed of Transition', 'gp'),

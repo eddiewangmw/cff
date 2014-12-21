@@ -49,7 +49,8 @@ get_header();
         
         <div class="content-event <?php echo $content_class; ?>" role="main">
             
-            
+            <?php  get_template_part('content', 'slider');?>
+			
             <?php if ($view_type == 'grid') { ?>
             
                <div class="grid-event grid-event-upcoming clearfix">
@@ -325,16 +326,8 @@ get_header();
                 
                 wp_reset_query();
             ?>
-                
+          <?php  get_template_part('content', 'ads');?>	
         </div><!-- END // content -->
-        
-        <?php
-            if ($sidebar == 'right') {
-                if (get_terms('category-event') || is_active_sidebar('widget-area-event')) {
-                    get_sidebar('event');
-                }
-            }
-        ?>
         
 	<?php gp_end('div', 'canvas'); ?>
 

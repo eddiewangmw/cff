@@ -138,7 +138,7 @@ if (!function_exists('gp_frontend_scripts')) {
 				 wp_enqueue_script('menu');
 			 }
             // Homepage Scripts
-            if (is_page_template('template-home.php')OR is_page_template('template-about-us.php')) {
+            // if (is_page_template('template-home.php')OR is_page_template('template-about-us.php')) {
 
 				// jQuery Revolution Slider Plugins
 				wp_register_script('gp-revolution-plugins', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.revolution.plugins.min.js', array('jquery'), '1.0.0', true);
@@ -148,7 +148,7 @@ if (!function_exists('gp_frontend_scripts')) {
                 wp_register_script('gp-revolution', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.revolution.min.js', array('jquery'), '4.1.2', true);
                 wp_enqueue_script('gp-revolution');
             
-            }
+            // }
             
             // jQuery Isotope
             wp_register_script('gp-isotope', trailingslashit(get_template_directory_uri()) . 'javascripts/jquery.isotope.min.js', array('jquery'), '1.5.21', true);
@@ -217,7 +217,7 @@ if (!function_exists('gp_frontend_homepage_scripts')) {
 
     function gp_frontend_homepage_scripts() {
     
-        if (is_page_template('template-home.php') OR is_page_template('template-about-us.php') ) {
+        // if (is_page_template('template-home.php') OR is_page_template('template-about-us.php') ) {
         
             // Variables
             if (gp_option('gp_slideshow_type') == 'fullwidth') {
@@ -306,7 +306,7 @@ if (!function_exists('gp_frontend_homepage_scripts')) {
                 </script>
 
             <?php
-            }
+            // }
 
         }
 

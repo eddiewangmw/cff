@@ -2,16 +2,40 @@
 		<!-- start slideshow -->
 	<?php 
 	global $post;
-	// Query
+	
 	$gp_query_args = array(
 		'post_type'              => 'slide',
 		'posts_per_page'         => -1,
 		'meta_key'    => 'gp_slide_page',
 		'meta_query' => array(array('key' => 'gp_slide_page','value'=>get_the_ID()))
 	);
+	
+	if(is_tax('category-event')){
+		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+		// Query
+		$gp_query_args = array(
+			'post_type'              => 'slide',
+			'posts_per_page'         => -1,
+			'meta_key'    => 'gp_slide_city',
+			'meta_query' => array(array('key' => 'gp_slide_city','value'=>$term->term_id))
+		);
+		
+	}
+	
+	if(is_tax('category-award')){
+		// Query
+		$gp_query_args = array(
+			'post_type'              => 'slide',
+			'posts_per_page'         => -1,
+			'meta_key'    => 'gp_slide_award',
+			'meta_query' => array(array('key' => 'gp_slide_page','value'=>get_the_ID()))
+		);
+
+	}
+	
 
 	query_posts($gp_query_args);
-	
+
 	if (have_posts()) { ?>
 
 		<?php
@@ -271,7 +295,7 @@
 									$slide_count++;
 									} //while
 								// } //if
-								// wp_reset_query();
+								
 							?>
 
 						</ul>
@@ -284,5 +308,7 @@
 
 		</div>
 
-	<?php } ?>
+	<?php } 
+	wp_reset_query();
+	?>
 	<!-- END // slideshow -->

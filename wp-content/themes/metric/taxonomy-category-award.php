@@ -30,7 +30,7 @@ get_header();
 		<?php  get_sidebar('award');?>
 		
         <div class="content-event <?php echo $content_class; ?>" role="main">
-            
+             <?php  get_template_part('content', 'slider');?>
                <div class="grid-award grid-event-upcoming clearfix">
             <?php 
 			
