@@ -1396,6 +1396,7 @@ if (!function_exists('gp_excerpt')) {
 
 	function gp_excerpt($text) {
 			global $post;
+				
 			
 			if ($text == '') {
 				$text = get_the_content('');
@@ -1403,13 +1404,20 @@ if (!function_exists('gp_excerpt')) {
 				$text = str_replace('\]\]\>', ']]&gt;', $text);
 				$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
 				$text = strip_tags($text, '<p>');
-				$excerpt_length = 30;
-				$words = explode(' ', $text, $excerpt_length + 1);
-				if (count($words)> $excerpt_length) {
-					array_pop($words);
-					array_push($words, '...');
-					$text = implode(' ', $words);
+				
+				if( get_bloginfo('language') == 'en-AU'){
+					$excerpt_length = 30;
+					$words = explode(' ', $text, $excerpt_length + 1);
+					if (count($words)> $excerpt_length) {
+						array_pop($words);
+						array_push($words, '...');
+						$text = implode(' ', $words);
+					}
+				}else{
+					$excerpt_length =  250;
+					$text = mb_substr($text, 0, $excerpt_length);
 				}
+				
 			}
 			
 			return $text;
@@ -1535,6 +1543,11 @@ if (!function_exists('gp_comments_list')) {
 	}
 
 }
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 pll_register_string('Subscription button','Submit your email');
 pll_register_string('About Us Sidebar Title','About Us');

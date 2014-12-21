@@ -245,7 +245,7 @@ get_header();
                                             
                                                 <div class="post-excerpt">
                                                     
-                                                    <?php the_excerpt(); ?>   
+                                                    <?php echo get_the_excerpt(); ?>   
                                                     
                                                 </div><!-- END // post-excerpt -->
                                             
