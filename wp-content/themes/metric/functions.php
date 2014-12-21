@@ -133,7 +133,7 @@ if (!function_exists('gp_frontend_scripts')) {
             wp_enqueue_script('jquery-ui-core');
             wp_enqueue_script('jquery-ui-tabs');
             
-			 if (is_page_template('template-about-us.php') ) {
+			 if (is_page_template('template-about-us.php') OR is_page_template('template-events.php') ) {
 			 	 wp_register_script('menu', trailingslashit(get_template_directory_uri()) . 'javascripts/menu.js', array('jquery'), '1.0.0', true);
 				 wp_enqueue_script('menu');
 			 }
