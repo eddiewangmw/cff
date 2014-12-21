@@ -27,6 +27,7 @@ get_header();
 	<!-- End left side-->
 	<!-- Start right side-->
 	<div class="content-page content-sidebar content-sidebar-left">
+		<?php  get_template_part('content', 'slider');?>
 		<!-- start slideshow -->
 	<?php 
 	global $post;
@@ -337,12 +338,7 @@ get_header();
                 wp_reset_query();
             ?>
 	<!-- END // page-content -->
-	<div class="ads ad-home-top">
-		<?php dynamic_sidebar('widget-ad-normal-top-footer'); ?> 
-	</div>
-	<div class="ads ad-normal-footer">
-		<?php dynamic_sidebar('widget-ad-normal-footer'); ?> 
-	</div>
+	 <?php  get_template_part('content', 'ads');?>	
 	</div>
     <!-- END // right side -->
 
