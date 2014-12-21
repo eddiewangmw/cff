@@ -28,7 +28,7 @@ get_header();
         ?>
         
         <div class="content-ticket <?php echo $content_class; ?>" role="main">
-            
+            <?php  get_template_part('content', 'slider');?>	
                <div class="grid-ticket grid-event-upcoming clearfix">
                 
             <?php
@@ -132,7 +132,7 @@ get_header();
                 ?>
                 
             </div><!-- END // grid-event-upcoming / list-event-upcoming -->
-                
+                <?php  get_template_part('content', 'ads');?>	
         </div><!-- END // content -->
         
 	<?php gp_end('div', 'canvas'); ?>

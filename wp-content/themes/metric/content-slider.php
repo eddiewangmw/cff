@@ -38,8 +38,8 @@
 		$gp_query_args = array(
 			'post_type'              => 'slide',
 			'posts_per_page'         => -1,
-			'meta_key'    => 'gp_slide_award',
-			'meta_query' => array(array('key' => 'gp_slide_ticket','value'=>get_the_ID()))
+			'meta_key'    => 'gp_slide_ticket_single',
+			'meta_query' => array(array('key' => 'gp_slide_ticket_single','value'=>get_the_ID()))
 		);
 	}
 	
@@ -50,14 +50,14 @@
 		$gp_query_args = array(
 			'post_type'              => 'slide',
 			'posts_per_page'         => -1,
-			'meta_key'    => 'gp_slide_award_single',
-			'meta_query' => array(array('key' => 'gp_slide_ticket_single','value'=>$term->term_id))
+			'meta_key'    => 'gp_slide_ticket_category',
+			'meta_query' => array(array('key' => 'gp_slide_ticket_category','value'=>$term->term_id))
 		);
 		
 	}
 	
 	query_posts($gp_query_args);
-
+	// var_dump(have_posts(),$gp_query_args);
 	if (have_posts()) { ?>
 
 		<?php
