@@ -1560,3 +1560,4 @@ pll_register_string('Ticket Book Contact','Ticket Book Contact');
 pll_register_string('Ticket Proxy Contact','Ticket Proxy Contact');
 pll_register_string('Ticket Seal Date','Ticket Seal Date');
 pll_register_string('Ticket Seal Time','Ticket Seal Time');
+pll_register_string('Events Title','Events');
