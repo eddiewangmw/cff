@@ -224,14 +224,14 @@ if (!function_exists('gp_register_metabox_slide')) {
 				),
 				
 				array(
-					'name'=>__('Award Category','gp'),
+					'name'=>__('Ticket Category','gp'),
 					'desc'=>__('Slide dispalay in ticket category page'),
 					'id'=>GP_SHORTNAME . '_slide_ticket_category',
 					'type'=>'select',
 					'options'=>$ticket_categories
 				),
 				array(
-					'name'=>__('Award Page','gp'),
+					'name'=>__('Ticket Page','gp'),
 					'desc'=>__('Slide dispalay in ticket page'),
 					'id'=>GP_SHORTNAME . '_slide_ticket_single',
 					'type'=>'select',
