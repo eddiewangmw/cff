@@ -88,7 +88,6 @@ if (!function_exists('gp_register_metabox_slide')) {
 		
 		// SCHEDULE CITY
 		$terms = get_categories(array('taxonomy' => 'category-event','hide_empty'=>0,'show_count'=>0));
-		// $terms = get_terms('category-event');
 		$cities[''] = 'Select One City';
 		foreach($terms AS $post){
 			$cities[$post->term_id]=$post->name;
@@ -99,6 +98,20 @@ if (!function_exists('gp_register_metabox_slide')) {
 		$events[''] = 'Select One Page';
 		foreach($posts AS $post){
 			$events[$post->ID]=$post->post_title;
+		}
+		
+		// Award category
+		$terms = get_categories(array('taxonomy' => 'category-ticket','hide_empty'=>0,'show_count'=>0));
+		$ticket_categories[''] = 'Select One Ticket Category';
+		foreach($terms AS $post){
+			$ticket_categories[$post->term_id]=$post->name.' '.$post->description;
+		}
+		
+		// SCHEDULE page
+		$posts = query_posts(array('post_type'=>'ticket','posts_per_page'=>-1));
+		$ticket_pages[''] = 'Select One Page';
+		foreach($posts AS $post){
+			$ticket_pages[$post->ID]=$post->post_title;
 		}
 		
 		wp_reset_query();
@@ -208,6 +221,21 @@ if (!function_exists('gp_register_metabox_slide')) {
 					'id'=>GP_SHORTNAME . '_slide_event',
 					'type'=>'select',
 					'options'=>$events
+				),
+				
+				array(
+					'name'=>__('Award Category','gp'),
+					'desc'=>__('Slide dispalay in ticket category page'),
+					'id'=>GP_SHORTNAME . '_slide_ticket_category',
+					'type'=>'select',
+					'options'=>$ticket_categories
+				),
+				array(
+					'name'=>__('Award Page','gp'),
+					'desc'=>__('Slide dispalay in ticket page'),
+					'id'=>GP_SHORTNAME . '_slide_ticket_single',
+					'type'=>'select',
+					'options'=>$ticket_pages
 				),
 				array(
 					'name'				=> __('Speed of Transition', 'gp'),

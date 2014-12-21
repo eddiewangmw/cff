@@ -33,17 +33,29 @@
 		
 	}
 	
-	if(is_tax('category-award')){
-		// Query
+	// Sing award page
+	if($post->post_type == 'ticket'){
 		$gp_query_args = array(
 			'post_type'              => 'slide',
 			'posts_per_page'         => -1,
 			'meta_key'    => 'gp_slide_award',
-			'meta_query' => array(array('key' => 'gp_slide_page','value'=>get_the_ID()))
+			'meta_query' => array(array('key' => 'gp_slide_ticket','value'=>get_the_ID()))
 		);
-
 	}
-
+	
+	// Category award page
+	if(is_tax('category-ticket')){
+		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+		// Query
+		$gp_query_args = array(
+			'post_type'              => 'slide',
+			'posts_per_page'         => -1,
+			'meta_key'    => 'gp_slide_award_single',
+			'meta_query' => array(array('key' => 'gp_slide_ticket_single','value'=>$term->term_id))
+		);
+		
+	}
+	
 	query_posts($gp_query_args);
 
 	if (have_posts()) { ?>
