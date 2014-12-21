@@ -45,7 +45,7 @@ get_header();
         
         <div class="content-gallery <?php echo $content_class; ?>" role="main">
         
-            <?php get_template_part('meta'); ?>
+            <?php //get_template_part('meta'); ?>
 
             <div class="single-gallery lightbox <?php echo $grid_class; ?>">
                         
