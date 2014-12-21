@@ -190,12 +190,9 @@ get_header();
                                                 ?>
                                         
                                                     <div class="post-image transition overlay">
-                                                    
-
                                                             
                                                             <?php the_post_thumbnail('medium-gallery'); ?>
                                                             <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                            
         
                                                     </div><!-- END // post-image -->
                                             
@@ -251,6 +248,16 @@ get_header();
                                                     <?php the_excerpt(); ?>   
                                                     
                                                 </div><!-- END // post-excerpt -->
+                                            
+                                            <?php if (!empty($event_status)) { ?>
+                                            
+                                                <div class="post-status">
+                                                    
+                                                    <?php echo $event_status; ?>
+                                                    
+                                                </div><!-- END // post-status -->
+                                                
+                                            <?php } ?>
                                             
                                             <?php if (!empty($event_buy_text_1) && !empty($event_buy_url_1) || !empty($event_buy_text_2) && !empty($event_buy_url_2)) { ?>
                                             
