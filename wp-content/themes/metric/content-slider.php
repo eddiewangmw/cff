@@ -10,6 +10,16 @@
 		'meta_query' => array(array('key' => 'gp_slide_page','value'=>get_the_ID()))
 	);
 	
+	// Sing event page
+	if($post->post_type == 'event'){
+		$gp_query_args = array(
+			'post_type'              => 'slide',
+			'posts_per_page'         => -1,
+			'meta_key'    => 'gp_slide_event',
+			'meta_query' => array(array('key' => 'gp_slide_event','value'=>get_the_ID()))
+		);
+	}
+	
 	// Category event page
 	if(is_tax('category-event')){
 		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
@@ -23,17 +33,6 @@
 		
 	}
 	
-	// Sing event page
-	if($post->post_type == 'event'){
-		$gp_query_args = array(
-			'post_type'              => 'slide',
-			'posts_per_page'         => -1,
-			'meta_key'    => 'gp_slide_event',
-			'meta_query' => array(array('key' => 'gp_slide_event','value'=>get_the_ID()))
-		);
-	}
-	
-	
 	if(is_tax('category-award')){
 		// Query
 		$gp_query_args = array(
@@ -44,7 +43,7 @@
 		);
 
 	}
-	
+
 	query_posts($gp_query_args);
 
 	if (have_posts()) { ?>
