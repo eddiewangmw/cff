@@ -191,28 +191,11 @@ get_header();
                                         
                                                     <div class="post-image transition overlay">
                                                     
-                                                        <?php if (gp_option('gp_event_single') != 'false') { ?>
-                                                            
-                                                            <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                                                                <?php the_post_thumbnail('medium-gallery'); ?>
-                                                                <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                            </a>
-                                                            
-                                                        <?php } else if (gp_option('gp_event_single') == 'false' || gp_option('gp_event_single') == '' && has_post_thumbnail()) { ?>
-                                                            
-                                                            <span class="lightbox">
-                                                                <a href="<?php echo $original_image_url[0]; ?>" title="<?php the_title_attribute(); ?>">
-                                                                    <?php the_post_thumbnail('medium-gallery'); ?>
-                                                                    <span class="overlay-block"><span class="overlay-icon"></span></span>
-                                                                </a>
-                                                            </span>
-                                                            
-                                                        <?php } else { ?>
+
                                                             
                                                             <?php the_post_thumbnail('medium-gallery'); ?>
                                                             <span class="overlay-block"><span class="overlay-icon"></span></span>
                                                             
-                                                        <?php } ?>
         
                                                     </div><!-- END // post-image -->
                                             
@@ -263,25 +246,11 @@ get_header();
     
                                             <?php } ?>
                                             
-                                            <?php if ($post_count == 1 && ($paged == '' || $paged < 2)) { ?>
-                                            
                                                 <div class="post-excerpt">
                                                     
                                                     <?php the_excerpt(); ?>   
                                                     
                                                 </div><!-- END // post-excerpt -->
-                                            
-                                            <?php } ?>
-                                            
-                                            <?php if (!empty($event_status)) { ?>
-                                            
-                                                <div class="post-status">
-                                                    
-                                                    <?php echo $event_status; ?>
-                                                    
-                                                </div><!-- END // post-status -->
-                                                
-                                            <?php } ?>
                                             
                                             <?php if (!empty($event_buy_text_1) && !empty($event_buy_url_1) || !empty($event_buy_text_2) && !empty($event_buy_url_2)) { ?>
                                             
