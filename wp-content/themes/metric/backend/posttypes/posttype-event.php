@@ -257,6 +257,7 @@ if (!function_exists('gp_edit_columns_event')) {
 			'event_date'		=> __('Start Date', 'gp'),
 			'event_date_end'	=> __('End Date', 'gp'),
 			'event_location'	=> __('Location / Venue', 'gp'),
+			'city'				=> __('City', 'gp'),
 			'author'			=> __('Author', 'gp'),
 			'date'				=> __('Date', 'gp'),
 		);
@@ -293,6 +294,16 @@ if (!function_exists('gp_edit_columns_content_event')) {
 	
 			break;
 
+			case 'city':
+			
+			$terms = get_the_terms( $post->ID , 'category-event' );
+			if($terms ){
+				foreach ( $terms as $term ) {
+					echo $term->name.' ';
+				}
+			}
+			
+			break;
             // End Date
             case 'event_date_end':
 
