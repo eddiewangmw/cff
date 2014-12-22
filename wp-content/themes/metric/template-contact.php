@@ -26,11 +26,16 @@ if (is_active_sidebar('widget-area-contact')) {
 }
 
 // Error Messages
-$contact_name_error = __('Please fill your name.', 'gp');
-$contact_email_error = __('Please fill your email address.', 'gp');
-$contact_email_invalid_error = __('Please fill the valid email address.', 'gp');
-$contact_message_error = __('Please fill your message.', 'gp');
+// $contact_name_error = pll__('Please fill your name.', 'gp');
+$contact_name_error = pll__('Contact error name');
+// $contact_email_error = __('Please fill your email address.', 'gp');
+$contact_email_error = pll__('Contact error email empty');
+// $contact_email_invalid_error = __('Please fill the valid email address.', 'gp');
+$contact_email_invalid_error = pll__('Contact error email valid');
+// $contact_message_error = __('Please fill your message.', 'gp');
+$contact_message_error = pll__('Contact error message');
 $contact_captcha_error = __('Please fill the valid captcha.', 'gp');
+
 
 // Subject
 if (gp_option('gp_form_contact_subject')) {

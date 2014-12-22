@@ -1570,4 +1570,9 @@ pll_register_string('Contact label Message','Contact Message');
 pll_register_string('Contact Message Sent Succeffully','Contact Send Success');
 pll_register_string('Contact Message Sent Fail','Contact Send Fail');
 pll_register_string('Footer Copyright copy','Copyright copy');
+pll_register_string('Contact error name','Contact error name');
+pll_register_string('Contact error email empty','Contact error email empty');
+pll_register_string('Contact error email valid','Contact error email valid');
+pll_register_string('Contact error message','Contact error message');
+pll_register_string('Contact error name','Contact error name');
 
