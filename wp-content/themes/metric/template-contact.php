@@ -36,7 +36,7 @@ $contact_captcha_error = __('Please fill the valid captcha.', 'gp');
 if (gp_option('gp_form_contact_subject')) {
     $subject = gp_option('gp_form_contact_subject');
 } else {
-    $subject = __('Contact Form', 'gp');
+    $subject = pll__('Contact form');
 }
 
 // reCaptcha
@@ -116,10 +116,10 @@ if (isset($_POST['contact_submitted'])) {
 
     if (!isset($has_contact_error) && !isset($has_captcha_error)) {
 
-        $name_title = __('Name:', 'gp');
-        $phone_title = __('Phone:', 'gp');
-        $email_title = __('Email:', 'gp');
-        $message_title = __('Message:', 'gp');
+        $name_title = pll__('Contact Name');
+        $phone_title = pll__('Contact Phone');
+        $email_title = pll__('Contact Email');
+        $message_title = pll__('Contact Message');
 
         // Email Template
         $body = "
@@ -220,20 +220,15 @@ get_header();
                     while (have_posts()) {
                         the_post();
                         ?>
-
-                        <?php if (!empty($post->post_content)) { ?>
-
-                            <div class="content-page one-entire">
-                                <?php the_content(); ?>
-                            </div><!-- END // content-page -->
-
-                        <?php } ?>
+						<?php $address = gp_option('gp_contact_address') ? gp_option('gp_contact_address') : 'PO Box 555 Westmead, NSW, 2145 Australia';?>
+                       <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=cs&amp;geocode=&amp;q=<?php echo $address;?>&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=62.870523,135.263672&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=<?php echo $address;?>&amp;z=11&amp;iwloc=A&amp;output=embed" width="100%" height="360" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
                         <?php if (isset($has_contact_sent) && $has_contact_sent == true) { ?>
 
                             <div class="alert success">
                                 <h5>
-                                    <?php _e('Thank you. Email has been sent. We will contact you as soon as possible.', 'gp'); ?>
+                                    <?php //_e('Thank you. Email has been sent. We will contact you as soon as possible.', 'gp'); ?>
+									<?php echo pll__('Contact Send Success');?>
                                 </h5>
                                 <span class="close">&times;</span>
                             </div><!-- END // alert -->
@@ -244,7 +239,8 @@ get_header();
 
                                 <div class="alert error">
                                     <h5>
-                                        <?php _e('Sorry, an error occurred, email hasn\'t been sent.', 'gp'); ?>
+                                        <?php //_e('Sorry, an error occurred, email hasn\'t been sent.', 'gp'); ?>
+										<?php echo pll__('Contact Send Fail');?>
                                     </h5>
                                     <span class="close">&times;</span>
                                 </div><!-- END // alert -->
@@ -264,13 +260,13 @@ get_header();
 
                                 <fieldset>
 
-                                    <h2><?php _e('Contact form', 'gp'); ?></h2>
+                                    <h2><?php echo pll__('Contact form');?></h2>
 
                                     <div class="grid">
 
                                         <div class="input-block one-third">
 
-                                            <label for="contact_name"><?php _e('Name', 'gp'); ?> <span
+                                            <label for="contact_name"><?php echo pll__('Contact Name');?> <span
                                                     class="required-star">*</span></label>
 
                                             <input name="contact_name" id="contact_name"
@@ -291,7 +287,7 @@ get_header();
 
                                         <div class="input-block one-third">
 
-                                            <label for="contact_phone"><?php _e('Phone', 'gp'); ?></label>
+                                            <label for="contact_phone"><?php echo pll__('Contact Phone');?></label>
 
                                             <input name="contact_phone" id="contact_phone"  class="<?php if (isset($error_message['contact_phone_error'])) { ?> error<?php } ?>" type="text" value="<?php if(isset($_POST['contact_phone'])) { echo $_POST['contact_phone']; } ?>" />
 
@@ -304,7 +300,7 @@ get_header();
 
                                         <div class="input-block one-third">
 
-                                            <label for="contact_email"><?php _e('Email', 'gp'); ?> <span
+                                            <label for="contact_email"><?php echo pll__('Contact Email');?> <span
                                                     class="required-star">*</span></label>
 
                                             <input name="contact_email" id="contact_email"
@@ -332,7 +328,7 @@ get_header();
 
                                         <div class="textarea-block one-entire clearfix">
 
-                                            <label for="contact_message"><?php _e('Message', 'gp'); ?> <span
+                                            <label for="contact_message"><?php echo pll__('Contact Message');?> <span
                                                     class="required-star">*</span></label>
 
                                             <textarea name="contact_message" id="contact_message"

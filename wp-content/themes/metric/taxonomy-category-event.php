@@ -186,7 +186,6 @@ get_header();
                                     <div class="tile-block">
 
                                         <?php
-                                            if (gp_option('gp_event_thumbnail') != 'false') {
                                                 if (has_post_thumbnail()) { 
                                                 ?>
                                         
@@ -198,8 +197,7 @@ get_header();
                                                     </div><!-- END // post-image -->
                                             
                                             <?php
-                                                }
-                                            } 
+                                                } 
                                         ?>
                                         
                                         <div class="post-content">
@@ -220,17 +218,11 @@ get_header();
 
                                             <h2 class="post-header">
                                                 
-                                                <?php if (gp_option('gp_event_single') != 'false') { ?>
                                                     
                                                     <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                                                         <?php the_title(); ?>
                                                     </a>
                                                     
-                                                <?php } else { ?>
-                                                    
-                                                    <?php the_title(); ?>
-                                                    
-                                                <?php } ?>
                                                 
                                             </h2><!-- END // post-header -->
                                             

@@ -629,378 +629,64 @@ if (!function_exists('gp_theme_options_fields')) {
 			)
 		);
 
-        if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) { // Check if WooCommerce is Active
+       
 
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_heading_posts_homepage_shop',
-                'title'		=> __('Shop Items', 'gp'),
-                'type'		=> 'subheading'
-            );
-
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_shop_homepage',
-                'title'		=> __('Shop Items', 'gp'),
-                'desc'		=> __('Enable / Disable shop items on homepage.', 'gp'),
-                'type'		=> 'select-text',
-                'std'		=> 'true',
-                'choices'	=> array(
-                    __('Enabled', 'gp') . '|true',
-                    __('Disabled', 'gp') . '|false'
-                )
-            );
-
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_shop_homepage_type',
-                'title'		=> __('Shop Items Type', 'gp'),
-                'desc'		=> __('Select type of displayed shop items.', 'gp'),
-                'type'		=> 'select-text',
-                'std'		=> 'recent',
-                'choices'	=> array(
-                    __('Recent Items', 'gp') . '|recent',
-                    __('Featured Items', 'gp') . '|featured'
-                )
-            );
-
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_shop_homepage_title',
-                'title'		=> __('Shop Items Title', 'gp'),
-                'desc'		=> __('Fill the homepage shop items title.', 'gp'),
-                'type'		=> 'input',
-                'std'		=> __('Recent shop items', 'gp')
-            );
-
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_shop_homepage_title_show',
-                'title'		=> __('Shop Items Title Show', 'gp'),
-                'desc'		=> __('Enable / Disable homepage shop items title.', 'gp'),
-                'type'		=> 'select-text',
-                'std'		=> 'true',
-                'choices'	=> array(
-                    __('Enabled', 'gp') . '|true',
-                    __('Disabled', 'gp') . '|false'
-                )
-            );
-
-        }
-
-        $options[] = array(
-            'section'	=> 'reading',
-            'id'		=> GP_SHORTNAME . '_heading_posts_homepage_event',
-            'title'		=> __('Events', 'gp'),
-            'type'		=> 'subheading'
-        );
+     
 		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_homepage',
-			'title'		=> __('Events', 'gp'),
-			'desc'		=> __('Enable / Disable latest events on homepage.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_homepage_title',
-			'title'		=> __('Events Title', 'gp'),
-			'desc'		=> __('Fill the homepage events title.', 'gp'),
-			'type'		=> 'input',
-			'std'		=> __('Upcoming events', 'gp')
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_homepage_title_show',
-			'title'		=> __('Events Title Show', 'gp'),
-			'desc'		=> __('Enable / Disable homepage events title.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-
-        $options[] = array(
-            'section'	=> 'reading',
-            'id'		=> GP_SHORTNAME . '_event_homepage_thumbnail_crop',
-            'title'		=> __('Events Thumbnail Crop', 'gp'),
-            'desc'		=> __('Select a events thumbnails cropping.', 'gp'),
-            'type'		=> 'select-text',
-            'std'		=> 'true',
-            'choices'	=> array(
-                __('Crop', 'gp') . '|true',
-                __('Don\'t crop', 'gp') . '|false'
-            )
-        );
-
-        $options[] = array(
-            'section'	=> 'reading',
-            'id'		=> GP_SHORTNAME . '_heading_posts_homepage_album',
-            'title'		=> __('Albums', 'gp'),
-            'type'		=> 'subheading'
-        );
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_album_homepage',
-			'title'		=> __('Albums', 'gp'),
-			'desc'		=> __('Enable / Disable latest albums on homepage.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_album_homepage_title',
-			'title'		=> __('Albums Title', 'gp'),
-			'desc'		=> __('Fill the homepage albums title.', 'gp'),
-			'type'		=> 'input',
-			'std'		=> __('Recent albums', 'gp')
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_album_homepage_title_show',
-			'title'		=> __('Albums Title Show', 'gp'),
-			'desc'		=> __('Enable / Disable homepage albums title.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-
-        $options[] = array(
-            'section'	=> 'reading',
-            'id'		=> GP_SHORTNAME . '_heading_posts_homepage_post',
-            'title'		=> __('Posts', 'gp'),
-            'type'		=> 'subheading'
-        );
-
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_post_homepage',
-			'title'		=> __('Posts', 'gp'),
-			'desc'		=> __('Enable / Disable latest posts on homepage.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_post_homepage_title',
-			'title'		=> __('Posts Title', 'gp'),
-			'desc'		=> __('Fill the homepage posts title.', 'gp'),
-			'type'		=> 'input',
-			'std'		=> __('Recent posts', 'gp')
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_post_homepage_title_show',
-			'title'		=> __('Posts Title Show', 'gp'),
-			'desc'		=> __('Enable / Disable homepage posts title.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_heading_blog',
-			'title'		=> __('Blog', 'gp'),
-			'type'		=> 'heading'
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_blog_view',
-			'title'		=> __('Blog View Type', 'gp'),
-			'desc'		=> __('Select <strong>Blog</strong> view type.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'grid',
-			'choices'	=> array(
-				__('Grid', 'gp') . '|grid',
-				__('List', 'gp') . '|list'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_blog_sidebar',
-			'title'		=> __('Blog Sidebar', 'gp'),
-			'desc'		=> __('Select the sidebar location of the blog templates.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'right',
-			'choices'	=> array(
-				__('Left', 'gp') . '|left',
-				__('Right', 'gp') . '|right'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_heading_event',
-			'title'		=> __('Events', 'gp'),
-			'type'		=> 'heading'
-		);
-			
-        $options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_view',
-			'title'		=> __('Events View Type', 'gp'),
-			'desc'		=> __('Select <strong>Events</strong> view type.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'grid',
-			'choices'	=> array(
-				__('Grid', 'gp') . '|grid',
-				__('List', 'gp') . '|list'
-			)
-		);
-        
-        $options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_thumbnail',
-			'title'		=> __('Thumbnails on Events Page', 'gp'),
-			'desc'		=> __('Enable / disable thumbnails on the <strong>Events</strong> page template.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_single',
-			'title'		=> __('Event Single Page', 'gp'),
-			'desc'		=> __('Enable / disable event single page.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'true',
-			'choices'	=> array(
-				__('Enabled', 'gp') . '|true',
-				__('Disabled', 'gp') . '|false'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_per_page',
-			'title'		=> __('Upcoming Events per Page', 'gp'),
-			'desc'		=> __('Fill the number of upcoming events displayed per page. Default: -1 (all).', 'gp'),
-			'type'		=> 'input',
-			'std'		=> '-1'
-		);
+		// $options[] = array(
+		// 	'section'	=> 'reading',
+		// 	'id'		=> GP_SHORTNAME . '_heading_event',
+		// 	'title'		=> __('Events', 'gp'),
+		// 	'type'		=> 'heading'
+		// );
+		//
+		//         $options[] = array(
+		// 	'section'	=> 'reading',
+		// 	'id'		=> GP_SHORTNAME . '_event_view',
+		// 	'title'		=> __('Events View Type', 'gp'),
+		// 	'desc'		=> __('Select <strong>Events</strong> view type.', 'gp'),
+		// 	'type'		=> 'select-text',
+		// 	'std'		=> 'grid',
+		// 	'choices'	=> array(
+		// 		__('Grid', 'gp') . '|grid',
+		// 		__('List', 'gp') . '|list'
+		// 	)
+		// );
+       		//
+		//
+		// $options[] = array(
+		// 	'section'	=> 'reading',
+		// 	'id'		=> GP_SHORTNAME . '_event_per_page',
+		// 	'title'		=> __('Upcoming Events per Page', 'gp'),
+		// 	'desc'		=> __('Fill the number of upcoming events displayed per page. Default: -1 (all).', 'gp'),
+		// 	'type'		=> 'input',
+		// 	'std'		=> '-1'
+		// );
 				
-        $options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_past_per_page',
-			'title'		=> __('Past Events per Page', 'gp'),
-			'desc'		=> __('Fill the number of upcoming events displayed per page. Default: -1 (all).', 'gp'),
-			'type'		=> 'input',
-			'std'		=> '-1'
-		);
-			
-        $options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_event_sidebar',
-			'title'		=> __('Events Sidebar', 'gp'),
-			'desc'		=> __('Select the sidebar location of the events templates.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'left',
-			'choices'	=> array(
-				__('Left', 'gp') . '|left',
-				__('Right', 'gp') . '|right'
-			)
-		);
+        // $options[] = array(
+  // 			'section'	=> 'reading',
+  // 			'id'		=> GP_SHORTNAME . '_event_past_per_page',
+  // 			'title'		=> __('Past Events per Page', 'gp'),
+  // 			'desc'		=> __('Fill the number of upcoming events displayed per page. Default: -1 (all).', 'gp'),
+  // 			'type'		=> 'input',
+  // 			'std'		=> '-1'
+  // 		);
+  //
+        // $options[] = array(
+  // 			'section'	=> 'reading',
+  // 			'id'		=> GP_SHORTNAME . '_event_sidebar',
+  // 			'title'		=> __('Events Sidebar', 'gp'),
+  // 			'desc'		=> __('Select the sidebar location of the events templates.', 'gp'),
+  // 			'type'		=> 'select-text',
+  // 			'std'		=> 'left',
+  // 			'choices'	=> array(
+  // 				__('Left', 'gp') . '|left',
+  // 				__('Right', 'gp') . '|right'
+  // 			)
+  // 		);
 		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_heading_page',
-			'title'		=> __('Pages', 'gp'),
-			'type'		=> 'heading'
-		);
+	
 		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_page_sidebar',
-			'title'		=> __('Pages Sidebar', 'gp'),
-			'desc'		=> __('Select the sidebar location of the page templates.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'left',
-			'choices'	=> array(
-				__('Left', 'gp') . '|left',
-				__('Right', 'gp') . '|right'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_heading_album',
-			'title'		=> __('Albums', 'gp'),
-			'type'		=> 'heading'
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_album_number',
-			'title'		=> __('Albums per Page', 'gp'),
-			'desc'		=> __('Fill the number of albums displayed per page. Default: -1 (all).', 'gp'),
-			'type'		=> 'input',
-			'std'		=> '-1'
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_album_sidebar',
-			'title'		=> __('Albums Sidebar', 'gp'),
-			'desc'		=> __('Select the sidebar location of the album templates.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'left',
-			'choices'	=> array(
-				__('Left', 'gp') . '|left',
-				__('Right', 'gp') . '|right'
-			)
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_heading_video',
-			'title'		=> __('Videos', 'gp'),
-			'type'		=> 'heading'
-		);
-		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_video_number',
-			'title'		=> __('Videos per Page', 'gp'),
-			'desc'		=> __('Fill the number of videos displayed per page. Default: -1 (all).', 'gp'),
-			'type'		=> 'input',
-			'std'		=> '-1'
-		);
 		
 		$options[] = array(
 			'section'	=> 'reading',
@@ -1031,42 +717,7 @@ if (!function_exists('gp_theme_options_fields')) {
 			'std'		=> '-1'
 		);
 		
-		$options[] = array(
-			'section'	=> 'reading',
-			'id'		=> GP_SHORTNAME . '_gallery_sidebar',
-			'title'		=> __('Gallery Sidebar', 'gp'),
-			'desc'		=> __('Select the sidebar location of the gallery templates.', 'gp'),
-			'type'		=> 'select-text',
-			'std'		=> 'left',
-			'choices'	=> array(
-				__('Left', 'gp') . '|left',
-				__('Right', 'gp') . '|right'
-			)
-		);
 		
-		if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) { // Check if WooCommerce is Active
-		
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_heading_shop',
-                'title'		=> __('Shop', 'gp'),
-                'type'		=> 'heading'
-            );
-            
-            $options[] = array(
-                'section'	=> 'reading',
-                'id'		=> GP_SHORTNAME . '_shop_sidebar',
-                'title'		=> __('Shop Sidebar', 'gp'),
-                'desc'		=> __('Select the sidebar location of the shop (WooCommerce) templates.', 'gp'),
-                'type'		=> 'select-text',
-                'std'		=> 'left',
-                'choices'	=> array(
-                    __('Left', 'gp') . '|left',
-				    __('Right', 'gp') . '|right'
-                )
-            );
-		
-        }
 
         $options[] = array(
             'section'	=> 'reading',
@@ -1087,6 +738,14 @@ if (!function_exists('gp_theme_options_fields')) {
                 __('Right', 'gp') . '|right'
             )
         );
+		
+		$options[] = array(
+			'section'	=> 'reading',
+			'id'		=> GP_SHORTNAME . '_contact_address',
+			'title'		=> __('Contact address', 'gp'),
+			'type'		=> 'input',
+			'std'		=> 'PO Box 555 Westmead, NSW, 2145 Australia'
+		);
 		
 		$options[] = array(
 			'section'	=> 'reading',
