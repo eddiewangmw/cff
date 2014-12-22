@@ -429,11 +429,11 @@ get_header();
                                         <input type="hidden" name="contact_submitted" id="contact_submitted" value="true"/>
 
                                         <button type="submit" name="button-submit" class="button">
-                                            <?php _e('Send email', 'gp'); ?>
+											<?php echo pll__('Contact Button');?>
                                         </button>
 
                                         <div class="required-star-info float-right"><span
-                                                class="required-star">*</span> <?php _e('Required fields', 'gp'); ?></div>
+                                                class="required-star">*</span> <?php pll__('Contact Required'); ?></div>
 
                                     </div><!-- END // buttons -->
 

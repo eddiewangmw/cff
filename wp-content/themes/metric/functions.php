@@ -1563,6 +1563,8 @@ pll_register_string('Ticket Seal Time','Ticket Seal Time');
 pll_register_string('Contact label Title','Contact form');
 pll_register_string('Contact label Name','Contact Name');
 pll_register_string('Contact label Phone','Contact Phone');
+pll_register_string('Contact label Button','Contact Button');
+pll_register_string('Contact label Required','Contact Required');
 pll_register_string('Contact label Email','Contact Email');
 pll_register_string('Contact label Message','Contact Message');
 pll_register_string('Contact Message Sent Succeffully','Contact Send Success');
