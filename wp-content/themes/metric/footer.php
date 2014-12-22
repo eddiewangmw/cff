@@ -24,7 +24,7 @@
                 } else {
                 ?>
             		
-                    <?php pll__('Copyright copy'); ?> <?php echo date('Y'); ?> <a class="underline" href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>"><?php echo get_bloginfo('name'); ?></a>
+                    <?php echo pll__('Copyright copy'); ?> <?php echo date('Y'); ?> <a class="underline" href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo('name'); ?>"><?php echo get_bloginfo('name'); ?></a>
             
                 <?php
                 }
