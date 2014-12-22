@@ -24,9 +24,9 @@ if (!function_exists('gp_register_news')) {
 			array (
 				'labels' => array(
 					'name'					=> __('News', 'gp'),
-					'menu_name'				=> __('Newss', 'gp'),
+					'menu_name'				=> __('News', 'gp'),
 					'singular_name'			=> __('News', 'gp'),
-					'all_items'				=> __('All Newss', 'gp'),
+					'all_items'				=> __('All News', 'gp'),
 					'add_new'				=> __('Add New News', 'gp'),
 					'add_new_item'			=> __('Add New News', 'gp'),
 					'edit_item'				=> __('Edit News', 'gp'),
