@@ -1569,4 +1569,5 @@ pll_register_string('Contact label Email','Contact Email');
 pll_register_string('Contact label Message','Contact Message');
 pll_register_string('Contact Message Sent Succeffully','Contact Send Success');
 pll_register_string('Contact Message Sent Fail','Contact Send Fail');
+pll_register_string('Footer Copyright copy','Copyright copy');
 
