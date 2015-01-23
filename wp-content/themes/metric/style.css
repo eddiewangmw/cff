@@ -1764,7 +1764,8 @@ Navigation - Categories
 .switchlang li a{text-decoration:none;}
 
 .switchlang .widget-block{float:right;clear:both;margin: 5px;}
-.switchlang .widgetGuts{display: table-cell;float: right;}
+.switchlang .widgetGuts{display: table-cell;float: right; margin-top: 10px;
+margin-bottom: 10px;}
 .switchlang .widgetGuts form input {
 float: left;
 width: auto;
